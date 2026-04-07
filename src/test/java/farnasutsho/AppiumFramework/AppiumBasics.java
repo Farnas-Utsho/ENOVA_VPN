@@ -18,6 +18,6 @@ public class AppiumBasics extends AndroidBaseTest{
 			driver.findElement(AppiumBy.accessibilityId("Preference")).click();
 			
 			
-			
-		}
+}
+	
 }

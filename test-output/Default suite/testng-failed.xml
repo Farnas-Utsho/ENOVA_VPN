@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="farnasutsho.AppiumFramework.EnovaLogin_Test">
+      <class name="farnasutsho.AppiumFramework.ServerStatusCheck_Test">
         <methods>
           <include name="ConfigureAppium"/>
-          <include name="LoginTest"/>
+          <include name="serverTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- farnasutsho.AppiumFramework.EnovaLogin_Test -->
+      </class> <!-- farnasutsho.AppiumFramework.ServerStatusCheck_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

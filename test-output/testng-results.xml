@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-06T18:19:55 GMT+06:00" name="Default suite" finished-at="2026-04-06T18:20:01 GMT+06:00" duration-ms="6102">
+  <suite started-at="2026-04-07T18:24:24 GMT+06:00" name="Default suite" finished-at="2026-04-07T18:24:51 GMT+06:00" duration-ms="26502">
     <groups>
     </groups>
-    <test started-at="2026-04-06T18:19:55 GMT+06:00" name="Default test" finished-at="2026-04-06T18:20:01 GMT+06:00" duration-ms="6102">
-      <class name="farnasutsho.AppiumFramework.EnovaLogin_Test">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:farnasutsho.AppiumFramework.EnovaLogin_Test@158da8e]" started-at="2026-04-06T18:19:55 GMT+06:00" name="ConfigureAppium" finished-at="2026-04-06T18:19:59 GMT+06:00" duration-ms="3766" status="PASS">
+    <test started-at="2026-04-07T18:24:24 GMT+06:00" name="Default test" finished-at="2026-04-07T18:24:51 GMT+06:00" duration-ms="26502">
+      <class name="farnasutsho.AppiumFramework.ServerStatusCheck_Test">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@158da8e]" started-at="2026-04-07T18:24:24 GMT+06:00" name="ConfigureAppium" finished-at="2026-04-07T18:24:28 GMT+06:00" duration-ms="4159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method signature="LoginTest()[pri:0, instance:farnasutsho.AppiumFramework.EnovaLogin_Test@158da8e]" started-at="2026-04-06T18:19:59 GMT+06:00" name="LoginTest" finished-at="2026-04-06T18:20:01 GMT+06:00" duration-ms="1741" status="PASS">
+        <test-method signature="serverTest()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@158da8e]" started-at="2026-04-07T18:24:28 GMT+06:00" name="serverTest" finished-at="2026-04-07T18:24:50 GMT+06:00" duration-ms="21641" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:farnasutsho.AppiumFramework.EnovaLogin_Test@158da8e]" started-at="2026-04-06T18:20:01 GMT+06:00" name="tearDown" finished-at="2026-04-06T18:20:01 GMT+06:00" duration-ms="572" status="PASS">
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@158da8e]" started-at="2026-04-07T18:24:50 GMT+06:00" name="tearDown" finished-at="2026-04-07T18:24:51 GMT+06:00" duration-ms="663" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- farnasutsho.AppiumFramework.EnovaLogin_Test -->
+      </class> <!-- farnasutsho.AppiumFramework.ServerStatusCheck_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
