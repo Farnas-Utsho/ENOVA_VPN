@@ -1,0 +1,86 @@
+[
+  {
+    "country": "India",
+    "Server": "India - 3"
+  },
+  {
+    "country": "India",
+    "Server": "India - Premium"
+  },
+
+  {
+    "country": "USA",
+    "Server": "USA - 4"
+  },
+  {
+    "country": "USA",
+    "Server": "USA - 13"
+  },
+  {
+    "country": "USA",
+    "Server": "USA - Premium"
+  },
+  {
+    "country": "USA",
+    "Server": "USA - Super"
+  },
+
+  {
+    "country": "France",
+    "Server": "France - 6"
+  },
+  {
+    "country": "France",
+    "Server": "France - 4"
+  },
+  {
+    "country": "France",
+    "Server": "France - 5"
+  },
+  {
+    "country": "France",
+    "Server": "France - Special"
+  },
+
+  {
+    "country": "Netherlands",
+    "Server": "Netherlands - 1"
+  },
+
+  {
+    "country": "Brazil",
+    "Server": "Brazil"
+  },
+
+  {
+    "country": "Singapore",
+    "Server": "Singapore"
+  },
+  {
+    "country": "Singapore",
+    "Server": "Singapore - 1"
+  },
+  {
+    "country": "Singapore",
+    "Server": "Singapore - Premium"
+  },
+
+  {
+    "country": "Germany",
+    "Server": "Germany - 6"
+  },
+  {
+    "country": "Germany",
+    "Server": "Germany Premium - 2"
+  },
+
+  {
+    "country": "",
+    "Server": "Japan"
+  },
+
+  {
+    "country": "United Kingdom",
+    "Server": "United Kingdom"
+  }
+]

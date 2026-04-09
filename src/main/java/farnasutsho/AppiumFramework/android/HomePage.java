@@ -22,11 +22,39 @@ public class HomePage extends AndroidActions{
 	}
 	
 	@AndroidFindBy(xpath = "//android.widget.ImageView[3]")
-	private WebElement connectButton;
+	private WebElement connectdiscoButton;
 
 	public void clickConnect() {
-	    connectButton.click();
+		connectdiscoButton.click();
 	}
+	
+	public void clickDisConnect() {
+		connectdiscoButton.click();
+	}
+	
+	
+	
+
+	
+	
+	@AndroidFindBy(accessibility="DISCONNECT")
+	private WebElement disconnectButton;
+	
+	public void ClickDisconnectOnPopUp() {
+		
+		disconnectButton.click();
+		
+	}
+	
+	
+	@AndroidFindBy(xpath = "//android.widget.ImageView[1]")
+	private WebElement closeButton;
+
+	public void connectionReportPopClose() {
+		closeButton.click();
+	}
+	
+	
 	
 	
 	@AndroidFindBy(xpath="//android.view.View[contains(@content-desc,'Auto')]")
@@ -37,6 +65,9 @@ public class HomePage extends AndroidActions{
 		Thread.sleep(5000);
 		serverNameButton.click();
 	}
+	
+	
+	
 	
 	
 	
