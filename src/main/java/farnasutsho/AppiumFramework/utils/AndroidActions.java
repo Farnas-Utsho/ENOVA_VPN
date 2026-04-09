@@ -40,7 +40,7 @@ public class AndroidActions extends AppiumUtils{
 	public WebElement getCountryByName(String countryName) {
 	    return driver.findElement(AppiumBy.androidUIAutomator(
 	        "new UiScrollable(new UiSelector().scrollable(true))" +
-	        ".scrollIntoView(new UiSelector().descriptionContains(\"" + countryName + "\"));"
+	        ".scrollIntoView(new UiSelector().description(\"" + countryName + "\"));"
 	    ));
 	}
 	

@@ -59,9 +59,15 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    home.GoToServerList();
 
 	    // If country is not null or empty, select it
-	    if (country != null && !country.isEmpty()) {
+	    
+	 // Only select country if it is provided in JSON
+	    if (country != null && !country.trim().isEmpty()) {
+	        System.out.println("Selecting country: " + country);
 	        location.SelectCountry(country);
+	    } else {
+	        System.out.println("No country provided, skipping country selection");
 	    }
+	    
 
 	    // If server is not null or empty, select it
 	    
