@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>12/7/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>15/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 09 16:39:59 GMT+06:00 2026</td>
+<td>Started on:</td><td>Fri Apr 10 09:25:18 GMT+06:00 2026</td>
 </tr>
-<tr><td>Total time:</td><td>434 seconds (434699 ms)</td>
+<tr><td>Total time:</td><td>712 seconds (712137 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,41 +76,27 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=France - Special, country=France}</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;France - Special&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=France - 4, country=France}</td>
+<td><div><pre>java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [157.173.125.188] but found [N/A]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:117)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
@@ -124,41 +110,27 @@ Session ID: 78968461-33ef-4953-828a-fca048d062a8
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1328388446", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1328388446'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;France - Special&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1411828534", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1411828534'><pre>java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [157.173.125.188] but found [N/A]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:117)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
@@ -173,230 +145,30 @@ Session ID: 78968461-33ef-4953-828a-fca048d062a8
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>23</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
-<tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Singapore - Premium, country=Singapore}</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;Singapore - Premium&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1938377818", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1938377818'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;Singapore - Premium&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>24</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
-<tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Germany Premium - 2, country=Germany}</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;Germany Premium - 2&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1329504187", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1329504187'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;Germany Premium - 2&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>23</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>28</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 <tr>
 <td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Singapore - 1, country=Singapore}</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({AppiumBy.accessibilityId: DISCONNECT})
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.view.View[contains(@content-desc,&apos;Connected&apos;)]})
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:74)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Romg9OCc.click(Unknown Source)
-	at farnasutsho.AppiumFramework.android.HomePage.ClickDisconnectOnPopUp(HomePage.java:45)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$ZLDSprQX.getAttribute(Unknown Source)
+	at farnasutsho.AppiumFramework.android.HomePage.VPNiPAddress(HomePage.java:78)
+	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:92)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
@@ -410,54 +182,54 @@ Session ID: 78968461-33ef-4953-828a-fca048d062a8
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@746c411c
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@476fde05
 (tried for 1 second with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:278)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:279)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
 	... 31 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: DISCONNECT})
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.view.View[contains(@content-desc,&apos;Connected&apos;)]})
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+Build info: version: &apos;4.42.0&apos;, revision: &apos;74c7f0249a*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
 Driver info: driver.version: RemoteWebDriver
 	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:140)
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
 	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:140)
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
 	... 33 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1172754912", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1172754912'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({AppiumBy.accessibilityId: DISCONNECT})
+</pre></div><a href='#' onClick='toggleBox("stack-trace1796415927", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1796415927'><pre>org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.view.View[contains(@content-desc,&apos;Connected&apos;)]})
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:74)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Romg9OCc.click(Unknown Source)
-	at farnasutsho.AppiumFramework.android.HomePage.ClickDisconnectOnPopUp(HomePage.java:45)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$ZLDSprQX.getAttribute(Unknown Source)
+	at farnasutsho.AppiumFramework.android.HomePage.VPNiPAddress(HomePage.java:78)
+	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:92)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
@@ -471,72 +243,58 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@746c411c
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@476fde05
 (tried for 1 second with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:278)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:279)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160)
 	... 31 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.accessibilityId: DISCONNECT})
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.view.View[contains(@content-desc,&apos;Connected&apos;)]})
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+Build info: version: &apos;4.42.0&apos;, revision: &apos;74c7f0249a*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
 Driver info: driver.version: RemoteWebDriver
 	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:140)
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
 	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:54)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:140)
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217)
 	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
 	... 33 more
 </pre></div></td>
-<td>31</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>24</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 <tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=USA - Super, country=USA}</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;USA - Super&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Brazil, country=}</td>
+<td><div><pre>java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [172.233.1.25] but found [Please wait…]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:117)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
@@ -550,41 +308,27 @@ Session ID: 78968461-33ef-4953-828a-fca048d062a8
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1152524191", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1152524191'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;USA - Super&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
+</pre></div><a href='#' onClick='toggleBox("stack-trace786047074", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace786047074'><pre>java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [172.233.1.25] but found [Please wait…]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:117)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
@@ -599,44 +343,30 @@ Session ID: 78968461-33ef-4953-828a-fca048d062a8
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>25</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>26</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 <tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=France - 6, country=France}</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;France - 6&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=USA - 13, country=USA}</td>
+<td><div><pre>java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [162.120.71.185] but found [N/A]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:117)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
@@ -650,41 +380,27 @@ Session ID: 78968461-33ef-4953-828a-fca048d062a8
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1768639125", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1768639125'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;France - 6&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1775525066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1775525066'><pre>java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [162.120.71.185] but found [N/A]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:117)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
@@ -699,108 +415,8 @@ Session ID: 78968461-33ef-4953-828a-fca048d062a8
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>22</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
-<tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=France - 5, country=France}</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;France - 5&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace67985650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace67985650'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;26.3.1&apos;, java.version: &apos;26&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [78968461-33ef-4953-828a-fca048d062a8, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(&quot;France - 5&quot;));}]
-Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, deviceName: Pixel 4, fullReset: false, noReset: true, platformName: ANDROID}, appium:deviceApiLevel: 37, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone16k_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2.75, appium:platformVersion: 17, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2197, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 78968461-33ef-4953-828a-fca048d062a8
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:48)
-	at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
-	at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:68)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>23</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>28</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -811,65 +427,80 @@ Session ID: 78968461-33ef-4953-828a-fca048d062a8
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=USA - 13, country=USA}</td>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Germany - 6, country=Germany}</td>
 <td></td>
-<td>17</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>37</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 <tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=India - Premium, country=India}</td>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Netherlands - 1, country=}</td>
 <td></td>
-<td>17</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>36</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 <tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=India - 3, country=India}</td>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Germany Premium - 2, country=Germany}</td>
 <td></td>
-<td>20</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>36</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 <tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=USA - Premium, country=USA}</td>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=France - 6, country=France}</td>
 <td></td>
-<td>18</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>44</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 <tr>
 <td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=United Kingdom, country=United Kingdom}</td>
 <td></td>
-<td>18</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>38</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 <tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Germany - 6, country=Germany}</td>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=India - Premium, country=India}</td>
 <td></td>
-<td>17</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
-<tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Brazil, country=Brazil}</td>
-<td></td>
-<td>17</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
-<tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=USA - 4, country=USA}</td>
-<td></td>
-<td>25</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
-<tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Netherlands - 1, country=Netherlands}</td>
-<td></td>
-<td>18</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
-<tr>
-<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=France - 4, country=France}</td>
-<td></td>
-<td>17</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>39</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 <tr>
 <td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Japan, country=}</td>
 <td></td>
-<td>20</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>37</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
+<tr>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=USA - Premium, country=USA}</td>
+<td></td>
+<td>37</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
+<tr>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=USA - Super, country=USA}</td>
+<td></td>
+<td>36</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
+<tr>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Singapore - Premium, country=Singapore}</td>
+<td></td>
+<td>36</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
+<tr>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=India - 3, country=India}</td>
+<td></td>
+<td>37</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
+<tr>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=France - Special, country=France}</td>
+<td></td>
+<td>36</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
+<tr>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=France - 5, country=France}</td>
+<td></td>
+<td>37</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
+<tr>
+<td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=USA - 4, country=USA}</td>
+<td></td>
+<td>38</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 <tr>
 <td title='farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.ServerStatusCheck_Test<br>Parameters: {Server=Singapore, country=Singapore}</td>
 <td></td>
-<td>18</td>
-<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@dd8ba08</td></tr>
+<td>38</td>
+<td>farnasutsho.AppiumFramework.ServerStatusCheck_Test@7e07db1f</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,5 +1,8 @@
 package farnasutsho.AppiumFramework.android;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -64,6 +67,25 @@ public class HomePage extends AndroidActions{
 		
 		Thread.sleep(5000);
 		serverNameButton.click();
+	}
+	
+	
+	@AndroidFindBy(xpath="//android.view.View[contains(@content-desc,'Connected')]")
+	private WebElement serverInformation;
+	
+	public String VPNiPAddress() {
+
+	    String fullText = serverInformation.getAttribute("contentDescription");
+
+	    // Extract IP using regex
+	    Pattern pattern = Pattern.compile("\\b\\d{1,3}(?:\\.\\d{1,3}){3}\\b");
+	    Matcher matcher = pattern.matcher(fullText);
+
+	    if (matcher.find()) {
+	        return matcher.group(); // returns the IP
+	    } else {
+	        return null; // or throw exception if you prefer
+	    }
 	}
 	
 	

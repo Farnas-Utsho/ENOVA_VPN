@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
+import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -15,6 +17,7 @@ import farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest;
 import farnasutsho.AppiumFramework.android.HomePage;
 
 import farnasutsho.AppiumFramework.android.LocationPage;
+import farnasutsho.AppiumFramework.android.myIPappPage;
 import io.appium.java_client.AppiumDriver;
 
 
@@ -27,6 +30,8 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	public HomePage home;
 	
 	public LocationPage location;
+	
+	public myIPappPage iptest;
 	
 	
 //	
@@ -49,9 +54,15 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 
 		home = new HomePage(driver);
 	    location = new LocationPage(driver); 
+	    iptest = new myIPappPage(driver);
+	    
+	    
 
 	    String country = input.get("country");
 	    String server = input.get("Server");
+	    
+	    
+
 
 	    System.out.println("Testing country: " + country + ", Server: " + server);
 
@@ -77,6 +88,36 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    // Connect and disconnect
 	    Thread.sleep(2000); // wait a bit before connecting
 	    home.clickConnect();
+	    
+	   String expected_ip = home.VPNiPAddress();
+	   
+	   
+	   System.out.println("IP from vpn applicatoin : "+expected_ip);
+	    
+	    Thread.sleep(5000);
+	  
+	    
+	    //Collect IP from third Party Application
+	    driver.activateApp("com.ddm.iptools");
+	    Thread.sleep(2000);
+	    
+	    for(int i = 0 ; i < 3 ;i++) {
+	    	Thread.sleep(2000);
+	    	iptest.clickRefreshButton();
+		    
+	    }
+	    Thread.sleep(1000);
+	    
+	    String actualIP= iptest.getIpAddress();
+	    System.out.println("IP from third party app : "+actualIP);
+	    driver.terminateApp("com.ddm.iptools");
+	    
+	   
+	    //Assert IP 
+	    Assert.assertEquals(actualIP, expected_ip, 
+	    	    "IP mismatch! VPN IP and Third-party IP are not the same.");
+	    
+	    
 	    Thread.sleep(5000); // wait for connection to establish
 	    home.clickDisConnect();
 
@@ -84,6 +125,9 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    home.ClickDisconnectOnPopUp();
 	    home.connectionReportPopClose();
 	    
+	
+	    
+	    Thread.sleep(1000);
 	    
 	    
 	}
