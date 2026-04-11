@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.google.common.collect.ImmutableMap;
+
 
 import farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest;
 import farnasutsho.AppiumFramework.android.HomePage;
@@ -37,7 +37,7 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 //	
 	
 	@AfterMethod
-	public void preSetup() throws InterruptedException {
+	public void presetup() throws InterruptedException {
 		driver.terminateApp("com.enovavpn.mobile");
 	     
 		Thread.sleep(1000);
