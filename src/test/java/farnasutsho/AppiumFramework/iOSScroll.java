@@ -1,6 +1,7 @@
 package farnasutsho.AppiumFramework;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 

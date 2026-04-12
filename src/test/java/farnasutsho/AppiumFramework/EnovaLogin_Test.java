@@ -1,6 +1,7 @@
 package farnasutsho.AppiumFramework;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest;
 import farnasutsho.AppiumFramework.android.LandingPage;

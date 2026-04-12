@@ -28,11 +28,11 @@ public class HomePage extends AndroidActions{
 	private WebElement connectdiscoButton;
 
 	public void clickConnect() {
-		connectdiscoButton.click();
+		clickElement(connectdiscoButton);
 	}
 	
 	public void clickDisConnect() {
-		connectdiscoButton.click();
+		clickElement(connectdiscoButton);
 	}
 	
 	
@@ -44,9 +44,10 @@ public class HomePage extends AndroidActions{
 	private WebElement disconnectButton;
 	
 	public void ClickDisconnectOnPopUp() {
-		
-		disconnectButton.click();
-		
+
+	  
+
+		clickElement( disconnectButton);
 	}
 	
 	
@@ -54,7 +55,7 @@ public class HomePage extends AndroidActions{
 	private WebElement closeButton;
 
 	public void connectionReportPopClose() {
-		closeButton.click();
+		clickElement(closeButton);
 	}
 	
 	
@@ -66,7 +67,7 @@ public class HomePage extends AndroidActions{
 	public void GoToServerList() throws InterruptedException {
 		
 		Thread.sleep(5000);
-		serverNameButton.click();
+		clickElement(serverNameButton);
 	}
 	
 	
@@ -88,6 +89,17 @@ public class HomePage extends AndroidActions{
 	    }
 	}
 	
+	
+	@AndroidFindBy(accessibility="Settings")
+	private WebElement settingsIcon;
+	
+	public SettingsPage clickSettings() {
+		
+		clickElement(settingsIcon);
+		
+		return new SettingsPage(driver);
+		
+	}
 	
 	
 	

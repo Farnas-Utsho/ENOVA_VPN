@@ -5,9 +5,10 @@
     <classes>
       <class name="farnasutsho.AppiumFramework.ServerStatusCheck_Test">
         <methods>
+          <include name="teardownTest"/>
           <include name="ConfigureAppium"/>
-          <include name="preSetup"/>
-          <include name="serverTest" invocation-numbers="3 7 11 13"/>
+          <include name="setupTest"/>
+          <include name="serverTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- farnasutsho.AppiumFramework.ServerStatusCheck_Test -->

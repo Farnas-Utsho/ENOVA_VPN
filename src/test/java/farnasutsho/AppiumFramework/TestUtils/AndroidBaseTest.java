@@ -1,5 +1,7 @@
 package farnasutsho.AppiumFramework.TestUtils;
+
 import org.testng.annotations.BeforeClass;
+
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -52,7 +54,8 @@ public class AndroidBaseTest extends AppiumUtils {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
-    @AfterClass
+  
+	@AfterClass
     public void tearDown() {
         if(driver != null) driver.quit();
         if(service != null) service.close();

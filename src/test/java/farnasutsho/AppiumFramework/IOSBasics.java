@@ -3,6 +3,7 @@ package farnasutsho.AppiumFramework;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import farnasutsho.AppiumFramework.TestUtils.IOSBaseTest;
 import io.appium.java_client.AppiumBy;

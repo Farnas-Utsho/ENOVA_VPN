@@ -1,6 +1,8 @@
 package farnasutsho.AppiumFramework.TestUtils;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import java.io.File;
 import java.io.FileInputStream;
@@ -57,7 +59,7 @@ public class IOSBaseTest extends AppiumUtils{
 			
 		}
 			
-		@AfterMethod
+		
 		@AfterClass
 		public void tearDown() {
 			

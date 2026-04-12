@@ -24,13 +24,14 @@ public class myIPappPage extends AndroidActions{
 
 	
 	
-	@AndroidFindBy(id="com.ddm.iptools:id/text_ip")
+	@AndroidFindBy(id="cz.webprovider.whatismyipaddress:id/zobraz_ip")
 	private WebElement getIP;
 	
 	public String getIpAddress() {
 		
-		System.out.println("This is only for testing");
+	
 		String ipAddress = getIP.getText();
+		System.out.println(ipAddress);
 		
 		return ipAddress;
 		
@@ -38,12 +39,12 @@ public class myIPappPage extends AndroidActions{
 	}
 	
 	
-	@AndroidFindBy(id="com.ddm.iptools:id/button_refresh")
+	@AndroidFindBy(id="cz.webprovider.whatismyipaddress:id/refresh_info")
 	private WebElement refreshButton;
 	
 	public void clickRefreshButton() {
 		
-		refreshButton.click();
+		clickElement(refreshButton);
 		
 		
 		
