@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.testng.Assert;
-import org.testng.ITestResult;
+
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -64,7 +64,7 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    
 
 
-	    System.out.println("Testing country: " + country + ", Server: " + server);
+	  
 
 	    // Go to server list
 	    home.GoToServerList();
@@ -117,6 +117,8 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    Assert.assertEquals(actualIP, expected_ip, 
 	    	    "IP mismatch! VPN IP and Third-party IP are not the same.");
 	    
+	    
+	    driver.activateApp("com.enovavpn.mobile");
 	    
 	    Thread.sleep(5000); // wait for connection to establish
 	    home.clickDisConnect();
