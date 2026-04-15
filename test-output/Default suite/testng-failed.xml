@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="farnasutsho.AppiumFramework.ServerStatusCheck_Test">
+      <class name="farnasutsho.AppiumFramework.IOS.ServerStatusCheck_Test">
         <methods>
+          <include name="serverTest"/>
           <include name="ConfigureAppium"/>
-          <include name="preSetup"/>
-          <include name="serverTest" invocation-numbers="3 7 11 13"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- farnasutsho.AppiumFramework.ServerStatusCheck_Test -->
+      </class> <!-- farnasutsho.AppiumFramework.IOS.ServerStatusCheck_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

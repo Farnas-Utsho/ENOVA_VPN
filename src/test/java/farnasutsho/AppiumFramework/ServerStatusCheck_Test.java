@@ -1,31 +1,25 @@
 package farnasutsho.AppiumFramework;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
-
-
 import farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest;
 import farnasutsho.AppiumFramework.android.HomePage;
-
 import farnasutsho.AppiumFramework.android.LocationPage;
 import farnasutsho.AppiumFramework.android.myIPappPage;
 import io.appium.java_client.AppiumDriver;
-
+import org.testng.Assert;
 
 
 public class ServerStatusCheck_Test extends AndroidBaseTest{
 	
 	public AppiumDriver drive;
-	
 	
 	public HomePage home;
 	
@@ -34,15 +28,18 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	public myIPappPage iptest;
 	
 	
-//	
+
+	
 	
 	@AfterMethod
-	public void presetup() throws InterruptedException {
+	public void preSetup() throws InterruptedException {
 		driver.terminateApp("com.enovavpn.mobile");
 	     
 		Thread.sleep(1000);
+		
+		driver.activateApp("com.enovavpn.mobile");
 	     
-	     driver.activateApp("com.enovavpn.mobile"); 
+	     
 	   
 	}
 	
@@ -62,9 +59,11 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    String server = input.get("Server");
 	    
 	    
-
+	 
 
 	    System.out.println("Testing country: " + country + ", Server: " + server);
+
+	   
 
 	    // Go to server list
 	    home.GoToServerList();
@@ -86,7 +85,7 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	   
 
 	    // Connect and disconnect
-	    Thread.sleep(2000); // wait a bit before connecting
+	    // wait a bit before connecting
 	    home.clickConnect();
 	    
 	   String expected_ip = home.VPNiPAddress();
@@ -94,28 +93,40 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	   
 	   System.out.println("IP from vpn applicatoin : "+expected_ip);
 	    
-	    Thread.sleep(5000);
+	
 	  
 	    
 	    //Collect IP from third Party Application
-	    driver.activateApp("com.ddm.iptools");
-	    Thread.sleep(2000);
+	    driver.activateApp("cz.webprovider.whatismyipaddress");
+	    Thread.sleep(5000);
+	  
 	    
-	    for(int i = 0 ; i < 3 ;i++) {
-	    	Thread.sleep(2000);
-	    	iptest.clickRefreshButton();
-		    
-	    }
-	    Thread.sleep(1000);
+	    
+	    	
+	   for (int i = 0 ; i < 3; i ++) { iptest.clickRefreshButton();}
+	   
+	   
+	    
+	   
 	    
 	    String actualIP= iptest.getIpAddress();
 	    System.out.println("IP from third party app : "+actualIP);
-	    driver.terminateApp("com.ddm.iptools");
+	    
+	    //Assert IP 
+	    Assert.assertEquals(actualIP, expected_ip,
+	            "IP mismatch! VPN IP and Third-party IP are not the same.");
+	    
+
+	
+	    driver.terminateApp("cz.webprovider.whatismyipaddress");
 	    
 	   
-	    //Assert IP 
-	    Assert.assertEquals(actualIP, expected_ip, 
-	    	    "IP mismatch! VPN IP and Third-party IP are not the same.");
+	 
+	    
+	    
+	    //Reopen Enova VPN 
+	    
+	    driver.activateApp("com.enovavpn.mobile");
 	    
 	    
 	    Thread.sleep(5000); // wait for connection to establish
@@ -123,11 +134,13 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 
 	    // Handle popups if any
 	    home.ClickDisconnectOnPopUp();
+	    
+	    
 	    home.connectionReportPopClose();
 	    
 	
 	    
-	    Thread.sleep(1000);
+	 
 	    
 	    
 	}

@@ -28,20 +28,30 @@ public class LocationPage extends AndroidActions{
 	private WebElement serverNameButton;
 	
 	public void GoToServerList() {
-		serverNameButton.click();
+		clickElement(serverNameButton);
 	}
 	
 
 	public void SelectCountry(String countryName) {
 		
-		getCountryByName(countryName).click();
+		clickElement(getCountryByName(countryName));
 		
 	}
 	
 	public void SelectServer(String serverName) {
 		
-		selectServer(serverName).click();
+		clickElement(selectServer(serverName));
 	}
+	
+	
+	@AndroidFindBy(accessibility="Switch")
+	private WebElement clickSwitch;
+	
+	public void ClickSwitchServer() {
+		clickElement(clickSwitch);
+		
+	}
+	
 	
 	
 }

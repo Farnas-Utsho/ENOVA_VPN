@@ -2,6 +2,8 @@ package farnasutsho.AppiumFramework.TestUtils;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -72,7 +74,7 @@ public class RealiOS  extends AppiumUtils{
         driver = new IOSDriver(service.getUrl(), options);
     }
 
-    @AfterMethod
+    
 	@AfterClass
     public void tearDown() {
         if (driver != null) {

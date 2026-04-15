@@ -1,4 +1,4 @@
-package farnasutsho.AppiumFramework;
+package farnasutsho.AppiumFramework.IOS;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
