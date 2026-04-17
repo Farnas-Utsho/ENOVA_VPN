@@ -34,11 +34,12 @@ public class AndroidBaseTest extends AppiumUtils {
 
         UiAutomator2Options options = new UiAutomator2Options();
         options.setUdid("3510232000002415"); 
+       // options.setDeviceName("Pixel 4");
 
         // App info
         options.setAppPackage("com.enovavpn.mobile");
         options.setAppActivity("com.enovavpn.mobile.MainActivity");
-
+ 
         // Wait for the app's main activity
         options.setAppWaitActivity("com.enovavpn.mobile.MainActivity");
         options.setAppWaitDuration(Duration.ofSeconds(60)); // Wait up to 60s for app to load

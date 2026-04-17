@@ -35,7 +35,7 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	
 
 	@AfterMethod(alwaysRun = true)
-	public void tearDown() {
+	public void presetup() {
 	    try {
 	        driver.activateApp("com.enovavpn.mobile");
 	    } catch (Exception e) {
@@ -103,12 +103,13 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    
 
 	    // If server is not null or empty, select it
-	    
+	    System.out.println("Selecting server : "+server);
+	     
 	    location.SelectServer(server);
 	   
 
 
-	    humanPause("Waiting for connection stability");// wait a bit before connecting
+	    
 
 	    home.clickConnect();
 	    humanPause("Waiting for connection stability");// wait a bit before connecting

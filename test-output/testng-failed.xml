@@ -5,6 +5,7 @@
     <classes>
       <class name="farnasutsho.AppiumFramework.ServerStatusCheck_Test">
         <methods>
+          <include name="presetup"/>
           <include name="ConfigureAppium"/>
           <include name="serverTest"/>
           <include name="tearDown"/>

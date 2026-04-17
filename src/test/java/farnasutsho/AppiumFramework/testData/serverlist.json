@@ -1,8 +1,5 @@
 [
-  {
-    "country": "France",
-    "Server": "France - 6"
-  },
+
   {
     "country": "India",
     "Server": "India - Premium"
@@ -47,6 +44,7 @@
     "country": "France",
     "Server": "France - 5"
   },
+  
   {
     "country": "France",
     "Server": "France - Special"
