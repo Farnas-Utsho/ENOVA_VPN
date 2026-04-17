@@ -1,4 +1,4 @@
-package farnasutsho.AppiumFramework;
+package farnasutsho.AppiumFramework.IOS;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
@@ -89,17 +89,11 @@ public class VPNactivity_test extends AndroidBaseTest{
 	    driver.activateApp("cz.webprovider.whatismyipaddress");
 	    Thread.sleep(2000);
 	    
-<<<<<<< HEAD
-	    iptest.clickRefreshButton();
-		   
-	    
-=======
 	    for(int i = 0 ; i < 3 ;i++) {
 	    	Thread.sleep(2000);
 	    	iptest.clickRefreshButton();
 		    
 	    }
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
 	    Thread.sleep(1000);
 	    
 	    String actualIP= iptest.getIpAddress();

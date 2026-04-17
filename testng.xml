@@ -4,7 +4,11 @@
   <test thread-count="5" name="Test">
     <classes>
 
+<<<<<<< HEAD
       <class name="farnasutsho.AppiumFramework.ServerStatusCheck_Test"/>
+=======
+      <class name="farnasutsho.AppiumFramework.VPNactivity_test"/>
+>>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
 
     </classes>
   </test> <!-- Test -->

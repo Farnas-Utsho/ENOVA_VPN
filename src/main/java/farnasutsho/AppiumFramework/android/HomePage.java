@@ -24,11 +24,19 @@ public class HomePage extends AndroidActions{
 		
 	}
 	
-	@AndroidFindBy(xpath = "//android.widget.ImageView[3]")
+	
+	//Shark Connection button
+	@AndroidFindBy(accessibility ="Connected")
 	private WebElement connectdiscoButton;
 
 	public void clickConnect() {
+<<<<<<< HEAD
 		clickElement(connectdiscoButton);
+=======
+		
+		connectdiscoButton.click();
+		
+>>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
 	}
 	
 	public void clickDisConnect() {
@@ -51,6 +59,13 @@ public class HomePage extends AndroidActions{
 	}
 	
 	
+	
+	
+	//Go to location page
+	@AndroidFindBy(xpath="   ")
+	
+	
+	
 	@AndroidFindBy(xpath = "//android.widget.ImageView[1]")
 	private WebElement closeButton;
 
@@ -66,7 +81,11 @@ public class HomePage extends AndroidActions{
 	
 	public void GoToServerList() throws InterruptedException {
 		
+<<<<<<< HEAD
 		
+=======
+		Thread.sleep(5000);
+>>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
 		clickElement(serverNameButton);
 	}
 	

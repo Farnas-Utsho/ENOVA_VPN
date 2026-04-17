@@ -24,6 +24,7 @@ import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class IOSBaseTest extends AppiumUtils{
+<<<<<<< HEAD
 	public IOSDriver driver;
 	public AppiumDriverLocalService service ;
 	
@@ -66,4 +67,63 @@ public class IOSBaseTest extends AppiumUtils{
 			driver.quit();
 			service.close();
 		}
+=======
+public IOSDriver driver;
+public AppiumDriverLocalService service ;
+
+@BeforeClass
+public void ConfigureAppium() throws URISyntaxException, IOException {
+
+//AndroidDriver , IOSDriver
+
+Properties prop = new Properties();
+
+FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//main//java//farnasutsho//AppiumFramework//resources//data.properties");
+
+prop.load(fis);
+
+String ipAddress = prop.getProperty("ipAddress");
+String port = prop.getProperty("port");
+
+//Start appium server programmatically
+service = startAppiumServer(ipAddress, Integer.parseInt(port));
+XCUITestOptions options = new XCUITestOptions();
+
+// ✅ CHANGED: Real device name
+options.setDeviceName("iPad");
+
+// ✅ ADDED: Required for real device
+options.setUdid("00008101-000339611A79A01E");
+
+// ✅ CHANGED: Platform version
+options.setPlatformVersion("26.3.1");
+
+// ✅ ADDED: Code signing (MANDATORY for real device)
+options.setCapability("xcodeOrgId", "37Q2WF67T5");
+options.setCapability("xcodeSigningId", "iPhone Developer");
+
+// ✅ ADDED: WDA + stability configs
+options.setUseNewWDA(true);
+options.setNoReset(true);
+options.setShowXcodeLog(true);
+
+// ❌ REMOVED .app path (real device doesn't need it if app already installed)
+// options.setApp("...");
+
+// ✅ ADDED: Use bundleId instead
+options.setBundleId("tech.nagorik.sharkvpn");
+
+options.setWdaLaunchTimeout(Duration.ofSeconds(100));
+
+driver = new IOSDriver(service.getUrl(), options);
+
+>>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
+}
+
+@AfterClass
+public void tearDown() {
+
+driver.quit();
+service.close();
+}
 }
