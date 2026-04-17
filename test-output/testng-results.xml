@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="27" passed="15" failed="12" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-12T19:31:16 GMT+06:00" name="Default suite" finished-at="2026-04-12T19:31:21 GMT+06:00" duration-ms="4584">
+  <suite started-at="2026-04-17T13:42:52 GMT+06:00" name="Default suite" finished-at="2026-04-17T13:55:27 GMT+06:00" duration-ms="754849">
     <groups>
     </groups>
-    <test started-at="2026-04-12T19:31:16 GMT+06:00" name="Default test" finished-at="2026-04-12T19:31:21 GMT+06:00" duration-ms="4584">
+    <test started-at="2026-04-17T13:42:52 GMT+06:00" name="Default test" finished-at="2026-04-17T13:55:27 GMT+06:00" duration-ms="754849">
       <class name="farnasutsho.AppiumFramework.ServerStatusCheck_Test">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@5876a9af]" started-at="2026-04-12T19:31:16 GMT+06:00" name="ConfigureAppium" finished-at="2026-04-12T19:31:20 GMT+06:00" duration-ms="4031" status="PASS">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:42:52 GMT+06:00" name="ConfigureAppium" finished-at="2026-04-17T13:42:59 GMT+06:00" duration-ms="7079" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@5876a9af]" started-at="2026-04-12T19:31:20 GMT+06:00" name="serverTest" finished-at="2026-04-12T19:31:20 GMT+06:00" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:43:00 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:43:23 GMT+06:00" duration-ms="23921" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=France - 4, country=France}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[
-Method public void farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(java.util.HashMap) throws java.lang.InterruptedException requires a @DataProvider named : getData]]>
+              <![CDATA[IP mismatch! VPN IP and Third-party IP are not the same. expected [157.173.125.188] but found []]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method public void farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(java.util.HashMap) throws java.lang.InterruptedException requires a @DataProvider named : getData
-at org.testng.internal.Parameters.findDataProvider(Parameters.java:532)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+              <![CDATA[java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [157.173.125.188] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:120)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -47,11 +59,961 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- serverTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@5876a9af]" started-at="2026-04-12T19:31:20 GMT+06:00" name="tearDown" finished-at="2026-04-12T19:31:21 GMT+06:00" duration-ms="536" status="PASS">
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:43:23 GMT+06:00" name="presetup" finished-at="2026-04-17T13:43:25 GMT+06:00" duration-ms="1915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:43:25 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:43:54 GMT+06:00" duration-ms="28596" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=India - Premium, country=India}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:43:54 GMT+06:00" name="presetup" finished-at="2026-04-17T13:43:56 GMT+06:00" duration-ms="1898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:43:56 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:44:25 GMT+06:00" duration-ms="28702" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=India - 2, country=India}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:44:25 GMT+06:00" name="presetup" finished-at="2026-04-17T13:44:27 GMT+06:00" duration-ms="1916" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:44:27 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:44:55 GMT+06:00" duration-ms="28130" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=India - 4, country=India}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[IP mismatch! VPN IP and Third-party IP are not the same. expected [82.180.144.137] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [82.180.144.137] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:120)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:44:55 GMT+06:00" name="presetup" finished-at="2026-04-17T13:44:56 GMT+06:00" duration-ms="1741" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:44:56 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:45:24 GMT+06:00" duration-ms="27490" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=India - 3, country=India}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:45:24 GMT+06:00" name="presetup" finished-at="2026-04-17T13:45:26 GMT+06:00" duration-ms="1691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:45:26 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:45:55 GMT+06:00" duration-ms="29201" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - 1, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:45:55 GMT+06:00" name="presetup" finished-at="2026-04-17T13:45:56 GMT+06:00" duration-ms="1659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:45:56 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:46:25 GMT+06:00" duration-ms="28067" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - 10, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:46:25 GMT+06:00" name="presetup" finished-at="2026-04-17T13:46:26 GMT+06:00" duration-ms="1973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:46:26 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:46:56 GMT+06:00" duration-ms="29105" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - 4, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:46:56 GMT+06:00" name="presetup" finished-at="2026-04-17T13:46:58 GMT+06:00" duration-ms="2027" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:46:58 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:47:18 GMT+06:00" duration-ms="20407" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - 13, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[IP mismatch! VPN IP and Third-party IP are not the same. expected [162.120.71.185] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [162.120.71.185] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:120)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:47:18 GMT+06:00" name="presetup" finished-at="2026-04-17T13:47:20 GMT+06:00" duration-ms="1875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:47:20 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:47:42 GMT+06:00" duration-ms="21728" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - Premium, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[IP mismatch! VPN IP and Third-party IP are not the same. expected [172.238.63.76] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [172.238.63.76] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:120)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:47:42 GMT+06:00" name="presetup" finished-at="2026-04-17T13:47:43 GMT+06:00" duration-ms="1737" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:47:43 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:48:02 GMT+06:00" duration-ms="19062" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - Super, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[IP mismatch! VPN IP and Third-party IP are not the same. expected [162.120.71.217] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [162.120.71.217] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:120)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:48:02 GMT+06:00" name="presetup" finished-at="2026-04-17T13:48:04 GMT+06:00" duration-ms="1790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:48:04 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:48:30 GMT+06:00" duration-ms="25936" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=France - 5, country=France}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:48:30 GMT+06:00" name="presetup" finished-at="2026-04-17T13:48:32 GMT+06:00" duration-ms="1777" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:48:32 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:48:58 GMT+06:00" duration-ms="26365" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=France - Special, country=France}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:48:58 GMT+06:00" name="presetup" finished-at="2026-04-17T13:49:00 GMT+06:00" duration-ms="1845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:49:00 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:49:19 GMT+06:00" duration-ms="18774" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=France Warrior, country=France}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[IP mismatch! VPN IP and Third-party IP are not the same. expected [37.60.226.121] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [37.60.226.121] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:120)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:49:19 GMT+06:00" name="presetup" finished-at="2026-04-17T13:49:21 GMT+06:00" duration-ms="1653" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:49:21 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:49:51 GMT+06:00" duration-ms="30015" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Netherlands - 1, country=Netherlands}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:49:51 GMT+06:00" name="presetup" finished-at="2026-04-17T13:49:52 GMT+06:00" duration-ms="1750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:49:52 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:50:21 GMT+06:00" duration-ms="29099" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Netherlands - 5, country=Netherlands}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:50:21 GMT+06:00" name="presetup" finished-at="2026-04-17T13:50:23 GMT+06:00" duration-ms="1925" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:50:23 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:50:45 GMT+06:00" duration-ms="21159" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Brazil, country=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[IP mismatch! VPN IP and Third-party IP are not the same. expected [172.233.1.25] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: IP mismatch! VPN IP and Third-party IP are not the same. expected [172.233.1.25] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:120)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:50:45 GMT+06:00" name="presetup" finished-at="2026-04-17T13:50:47 GMT+06:00" duration-ms="2081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:50:47 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:51:16 GMT+06:00" duration-ms="29487" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Singapore, country=Singapore}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:51:16 GMT+06:00" name="presetup" finished-at="2026-04-17T13:51:18 GMT+06:00" duration-ms="1856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:51:18 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:51:37 GMT+06:00" duration-ms="19156" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Singapore - 1, country=Singapore}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [092f6a4e-9936-4e9b-ab01-b4007b69c608, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("Singapore - 1"));}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: 3510232000002415}, appium:deviceApiLevel: 33, appium:deviceManufacturer: realme, appium:deviceModel: RMX3624, appium:deviceName: 3510232000002415, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 3510232000002415, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 13, appium:statBarHeight: 96, appium:takesScreenshot: true, appium:udid: 3510232000002415, appium:viewportRect: {height: 1504, left: 0, top: 96, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 092f6a4e-9936-4e9b-ab01-b4007b69c608]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [092f6a4e-9936-4e9b-ab01-b4007b69c608, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("Singapore - 1"));}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: 3510232000002415}, appium:deviceApiLevel: 33, appium:deviceManufacturer: realme, appium:deviceModel: RMX3624, appium:deviceName: 3510232000002415, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 3510232000002415, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 13, appium:statBarHeight: 96, appium:takesScreenshot: true, appium:udid: 3510232000002415, appium:viewportRect: {height: 1504, left: 0, top: 96, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 092f6a4e-9936-4e9b-ab01-b4007b69c608
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:65)
+at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:101)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:51:37 GMT+06:00" name="presetup" finished-at="2026-04-17T13:51:39 GMT+06:00" duration-ms="1987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:51:39 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:51:59 GMT+06:00" duration-ms="19750" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Singapore - Premium, country=Singapore}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [092f6a4e-9936-4e9b-ab01-b4007b69c608, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("Singapore - Premium"));}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: 3510232000002415}, appium:deviceApiLevel: 33, appium:deviceManufacturer: realme, appium:deviceModel: RMX3624, appium:deviceName: 3510232000002415, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 3510232000002415, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 13, appium:statBarHeight: 96, appium:takesScreenshot: true, appium:udid: 3510232000002415, appium:viewportRect: {height: 1504, left: 0, top: 96, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 092f6a4e-9936-4e9b-ab01-b4007b69c608]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [092f6a4e-9936-4e9b-ab01-b4007b69c608, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("Singapore - Premium"));}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: 3510232000002415}, appium:deviceApiLevel: 33, appium:deviceManufacturer: realme, appium:deviceModel: RMX3624, appium:deviceName: 3510232000002415, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 3510232000002415, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 13, appium:statBarHeight: 96, appium:takesScreenshot: true, appium:udid: 3510232000002415, appium:viewportRect: {height: 1504, left: 0, top: 96, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 092f6a4e-9936-4e9b-ab01-b4007b69c608
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:65)
+at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:101)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:51:59 GMT+06:00" name="presetup" finished-at="2026-04-17T13:52:01 GMT+06:00" duration-ms="1917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:52:01 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:52:29 GMT+06:00" duration-ms="27973" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Germany - 6, country=Germany}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:52:29 GMT+06:00" name="presetup" finished-at="2026-04-17T13:52:31 GMT+06:00" duration-ms="1708" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:52:31 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:52:49 GMT+06:00" duration-ms="18724" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Germany Premium - 2, country=Germany}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [092f6a4e-9936-4e9b-ab01-b4007b69c608, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("Germany Premium - 2"));}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: 3510232000002415}, appium:deviceApiLevel: 33, appium:deviceManufacturer: realme, appium:deviceModel: RMX3624, appium:deviceName: 3510232000002415, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 3510232000002415, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 13, appium:statBarHeight: 96, appium:takesScreenshot: true, appium:udid: 3510232000002415, appium:viewportRect: {height: 1504, left: 0, top: 96, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 092f6a4e-9936-4e9b-ab01-b4007b69c608]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [092f6a4e-9936-4e9b-ab01-b4007b69c608, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("Germany Premium - 2"));}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: 3510232000002415}, appium:deviceApiLevel: 33, appium:deviceManufacturer: realme, appium:deviceModel: RMX3624, appium:deviceName: 3510232000002415, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 3510232000002415, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 13, appium:statBarHeight: 96, appium:takesScreenshot: true, appium:udid: 3510232000002415, appium:viewportRect: {height: 1504, left: 0, top: 96, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 092f6a4e-9936-4e9b-ab01-b4007b69c608
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:65)
+at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:101)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:52:49 GMT+06:00" name="presetup" finished-at="2026-04-17T13:52:51 GMT+06:00" duration-ms="1871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:52:51 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:53:18 GMT+06:00" duration-ms="27214" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Japan, country=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:53:18 GMT+06:00" name="presetup" finished-at="2026-04-17T13:53:20 GMT+06:00" duration-ms="1991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:53:20 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:53:41 GMT+06:00" duration-ms="20291" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=United Kingdom, country=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [092f6a4e-9936-4e9b-ab01-b4007b69c608, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("United Kingdom"));}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: 3510232000002415}, appium:deviceApiLevel: 33, appium:deviceManufacturer: realme, appium:deviceModel: RMX3624, appium:deviceName: 3510232000002415, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 3510232000002415, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 13, appium:statBarHeight: 96, appium:takesScreenshot: true, appium:udid: 3510232000002415, appium:viewportRect: {height: 1504, left: 0, top: 96, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 092f6a4e-9936-4e9b-ab01-b4007b69c608]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [092f6a4e-9936-4e9b-ab01-b4007b69c608, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains("United Kingdom"));}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: 3510232000002415}, appium:deviceApiLevel: 33, appium:deviceManufacturer: realme, appium:deviceModel: RMX3624, appium:deviceName: 3510232000002415, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 3510232000002415, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 13, appium:statBarHeight: 96, appium:takesScreenshot: true, appium:udid: 3510232000002415, appium:viewportRect: {height: 1504, left: 0, top: 96, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 092f6a4e-9936-4e9b-ab01-b4007b69c608
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+at farnasutsho.AppiumFramework.utils.AndroidActions.selectServer(AndroidActions.java:65)
+at farnasutsho.AppiumFramework.android.LocationPage.SelectServer(LocationPage.java:43)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:101)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:53:41 GMT+06:00" name="presetup" finished-at="2026-04-17T13:53:43 GMT+06:00" duration-ms="2031" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:53:43 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:54:23 GMT+06:00" duration-ms="40812" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Sweden - 3, country=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:54:24 GMT+06:00" name="presetup" finished-at="2026-04-17T13:54:25 GMT+06:00" duration-ms="1756" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:54:25 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:55:05 GMT+06:00" duration-ms="39928" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Denmark - Premium, country=Denmark}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:55:05 GMT+06:00" name="presetup" finished-at="2026-04-17T13:55:07 GMT+06:00" duration-ms="1961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:55:07 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-04-17T13:55:25 GMT+06:00" duration-ms="17679" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Denmark - Warrior, country=Denmark}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [092f6a4e-9936-4e9b-ab01-b4007b69c608, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().description("Denmark"));}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: 3510232000002415}, appium:deviceApiLevel: 33, appium:deviceManufacturer: realme, appium:deviceModel: RMX3624, appium:deviceName: 3510232000002415, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 3510232000002415, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 13, appium:statBarHeight: 96, appium:takesScreenshot: true, appium:udid: 3510232000002415, appium:viewportRect: {height: 1504, left: 0, top: 96, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 092f6a4e-9936-4e9b-ab01-b4007b69c608]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [092f6a4e-9936-4e9b-ab01-b4007b69c608, findElement {using=-android uiautomator, value=new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().description("Denmark"));}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.enovavpn.mobile.MainAct..., appPackage: com.enovavpn.mobile, appWaitActivity: com.enovavpn.mobile.MainAct..., appWaitDuration: 60000, automationName: UIAutomator2, fullReset: false, noReset: true, platformName: ANDROID, udid: 3510232000002415}, appium:deviceApiLevel: 33, appium:deviceManufacturer: realme, appium:deviceModel: RMX3624, appium:deviceName: 3510232000002415, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 3510232000002415, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 13, appium:statBarHeight: 96, appium:takesScreenshot: true, appium:udid: 3510232000002415, appium:viewportRect: {height: 1504, left: 0, top: 96, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 092f6a4e-9936-4e9b-ab01-b4007b69c608
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+at farnasutsho.AppiumFramework.utils.AndroidActions.getCountryByName(AndroidActions.java:58)
+at farnasutsho.AppiumFramework.android.LocationPage.SelectCountry(LocationPage.java:37)
+at farnasutsho.AppiumFramework.ServerStatusCheck_Test.serverTest(ServerStatusCheck_Test.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:55:25 GMT+06:00" name="presetup" finished-at="2026-04-17T13:55:27 GMT+06:00" duration-ms="1706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-04-17T13:55:27 GMT+06:00" name="tearDown" finished-at="2026-04-17T13:55:27 GMT+06:00" duration-ms="620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

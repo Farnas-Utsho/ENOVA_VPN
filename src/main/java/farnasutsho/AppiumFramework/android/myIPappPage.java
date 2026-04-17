@@ -29,7 +29,9 @@ public class myIPappPage extends AndroidActions{
 	
 	public String getIpAddress() {
 		
-	
+		for(int i = 0 ;i< 3 ;i++) {clickRefreshButton();}
+		
+		
 		String ipAddress = getIP.getText();
 		System.out.println(ipAddress);
 		

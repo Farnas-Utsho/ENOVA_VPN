@@ -66,7 +66,7 @@ public class HomePage extends AndroidActions{
 	
 	public void GoToServerList() throws InterruptedException {
 		
-		Thread.sleep(5000);
+		
 		clickElement(serverNameButton);
 	}
 	
