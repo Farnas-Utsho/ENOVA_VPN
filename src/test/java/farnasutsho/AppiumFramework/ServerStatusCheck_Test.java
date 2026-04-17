@@ -1,32 +1,16 @@
 package farnasutsho.AppiumFramework;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
-
-<<<<<<< HEAD
 import org.testng.Assert;
-
-import org.testng.annotations.AfterMethod;
-
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
-
-
-=======
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
 import farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest;
 import farnasutsho.AppiumFramework.android.HomePage;
 import farnasutsho.AppiumFramework.android.LocationPage;
 import farnasutsho.AppiumFramework.android.myIPappPage;
-import io.appium.java_client.AppiumDriver;
-import org.testng.Assert;
+
 
 
 public class ServerStatusCheck_Test extends AndroidBaseTest{

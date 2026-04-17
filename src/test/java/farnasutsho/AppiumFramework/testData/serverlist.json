@@ -1,36 +1,24 @@
 [
-<<<<<<< HEAD
-
-=======
-	
-	{
-	   "country": "France",
-	   "Server": "France - 6"
-	 },
-	
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
-	{
-	  "country": "India",
-	  "Server": "India - Premium"
-	},
-<<<<<<< HEAD
-	{
-	   "country": "India",
-	   "Server": "India - 2"
-	 },
-	 {
-	    "country": "India",
-	    "Server": "India - 4"
-	  },
-	  
-=======
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
-	
+  {
+    "country": "France",
+    "Server": "France - 6"
+  },
+  {
+    "country": "India",
+    "Server": "India - Premium"
+  },
+  {
+    "country": "India",
+    "Server": "India - 2"
+  },
+  {
+    "country": "India",
+    "Server": "India - 4"
+  },
   {
     "country": "India",
     "Server": "India - 3"
   },
-<<<<<<< HEAD
   {
     "country": "USA",
     "Server": "USA - 1"
@@ -39,10 +27,6 @@
     "country": "USA",
     "Server": "USA - 10"
   },
-=======
-
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
-
   {
     "country": "USA",
     "Server": "USA - 4"
@@ -59,12 +43,6 @@
     "country": "USA",
     "Server": "USA - Super"
   },
-
-<<<<<<< HEAD
-=======
- 
-
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
   {
     "country": "France",
     "Server": "France - 5"
@@ -73,17 +51,14 @@
     "country": "France",
     "Server": "France - Special"
   },
-
   {
-     "country": "France",
-     "Server": "France - 4"
-   },
-
+    "country": "France",
+    "Server": "France - 4"
+  },
   {
-     "country": "France",
-     "Server": "France Warrior"
-   },
-
+    "country": "France",
+    "Server": "France Warrior"
+  },
   {
     "country": "Netherlands",
     "Server": "Netherlands - 1"
@@ -92,12 +67,10 @@
     "country": "Netherlands",
     "Server": "Netherlands - 5"
   },
-
   {
     "country": "",
     "Server": "Brazil"
   },
-
   {
     "country": "Singapore",
     "Server": "Singapore"
@@ -110,7 +83,6 @@
     "country": "Singapore",
     "Server": "Singapore - Premium"
   },
-
   {
     "country": "Germany",
     "Server": "Germany - 6"
@@ -119,12 +91,10 @@
     "country": "Germany",
     "Server": "Germany Premium - 2"
   },
-
   {
     "country": "",
     "Server": "Japan"
   },
-
   {
     "country": "",
     "Server": "United Kingdom"
@@ -137,10 +107,8 @@
     "country": "Denmark",
     "Server": "Denmark - Premium"
   },
-  
   {
     "country": "Denmark",
     "Server": "Denmark - Warrior"
   }
-  
 ]

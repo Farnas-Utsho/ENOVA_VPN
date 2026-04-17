@@ -30,13 +30,11 @@ public class HomePage extends AndroidActions{
 	private WebElement connectdiscoButton;
 
 	public void clickConnect() {
-<<<<<<< HEAD
+
 		clickElement(connectdiscoButton);
-=======
-		
+
 		connectdiscoButton.click();
-		
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
+
 	}
 	
 	public void clickDisConnect() {
@@ -80,12 +78,9 @@ public class HomePage extends AndroidActions{
 	private WebElement serverNameButton;
 	
 	public void GoToServerList() throws InterruptedException {
-		
-<<<<<<< HEAD
-		
-=======
+
 		Thread.sleep(5000);
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
+
 		clickElement(serverNameButton);
 	}
 	

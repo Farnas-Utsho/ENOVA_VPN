@@ -1,9 +1,7 @@
 package farnasutsho.AppiumFramework.utils;
 import java.time.Duration;
-<<<<<<< HEAD
+
 import java.util.concurrent.ThreadLocalRandom;
-=======
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -39,12 +37,7 @@ public class AndroidActions extends AppiumUtils{
 }
 	
 	
-<<<<<<< HEAD
 
-	
-	
-=======
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
 	public void clickElement(WebElement element) {
 
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
