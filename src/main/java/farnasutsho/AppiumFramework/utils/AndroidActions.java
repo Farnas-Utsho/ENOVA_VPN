@@ -1,6 +1,5 @@
 package farnasutsho.AppiumFramework.utils;
 import java.time.Duration;
-import java.util.concurrent.ThreadLocalRandom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -34,9 +33,6 @@ public class AndroidActions extends AppiumUtils{
 		// Here all the android actions code  need to enlist 
 		  
 }
-	
-	
-
 	
 	
 	public void clickElement(WebElement element) {

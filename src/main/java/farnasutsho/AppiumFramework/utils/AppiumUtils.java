@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.HashMap;
 
 import io.appium.java_client.AppiumDriver;
@@ -56,7 +55,7 @@ public class AppiumUtils {
 	public void Wait() {
 		
 		
-		WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(60));
+		WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(20));
 				
 	}
 	public List<HashMap<String, String>> getJsonData(String jsonFilePath) throws IOException {
@@ -74,29 +73,7 @@ public class AppiumUtils {
 			}
 	
 	
-	public String getScreenshotPath(String testCaseName, AppiumDriver driver) throws IOException
-	{
-		File source = driver.getScreenshotAs(OutputType.FILE);
-		String destinationFile = System.getProperty("user.dir")+"/reports/"+testCaseName+".png";
-		FileUtils.copyFile(source, new File(destinationFile));
-		return destinationFile;
-		//1. capture and place in folder //2. extent report pick file and attach to report
-		
-		
-	}
 	
-	//Human pause 
-	public void humanPause(String reason) {
-	    int delay = ThreadLocalRandom.current().nextInt(2000, 3000);
-
-	  //  System.out.println("⏳ Pause (" + delay + " ms) | " + reason);
-
-	    try {
-	        Thread.sleep(delay);
-	    } catch (InterruptedException e) {
-	        Thread.currentThread().interrupt();
-	    }
-	}
 	
 	
 

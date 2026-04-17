@@ -33,7 +33,7 @@ public class AndroidBaseTest extends AppiumUtils {
         service = startAppiumServer(ipAddress, Integer.parseInt(port));
 
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setUdid("3510232000002415"); 
+        options.setDeviceName("Pixel 4");
 
         // App info
         options.setAppPackage("com.enovavpn.mobile");
@@ -54,7 +54,7 @@ public class AndroidBaseTest extends AppiumUtils {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
-   
+  
 	@AfterClass
     public void tearDown() {
         if(driver != null) driver.quit();

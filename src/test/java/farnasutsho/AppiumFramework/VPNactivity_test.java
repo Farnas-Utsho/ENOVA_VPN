@@ -89,9 +89,11 @@ public class VPNactivity_test extends AndroidBaseTest{
 	    driver.activateApp("cz.webprovider.whatismyipaddress");
 	    Thread.sleep(2000);
 	    
-	    iptest.clickRefreshButton();
-		   
-	    
+	    for(int i = 0 ; i < 3 ;i++) {
+	    	Thread.sleep(2000);
+	    	iptest.clickRefreshButton();
+		    
+	    }
 	    Thread.sleep(1000);
 	    
 	    String actualIP= iptest.getIpAddress();

@@ -23,50 +23,39 @@ import io.appium.java_client.AppiumDriver;
 
 
 public class ServerStatusCheck_Test extends AndroidBaseTest{
-
 	
-
+	public AppiumDriver drive;
 	
+	
+	public HomePage home;
+	
+	public LocationPage location;
+	
+	public myIPappPage iptest;
 	
 	
 //	
 	
-	@AfterMethod(alwaysRun = true)
-	public void tearDown() {
-	    try {
-	        driver.activateApp("com.enovavpn.mobile");
-	    } catch (Exception e) {
-	        System.out.println("App already active or not needed");
-	    }
+	@AfterMethod
+	public void presetup() throws InterruptedException {
+		driver.terminateApp("com.enovavpn.mobile");
+	     
+		Thread.sleep(1000);
+	     
+	     driver.activateApp("com.enovavpn.mobile"); 
+	   
 	}
 	
-	public String getIp() throws InterruptedException {
-		
-		  myIPappPage iptest = new myIPappPage(driver);
-		   humanPause("Switching to Ip checking application");
-		    
-		    //Collect IP from third Party Application
-		    driver.activateApp("cz.webprovider.whatismyipaddress");
-		    humanPause("Getting Ip from ThirdParty APP");
-		    Thread.sleep(5000);
-
-		    String actualIP= iptest.getIpAddress();  
-		    
-		    driver.activateApp("com.enovavpn.mobile");
-		
-		return actualIP;
-		
-		
-		
-	}
+	
 	
 	
 	@Test(dataProvider="getData")
 	public void serverTest(HashMap<String ,String> input) throws InterruptedException {
 
-		    HomePage home = new HomePage(driver);
-		    LocationPage location = new LocationPage(driver);
-		    myIPappPage iptest = new myIPappPage(driver);	    
+		home = new HomePage(driver);
+	    location = new LocationPage(driver); 
+	    iptest = new myIPappPage(driver);
+	    
 	    
 
 	    String country = input.get("country");
@@ -97,43 +86,51 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	   
 
 	    // Connect and disconnect
-	    humanPause("Waiting for connection stability");// wait a bit before connecting
+	    Thread.sleep(2000); // wait a bit before connecting
 	    home.clickConnect();
-	    humanPause("Waiting for connection stability");// wait a bit before connecting
-	    
 	    
 	   String expected_ip = home.VPNiPAddress();
 	   
 	   
 	   System.out.println("IP from vpn applicatoin : "+expected_ip);
 	    
-	
-	    String actualIP = getIp();
+	    Thread.sleep(5000);
+	  
 	    
+	    //Collect IP from third Party Application
+	    driver.activateApp("com.ddm.iptools");
+	    Thread.sleep(2000);
 	    
+	    for(int i = 0 ; i < 3 ;i++) {
+	    	Thread.sleep(2000);
+	    	iptest.clickRefreshButton();
+		    
+	    }
+	    Thread.sleep(1000);
+	    
+	    String actualIP= iptest.getIpAddress();
+	    System.out.println("IP from third party app : "+actualIP);
+	    driver.terminateApp("com.ddm.iptools");
+	    
+	   
 	    //Assert IP 
 	    Assert.assertEquals(actualIP, expected_ip, 
 	    	    "IP mismatch! VPN IP and Third-party IP are not the same.");
-		
-	  
 	    
-	    System.out.println("IP from third party app : "+actualIP);
-	 
 	    
-	   
-	  
+	    driver.activateApp("com.enovavpn.mobile");
 	    
-	    humanPause("After open Enova waiting for stability");
-	    
+	    Thread.sleep(5000); // wait for connection to establish
 	    home.clickDisConnect();
-	    
 
-	    // Handle pop ups if any
+	    // Handle popups if any
 	    home.ClickDisconnectOnPopUp();
 	    home.connectionReportPopClose();
 	    
 	
-	 
+	    
+	    Thread.sleep(1000);
+	    
 	    
 	}
 	

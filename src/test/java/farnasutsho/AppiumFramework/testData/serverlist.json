@@ -1,31 +1,20 @@
 [
-
+	
+	{
+	   "country": "France",
+	   "Server": "France - 6"
+	 },
+	
 	{
 	  "country": "India",
 	  "Server": "India - Premium"
 	},
-	{
-	   "country": "India",
-	   "Server": "India - 2"
-	 },
-	 {
-	    "country": "India",
-	    "Server": "India - 4"
-	  },
-	  
 	
   {
     "country": "India",
     "Server": "India - 3"
   },
-  {
-    "country": "USA",
-    "Server": "USA - 1"
-  },
-  {
-    "country": "USA",
-    "Server": "USA - 10"
-  },
+
 
   {
     "country": "USA",
@@ -44,6 +33,8 @@
     "Server": "USA - Super"
   },
 
+ 
+
   {
     "country": "France",
     "Server": "France - 5"
@@ -54,22 +45,8 @@
   },
 
   {
-     "country": "France",
-     "Server": "France - 4"
-   },
-
-  {
-     "country": "France",
-     "Server": "France Warrior"
-   },
-
-  {
-    "country": "Netherlands",
+    "country": "",
     "Server": "Netherlands - 1"
-  },
-  {
-    "country": "Netherlands",
-    "Server": "Netherlands - 5"
   },
 
   {
@@ -105,21 +82,7 @@
   },
 
   {
-    "country": "",
+    "country": "United Kingdom",
     "Server": "United Kingdom"
-  },
-  {
-    "country": "",
-    "Server": "Sweden - 3"
-  },
-  {
-    "country": "Denmark",
-    "Server": "Denmark - Premium"
-  },
-  
-  {
-    "country": "Denmark",
-    "Server": "Denmark - Warrior"
   }
-  
 ]

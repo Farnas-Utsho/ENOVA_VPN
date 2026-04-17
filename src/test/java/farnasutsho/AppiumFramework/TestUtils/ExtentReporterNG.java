@@ -1,7 +1,5 @@
 package farnasutsho.AppiumFramework.TestUtils;
 
-import java.io.File;
-
 import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -9,33 +7,29 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentReporterNG {
 
-    static ExtentReports extent;
+	static ExtentReports extent ;
+	
+	@BeforeTest
+	public static ExtentReports getReporterObject() {
+		
+		String path = System.getProperty("user.dir")+("\\reports\\index.html");
+		
+		//ExtentSparkReporter
+		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
+		
+		reporter.config().setReportName("Dummy Test");
+		reporter.config().setDocumentTitle("Dummy Test");
+		
+	    extent = new ExtentReports();
+		
+		extent.attachReporter(reporter);
+		
+		extent.setSystemInfo("Tester","Farnas Utsho");
+		return extent;
+		
 
-    public static ExtentReports getReporterObject() {
-
-        // Create reports directory inside project
-        String reportPath = System.getProperty("user.dir") 
-                + "/reports/index.html";
-
-        File reportDir = new File(System.getProperty("user.dir") 
-                + "/reports");
-
-        if (!reportDir.exists()) {
-            reportDir.mkdirs();
-        }
-
-        ExtentSparkReporter reporter = new ExtentSparkReporter(reportPath);
-
-        reporter.config().setReportName("Remitt and Go Test");
-        reporter.config().setDocumentTitle("Remitt and Go Automation Report");
-
-        extent = new ExtentReports();
-        extent.attachReporter(reporter);
-
-        extent.setSystemInfo("Tester", "Farnas Utsho");
-        extent.setSystemInfo("Platform", "Android");
-        extent.setSystemInfo("Framework", "Appium + TestNG");
-
-        return extent;
-    }
+		
+		
+	}
+	
 }
