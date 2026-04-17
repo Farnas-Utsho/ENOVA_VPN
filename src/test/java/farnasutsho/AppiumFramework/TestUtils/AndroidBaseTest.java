@@ -33,8 +33,8 @@ public class AndroidBaseTest extends AppiumUtils {
         service = startAppiumServer(ipAddress, Integer.parseInt(port));
 
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setUdid("3510232000002415"); 
-       // options.setDeviceName("Pixel 4");
+        //options.setUdid("3510232000002415"); 
+        options.setDeviceName("Pixel 4");
 
         // App info
         options.setAppPackage("com.enovavpn.mobile");

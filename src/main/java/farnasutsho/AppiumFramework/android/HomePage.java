@@ -26,7 +26,7 @@ public class HomePage extends AndroidActions{
 	
 	
 	//Shark Connection button
-	@AndroidFindBy(accessibility ="Connected")
+	@AndroidFindBy(uiAutomator ="new UiSelector().className(\"android.widget.ImageView\").instance(3)")
 	private WebElement connectdiscoButton;
 
 	public void clickConnect() {
