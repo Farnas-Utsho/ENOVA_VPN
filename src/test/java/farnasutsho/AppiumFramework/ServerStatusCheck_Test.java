@@ -34,40 +34,36 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	
 
 	
-<<<<<<< HEAD
-=======
+
 	public HomePage home;
 	
 	public LocationPage location;
 	
 	public myIPappPage iptest;
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
+	
+	
+	
+	
+	
+	
+	
 	
 	
 
-	
-	
-<<<<<<< HEAD
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 	    try {
 	        driver.activateApp("com.enovavpn.mobile");
 	    } catch (Exception e) {
 	        System.out.println("App already active or not needed");
+	        
 	    }
-=======
-	@AfterMethod
-	public void preSetup() throws InterruptedException {
-		driver.terminateApp("com.enovavpn.mobile");
-	     
-		Thread.sleep(1000);
-		
-		driver.activateApp("com.enovavpn.mobile");
+
+	}
 	     
 	     
 	   
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
-	}
+
 	
 	public String getIp() throws InterruptedException {
 		
@@ -127,12 +123,9 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    location.SelectServer(server);
 	   
 
-	    // Connect and disconnect
-<<<<<<< HEAD
+
 	    humanPause("Waiting for connection stability");// wait a bit before connecting
-=======
-	    // wait a bit before connecting
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
+
 	    home.clickConnect();
 	    humanPause("Waiting for connection stability");// wait a bit before connecting
 	    
@@ -142,8 +135,7 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	   
 	   System.out.println("IP from vpn applicatoin : "+expected_ip);
 	    
-	
-<<<<<<< HEAD
+
 	    String actualIP = getIp();
 	    
 	    
@@ -151,8 +143,7 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    Assert.assertEquals(actualIP, expected_ip, 
 	    	    "IP mismatch! VPN IP and Third-party IP are not the same.");
 		
-	  
-=======
+
 	  
 	    
 	    //Collect IP from third Party Application
@@ -168,11 +159,11 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    
 	   
 	    
-	    String actualIP= iptest.getIpAddress();
+	    String actIP= iptest.getIpAddress();
 	    System.out.println("IP from third party app : "+actualIP);
 	    
 	    //Assert IP 
-	    Assert.assertEquals(actualIP, expected_ip,
+	    Assert.assertEquals(actIP, expected_ip,
 	            "IP mismatch! VPN IP and Third-party IP are not the same.");
 	    
 
@@ -186,8 +177,7 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    //Reopen Enova VPN 
 	    
 	    driver.activateApp("com.enovavpn.mobile");
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
-	    
+
 	    System.out.println("IP from third party app : "+actualIP);
 	 
 	    
@@ -204,15 +194,6 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    
 	    
 	    home.connectionReportPopClose();
-	    
-	
-<<<<<<< HEAD
-	 
-=======
-	    
-	 
-	    
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
 	    
 	}
 	
@@ -233,10 +214,6 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    return arr;
 	}
 
-	
-	
 
-	
-	
 
 }

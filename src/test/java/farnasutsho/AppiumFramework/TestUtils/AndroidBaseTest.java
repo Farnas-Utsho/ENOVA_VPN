@@ -54,11 +54,7 @@ public class AndroidBaseTest extends AppiumUtils {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
-<<<<<<< HEAD
-   
-=======
-  
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
+
 	@AfterClass
     public void tearDown() {
         if(driver != null) driver.quit();

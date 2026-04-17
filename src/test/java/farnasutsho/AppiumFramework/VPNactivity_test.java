@@ -89,17 +89,15 @@ public class VPNactivity_test extends AndroidBaseTest{
 	    driver.activateApp("cz.webprovider.whatismyipaddress");
 	    Thread.sleep(2000);
 	    
-<<<<<<< HEAD
+
 	    iptest.clickRefreshButton();
 		   
-	    
-=======
+
 	    for(int i = 0 ; i < 3 ;i++) {
 	    	Thread.sleep(2000);
 	    	iptest.clickRefreshButton();
 		    
-	    }
->>>>>>> 05a332220c95ee5e4e787c0fc8b7e3665884913b
+
 	    Thread.sleep(1000);
 	    
 	    String actualIP= iptest.getIpAddress();
@@ -143,7 +141,7 @@ public class VPNactivity_test extends AndroidBaseTest{
 	    driver.activateApp("cz.webprovider.whatismyipaddress");
 	    Thread.sleep(2000);
 	    
-	    for(int i = 0 ; i < 3 ;i++) {
+	    for(int i1 = 0 ; i1 < 3 ;i1++) {
 	    	Thread.sleep(2000);
 	    	iptest.clickRefreshButton();
 		    
@@ -184,4 +182,4 @@ public class VPNactivity_test extends AndroidBaseTest{
 	
 	
 
-}
+	}}
