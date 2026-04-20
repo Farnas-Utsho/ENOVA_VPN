@@ -25,46 +25,40 @@ public class HomePage extends AndroidActions{
 	}
 	
 	
-	//Shark Connection button
-	@AndroidFindBy(uiAutomator ="new UiSelector().className(\"android.widget.ImageView\").instance(3)")
+
+	@AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.ImageView\").instance(3)")
 	private WebElement connectdiscoButton;
 
 	public void clickConnect() {
 
 		clickElement(connectdiscoButton);
 
-		connectdiscoButton.click();
+		
 
 	}
-	
+
 	public void clickDisConnect() {
 		clickElement(connectdiscoButton);
 	}
 	
 	
 	
+	
+	
+	
+	
+	
+	
 
 	
 	
-	@AndroidFindBy(accessibility="DISCONNECT")
-	private WebElement disconnectButton;
-	
-	public void ClickDisconnectOnPopUp() {
 
-	  
+	
 
-		clickElement( disconnectButton);
-	}
 	
 	
 	
-	
-	//Go to location page
-	@AndroidFindBy(xpath="   ")
-	
-	
-	
-	@AndroidFindBy(xpath = "//android.widget.ImageView[1]")
+	@AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.ImageView\").instance(0)")
 	private WebElement closeButton;
 
 	public void connectionReportPopClose() {
@@ -79,19 +73,18 @@ public class HomePage extends AndroidActions{
 	
 	public void GoToServerList() throws InterruptedException {
 
-		Thread.sleep(5000);
-
 		clickElement(serverNameButton);
 	}
 	
 	
-	@AndroidFindBy(xpath="//android.view.View[contains(@content-desc,'Connected')]")
+	@AndroidFindBy(xpath="//android.view.View[contains(@content-desc,'Connected') and contains(@content-desc,'Downloaded')]")
 	private WebElement serverInformation;
 	
 	public String VPNiPAddress() {
 
 	    String fullText = serverInformation.getAttribute("contentDescription");
 
+	   
 	    // Extract IP using regex
 	    Pattern pattern = Pattern.compile("\\b\\d{1,3}(?:\\.\\d{1,3}){3}\\b");
 	    Matcher matcher = pattern.matcher(fullText);
@@ -104,6 +97,15 @@ public class HomePage extends AndroidActions{
 	}
 	
 	
+	
+	@AndroidFindBy(accessibility="DISCONNECT")
+	private WebElement DisconnectOnpopup;
+	
+	public void ClickDisconnectOnPopUp() {
+		// TODO Auto-generated method stub
+		clickElement( DisconnectOnpopup);}
+		
+	
 	@AndroidFindBy(accessibility="Settings")
 	private WebElement settingsIcon;
 	
@@ -114,6 +116,9 @@ public class HomePage extends AndroidActions{
 		return new SettingsPage(driver);
 		
 	}
+	
+	
+
 	
 	
 	

@@ -1,7 +1,10 @@
 package farnasutsho.AppiumFramework.android;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import farnasutsho.AppiumFramework.utils.AndroidActions;
 import io.appium.java_client.android.AndroidDriver;
@@ -26,18 +29,21 @@ public class myIPappPage extends AndroidActions{
 	
 	@AndroidFindBy(id="cz.webprovider.whatismyipaddress:id/zobraz_ip")
 	private WebElement getIP;
-	
 	public String getIpAddress() {
-		
 
-		for(int i = 0 ;i< 3 ;i++) {clickRefreshButton();}
-	
-		String ipAddress = getIP.getText();
-		System.out.println(ipAddress);
-		
-		return ipAddress;
-		
-		
+	    clickRefreshButton();
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+	    wait.until(driver -> {
+	        String text = getIP.getText();
+	        return text != null && !text.trim().isEmpty();
+	    });
+
+	    String ipAddress = getIP.getText();
+	    System.out.println(ipAddress);
+
+	    return ipAddress;
 	}
 	
 	
