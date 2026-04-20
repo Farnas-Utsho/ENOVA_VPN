@@ -95,7 +95,7 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    //Collect IP from third Party Application
 	    driver.activateApp("cz.webprovider.whatismyipaddress");
 	    humanPause();
-	    Thread.sleep(5000);
+	  
 	    
 	    String actualIP = iptest.getIpAddress();
 	    
@@ -106,7 +106,9 @@ public class ServerStatusCheck_Test extends AndroidBaseTest{
 	    
 	    driver.activateApp("com.enovavpn.mobile");
 	   
-	    humanPause();// wait a bit before connecting
+	    humanPause();
+	    
+	    // wait a bit before connecting
 	    String expected_ip = home.VPNiPAddress();
 		   
 		   

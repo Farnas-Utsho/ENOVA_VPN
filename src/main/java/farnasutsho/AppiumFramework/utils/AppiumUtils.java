@@ -87,7 +87,7 @@ public class AppiumUtils {
 	
 	//Human pause 
 	public void humanPause() {
-	    int delay = ThreadLocalRandom.current().nextInt(1000, 2000);
+	    int delay = ThreadLocalRandom.current().nextInt(2000, 5000);
 
 	  //  System.out.println("⏳ Pause (" + delay + " ms) | " + reason);
 

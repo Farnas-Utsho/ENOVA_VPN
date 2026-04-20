@@ -7,7 +7,7 @@
         <methods>
           <include name="presetup"/>
           <include name="ConfigureAppium"/>
-          <include name="serverTest" invocation-numbers="18 5 7 9 25 26 12"/>
+          <include name="serverTest" invocation-numbers="0 16 2 18 3 4 21 7 24 25 26 12"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- farnasutsho.AppiumFramework.ServerStatusCheck_Test -->

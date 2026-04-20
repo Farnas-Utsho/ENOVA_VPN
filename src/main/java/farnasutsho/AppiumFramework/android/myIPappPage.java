@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import farnasutsho.AppiumFramework.utils.AndroidActions;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -33,7 +34,7 @@ public class myIPappPage extends AndroidActions{
 
 	    clickRefreshButton();
 
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
 	    wait.until(driver -> {
 	        String text = getIP.getText();
@@ -53,6 +54,7 @@ public class myIPappPage extends AndroidActions{
 	public void clickRefreshButton() {
 		
 		clickElement(refreshButton);
+	
 		
 		
 		

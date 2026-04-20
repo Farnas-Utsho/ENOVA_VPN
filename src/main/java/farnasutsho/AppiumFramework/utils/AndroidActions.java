@@ -40,10 +40,29 @@ public class AndroidActions extends AppiumUtils{
 
 	public void clickElement(WebElement element) {
 
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
 	    wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 	}
+	
+	public void clickElementUp(By locator) {
+
+		
+
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+
+		    for (int i = 0; i < 3; i++) {
+		        try {
+		            wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+		            return;
+		        } catch (Exception e) {
+		            System.out.println("Click retry " + (i + 1));
+		        }
+		    }
+
+		    throw new RuntimeException("Failed to click: " + locator);
+		}
+	
 	
 	public void longPressAction(WebElement ele)
 	{
