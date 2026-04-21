@@ -129,13 +129,11 @@
                   <a name="serverTest">
                   </a> <!-- serverTest -->
                   <span class="method-name">serverTest</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Cannot inject @Test annotated Method [serverTest] with [class java.util.HashMap].
-For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:699)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
+                  <div class="stack-trace">java.lang.RuntimeException: com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;{&apos; (code 123)): was expecting comma to separate Array entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 61, column: 6]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
 	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
 	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
@@ -159,6 +157,27 @@ For more information on native dependency injection please refer to https://test
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;{&apos; (code 123)): was expecting comma to separate Array entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 61, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2675)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:743)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._skipComma(ReaderBasedJsonParser.java:2429)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:691)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:349)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3937)
+	at farnasutsho.AppiumFramework.utils.AppiumUtils.getJsonData(AppiumUtils.java:68)
+	at farnasutsho.AppiumFramework.IOS.ServerStatusCheck.getData(ServerStatusCheck.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
+	... 25 more
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -168,7 +187,7 @@ For more information on native dependency injection please refer to https://test
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/lm/w3clddr13894zdyxqx9fjzb40000gn/T/testng-eclipse--1476946055/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/lm/w3clddr13894zdyxqx9fjzb40000gn/T/testng-eclipse-1807274893/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -259,7 +278,7 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13641 ms</span>
+                <span class="method-start">15103 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

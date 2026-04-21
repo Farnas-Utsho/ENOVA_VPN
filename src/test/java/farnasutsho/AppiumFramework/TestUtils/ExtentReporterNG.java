@@ -2,8 +2,6 @@ package farnasutsho.AppiumFramework.TestUtils;
 
 import java.io.File;
 
-import org.testng.annotations.BeforeTest;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
@@ -26,8 +24,8 @@ public class ExtentReporterNG {
 
         ExtentSparkReporter reporter = new ExtentSparkReporter(reportPath);
 
-        reporter.config().setReportName("Remitt and Go Test");
-        reporter.config().setDocumentTitle("Remitt and Go Automation Report");
+        reporter.config().setReportName("Enova serve Test");
+        reporter.config().setDocumentTitle("Server Report");
 
         extent = new ExtentReports();
         extent.attachReporter(reporter);
@@ -38,4 +36,4 @@ public class ExtentReporterNG {
 
         return extent;
     }
-}
+} 

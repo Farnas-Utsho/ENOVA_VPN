@@ -39,41 +39,43 @@ public class ServerStatusCheck extends IOSBaseTest{
 	
 	@Test(dataProvider="getData") 
 	public void serverTest(HashMap<String ,String> input) throws InterruptedException {
-		
-		home = new IOSHomePage(driver);
-		location = new IOSLocationPage (driver);
-		app = new IOSThirdPartyAPP(driver);
-		
-		home.goToLocationPage();
-		String country = input.get("country"); 
-		String server = input.get("Server"); 
-		
-		if (country == null || country.trim().isEmpty()) {
-		    location.SelectServer(server);
-		} else {
-		    location.SelectCountry(country);
-		    location.SelectServer(server);
-		}
-		home.clickconnect(); 
-		Thread.sleep(8000);
-		
-		driver.activateApp("com.monvpn.myip");
-		Thread.sleep(8000);
-		
-		String actualIP= app.extractIP(); 
-		driver.activateApp("com.enovavpn.mobile");
-		Thread.sleep(8000);
-		home.clickDisconnect();
-		home.clickdisconnectOnPopup();
-		String enovaIP = home.extractIP();
-		home.clickCloseConnectionReport();
-		
-	
-		
-		Assert.assertEquals(enovaIP, actualIP);
 
-		
-		
+	 
+
+	    home = new IOSHomePage(driver);
+	    location = new IOSLocationPage(driver);
+	    app = new IOSThirdPartyAPP(driver);
+
+	    home.goToLocationPage();
+
+	    String country = input.get("country"); 
+	    String server = input.get("Server"); 
+
+	    if (country == null || country.trim().isEmpty()) {
+	        location.SelectServer(server);
+	    } else {
+	        location.SelectCountry(country); 
+	        location.SelectServer(server);
+	    }
+
+	    home.clickconnect(); 
+	    Thread.sleep(8000);
+
+	    driver.activateApp("com.monvpn.myip");
+	    Thread.sleep(8000);
+
+	    String actualIP = app.extractIP(); 
+
+	    driver.activateApp("com.enovavpn.mobile");
+	    Thread.sleep(8000);
+	    
+	    home.clickDisconnect();
+	    home.clickdisconnectOnPopup();
+
+	    String enovaIP = home.extractIP();
+	    home.clickCloseConnectionReport();
+
+	    Assert.assertEquals(enovaIP, actualIP);
 	}
 	
 	

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Apr 21 15:16:18 GMT+06:00 2026</td>
+<td>Started on:</td><td>Tue Apr 21 16:30:45 GMT+06:00 2026</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13749 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15161 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,13 +77,11 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='farnasutsho.AppiumFramework.IOS.ServerStatusCheck.serverTest()'><b>serverTest</b><br>Test class: farnasutsho.AppiumFramework.IOS.ServerStatusCheck</td>
-<td><div><pre>org.testng.TestNGException: 
-Cannot inject @Test annotated Method [serverTest] with [class java.util.HashMap].
-For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:699)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
+<td><div><pre>java.lang.RuntimeException: com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;{&apos; (code 123)): was expecting comma to separate Array entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 61, column: 6]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
 	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
 	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
@@ -107,14 +105,33 @@ For more information on native dependency injection please refer to https://test
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace828326869", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace828326869'><pre>org.testng.TestNGException: 
-Cannot inject @Test annotated Method [serverTest] with [class java.util.HashMap].
-For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:699)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;{&apos; (code 123)): was expecting comma to separate Array entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 61, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2675)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:743)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._skipComma(ReaderBasedJsonParser.java:2429)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:691)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:349)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3937)
+	at farnasutsho.AppiumFramework.utils.AppiumUtils.getJsonData(AppiumUtils.java:68)
+	at farnasutsho.AppiumFramework.IOS.ServerStatusCheck.getData(ServerStatusCheck.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
+	... 25 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace2114537280", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2114537280'><pre>java.lang.RuntimeException: com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;{&apos; (code 123)): was expecting comma to separate Array entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 61, column: 6]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
 	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
 	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
@@ -138,6 +155,27 @@ For more information on native dependency injection please refer to https://test
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;{&apos; (code 123)): was expecting comma to separate Array entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 61, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2675)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:743)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._skipComma(ReaderBasedJsonParser.java:2429)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:691)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:349)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3937)
+	at farnasutsho.AppiumFramework.utils.AppiumUtils.getJsonData(AppiumUtils.java:68)
+	at farnasutsho.AppiumFramework.IOS.ServerStatusCheck.getData(ServerStatusCheck.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
+	... 25 more
 </pre></div></td>
 <td>0</td>
 <td>farnasutsho.AppiumFramework.IOS.ServerStatusCheck@36bc55de</td></tr>

@@ -9,17 +9,15 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">13,749</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">15,161</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">farnasutsho.AppiumFramework.IOS.ServerStatusCheck</td><td><a href="#m0">serverTest</a></td><td rowspan="1">1776762992329</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">farnasutsho.AppiumFramework.IOS.ServerStatusCheck</td><td><a href="#m0">serverTest</a></td><td rowspan="1">1776767460293</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">farnasutsho.AppiumFramework.IOS.ServerStatusCheck#serverTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Cannot inject @Test annotated Method [serverTest] with [class java.util.HashMap].
-For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:699)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
+<h2>Default test</h2><h3 id="m0">farnasutsho.AppiumFramework.IOS.ServerStatusCheck#serverTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;{&apos; (code 123)): was expecting comma to separate Array entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 61, column: 6]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
 	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
 	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
@@ -43,6 +41,27 @@ For more information on native dependency injection please refer to https://test
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character (&apos;{&apos; (code 123)): was expecting comma to separate Array entries
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 61, column: 6]
+	at com.fasterxml.jackson.core.JsonParser._constructReadException(JsonParser.java:2675)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:743)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._skipComma(ReaderBasedJsonParser.java:2429)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:691)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:349)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:5052)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3954)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3937)
+	at farnasutsho.AppiumFramework.utils.AppiumUtils.getJsonData(AppiumUtils.java:68)
+	at farnasutsho.AppiumFramework.IOS.ServerStatusCheck.getData(ServerStatusCheck.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
+	... 25 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -3,9 +3,13 @@
 
 <suite name="Suite">
 
+  <listeners>
+    <listener class-name="farnasutsho.AppiumFramework.TestUtils.Listeners"/>
+  </listeners>
+
   <test name="Server Status check">
     <classes>
-      <class name="farnasutsho.AppiumFramework.ServerStatusCheck_Test"/>
+      <class name="farnasutsho.AppiumFramework.IOS.ServerStatusCheck"/>
     </classes>
   </test>
 
