@@ -1,16 +1,20 @@
 package farnasutsho.AppiumFramework.iOS;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import farnasutsho.AppiumFramework.utils.IOSActions;
-
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -20,8 +24,9 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
  */
 public class IOSHomePage extends IOSActions{
 	
+	
 	IOSDriver driver ;
-	public IOSHomePage(IOSDriver driver)
+	public IOSHomePage (IOSDriver driver)
 	{
 		super(driver);
 		this.driver =driver;
@@ -29,66 +34,104 @@ public class IOSHomePage extends IOSActions{
 		
 	}
 
-
 	
 	
 
+//Home page locators 
 	
-  @iOSXCUITFindBy(iOSClassChain="**/XCUIElementTypeImage[`name == \"Connect\"`]")	
-  private WebElement ConnectButton ;
-  
-  public void ClickConnect() {
-	  
-	  ConnectButton.click();
-	  
-  }
-  
-  
-  @iOSXCUITFindBy(iOSClassChain="**/XCUIElementTypeImage[`name == \"Connected\"`]")
-  private WebElement DisconnectionButton;
-  
-  public void ClickDisconnect() {
-	  
-	  DisconnectionButton.click();
-	  
-  }
-  
-  
-  @iOSXCUITFindBy(iOSNsPredicate =
-		    "name CONTAINS 'server available'"
-		)
-		private WebElement serverList;
-  
-  
-  public void GoToServerList() {
-	  
-	  serverList.click();
-  }
-  
-  @iOSXCUITFindBy(iOSNsPredicate = "name CONTAINS 'MB'")
-  private List<WebElement> mbElements;
-  
+ private By locationPage = AppiumBy.className("XCUIElementTypeStaticText");
+ 
+ private By connectButton = AppiumBy.iOSClassChain("**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]");
+ 
+ private By disconnectButton = AppiumBy.iOSClassChain("**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]");
 
-  public String extractIP() {
+ private By disconnectOnPopup = AppiumBy.accessibilityId("DISCONNECT");
+ 
+private By ipAddress =
+		    AppiumBy.iOSNsPredicateString("name MATCHES '[0-9]{1,3}(\\.[0-9]{1,3}){3}'");
+	
+private By closeReport = AppiumBy.iOSClassChain("**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[1]")	;
+  
+ 
+ 
+ //Necessary functions 
+public void clickconnect() {
+	
+	clickElement(connectButton);
+	
+}
 
+public void clickDisconnect() {
+	clickElement(disconnectButton );
+	
+}
+
+public void clickdisconnectOnPopup() {
+	clickElement(disconnectOnPopup );
+	
+}
+
+public void goToLocationPage() {
+	
+	clickElement(locationPage);
+}
+
+public void clickCloseConnectionReport() {
+	
+	clickElement(closeReport);
+	
+}
+
+
+ 
+	public String extractIP() {
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 	    Pattern pattern = Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b");
 
-	    for (WebElement el : mbElements) {
+	    try {
+	    	
+	    	
+	        // wait until ANY element contains a valid IP
+	        Boolean ipFound = wait.until(driver -> {
+	            List<WebElement> elements = driver.findElements(ipAddress);
 
-	        String text = el.getText();
+	            for (WebElement el : elements) {
+	                String text = el.getText();
+	                if (text == null) continue;
 
-	        if (text == null) continue;
+	                Matcher matcher = pattern.matcher(text);
+	                if (matcher.find()) {
+	                    return true;
+	                }
+	            }
+	            return false;
+	        });
 
-	        Matcher matcher = pattern.matcher(text);
-
-	        if (matcher.find()) {
-	            return matcher.group();
+	        if (!ipFound) {
+	            return null;
 	        }
-	    }
 
-	    throw new RuntimeException("IP not found");
+	        // extract again after wait succeeds
+	        List<WebElement> elements = driver.findElements(ipAddress);
+
+	        for (WebElement el : elements) {
+	            String text = el.getText();
+	            if (text == null) continue;
+
+	            Matcher matcher = pattern.matcher(text);
+	            if (matcher.find()) {
+	                return matcher.group();
+	            }
+	        }
+
+	        return null; 
+
+	    } catch (TimeoutException e) {
+	        System.out.println("IP not found within timeout");
+	        return null;
+	    }
 	}
-  
-  
-  
+ 
+ 
 }

@@ -1,25 +1,10 @@
 [
 
   {
-    "country": "India",
-    "Server": "India - Premium"
-  },
-  {
-    "country": "India",
+    "country": "",
     "Server": "India - 2"
   },
-  {
-    "country": "India",
-    "Server": "India - 4"
-  },
-  {
-    "country": "India",
-    "Server": "India - 3"
-  },
-  {
-    "country": "USA",
-    "Server": "USA - 1"
-  },
+
   {
     "country": "USA",
     "Server": "USA - 10"
@@ -34,25 +19,17 @@
   },
   {
     "country": "USA",
-    "Server": "USA - Premium"
-  },
-  {
-    "country": "USA",
     "Server": "USA - Super"
   },
   {
     "country": "France",
     "Server": "France - 5"
   },
-  
   {
     "country": "France",
     "Server": "France - Special"
   },
-  {
-    "country": "France",
-    "Server": "France - 4"
-  },
+
   {
     "country": "France",
     "Server": "France Warrior"
@@ -65,22 +42,12 @@
     "country": "Netherlands",
     "Server": "Netherlands - 5"
   },
+
   {
     "country": "",
-    "Server": "Brazil"
-  },
-  {
-    "country": "Singapore",
-    "Server": "Singapore"
-  },
-  {
-    "country": "Singapore",
     "Server": "Singapore - 1"
   },
-  {
-    "country": "Singapore",
-    "Server": "Singapore - Premium"
-  },
+
   {
     "country": "Germany",
     "Server": "Germany - 6"
@@ -89,18 +56,12 @@
     "country": "Germany",
     "Server": "Germany Premium - 2"
   },
-  {
-    "country": "",
-    "Server": "Japan"
-  },
+
   {
     "country": "",
     "Server": "United Kingdom"
   },
-  {
-    "country": "",
-    "Server": "Sweden - 3"
-  },
+
   {
     "country": "Denmark",
     "Server": "Denmark - Premium"

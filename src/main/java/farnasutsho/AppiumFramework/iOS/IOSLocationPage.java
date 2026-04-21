@@ -33,9 +33,8 @@ public class IOSLocationPage extends IOSActions{
 	public void SelectCountry(String country) throws InterruptedException {
 
 	    iOSScroll();
-
-	    String predicate =
-	        "name BEGINSWITH '" + country + "' AND name CONTAINS 'servers'";
+	    
+	    String predicate = "name == '" + country + "'";
 
 	    driver.findElement(AppiumBy.iOSNsPredicateString(predicate)).click();
 	}
