@@ -2,6 +2,7 @@ package farnasutsho.AppiumFramework.android;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -48,8 +49,8 @@ public class myIPappPage extends AndroidActions{
 	}
 	
 	
-	@AndroidFindBy(id="cz.webprovider.whatismyipaddress:id/refresh_info")
-	private WebElement refreshButton;
+
+	private By refreshButton = AppiumBy.id("\"cz.webprovider.whatismyipaddress:id/refresh_info\"");
 	
 	public void clickRefreshButton() {
 		

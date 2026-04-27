@@ -8,7 +8,7 @@
           <include name="ConfigureAppium"/>
           <include name="preSetup"/>
           <include name="tearDown"/>
-          <include name="serverTest"/>
+          <include name="serverTest" invocation-numbers="0 6 7 15"/>
         </methods>
       </class> <!-- farnasutsho.AppiumFramework.IOS.ServerStatusCheck -->
     </classes>

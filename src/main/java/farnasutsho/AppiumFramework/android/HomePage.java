@@ -3,10 +3,12 @@ package farnasutsho.AppiumFramework.android;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import farnasutsho.AppiumFramework.utils.AndroidActions;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -26,9 +28,13 @@ public class HomePage extends AndroidActions{
 	
 	
 
-	@AndroidFindBy(uiAutomator="new UiSelector().className(\"android.widget.ImageView\").instance(3)")
-	private WebElement connectdiscoButton;
+	private By connectdiscoButton = AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(3)");
+	
+	
 
+	
+	
+	
 	public void clickConnect() {
 
 		clickElement(connectdiscoButton);
@@ -56,10 +62,8 @@ public class HomePage extends AndroidActions{
 	
 
 	
+	private By closeButton = AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(0)");
 	
-	
-	@AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.ImageView\").instance(0)")
-	private WebElement closeButton;
 
 	public void connectionReportPopClose() {
 		clickElement(closeButton);
@@ -67,14 +71,16 @@ public class HomePage extends AndroidActions{
 	
 	
 	
+	private By serverNameButton = AppiumBy.xpath("//android.view.View[contains(@content-desc,'Auto')]");
 	
-	@AndroidFindBy(xpath="//android.view.View[contains(@content-desc,'Auto')]")
-	private WebElement serverNameButton;
+	
 	
 	public void GoToServerList() throws InterruptedException {
 
 		clickElement(serverNameButton);
 	}
+	
+	
 	
 	
 	@AndroidFindBy(xpath="//android.view.View[contains(@content-desc,'Connected') and contains(@content-desc,'Downloaded')]")
@@ -98,16 +104,18 @@ public class HomePage extends AndroidActions{
 	
 	
 	
-	@AndroidFindBy(accessibility="DISCONNECT")
-	private WebElement DisconnectOnpopup;
+	
+	private By DisconnectOnpopup = AppiumBy.accessibilityId("DISCONNECT");
+	
+	
+	
 	
 	public void ClickDisconnectOnPopUp() {
 		// TODO Auto-generated method stub
 		clickElement( DisconnectOnpopup);}
 		
 	
-	@AndroidFindBy(accessibility="Settings")
-	private WebElement settingsIcon;
+	private By settingsIcon  = AppiumBy.accessibilityId("Settings");
 	
 	public SettingsPage clickSettings() {
 		
