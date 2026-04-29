@@ -52,7 +52,11 @@ private By ipAddress =
 	
 private By closeReport = AppiumBy.iOSClassChain("**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[1]")	;
   
- 
+//Settings Menu 
+private By SettingsIcon = AppiumBy.iOSNsPredicateString("name CONTAINS 'Settings'");
+	
+
+
  
  //Necessary functions 
 public void clickconnect() {
@@ -114,7 +118,7 @@ public void clickCloseConnectionReport() {
 
 	        // extract again after wait succeeds
 	        List<WebElement> elements = driver.findElements(ipAddress);
-
+	        System.out.println(elements);
 	        for (WebElement el : elements) {
 	            String text = el.getText();
 	            if (text == null) continue;
@@ -132,6 +136,15 @@ public void clickCloseConnectionReport() {
 	        return null;
 	    }
 	}
+	
+	
+	public IOSSettingsPage clickSettings() {
+		
+		clickElement(SettingsIcon);
+		
+		return new IOSSettingsPage (driver);
+	}
+	
  
  
 }

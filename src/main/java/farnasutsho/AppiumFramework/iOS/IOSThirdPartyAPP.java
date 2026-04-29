@@ -47,9 +47,15 @@ public class IOSThirdPartyAPP extends IOSActions{
 	private By ipAddress =
 		    AppiumBy.iOSNsPredicateString("name MATCHES '[0-9]{1,3}(\\.[0-9]{1,3}){3}'");
 	
+//
+////Will be changed based on the Third party app
+//	private By refreshButton = AppiumBy.accessibilityId("Update info");
+//	
+	
+//Will be changed based on the Third party app
+		private By refreshButton = AppiumBy.xpath("//XCUIElementTypeButton");	
 
-
-	private By refreshButton = AppiumBy.accessibilityId("Refresh");
+	//"Update info"
 
 
 
@@ -76,14 +82,16 @@ public void clickRefreshButton() {
 public String extractIP() {
 	
 	
-	clickRefreshButton();
-
+	
+			
     
-    try {
+    try {  clickRefreshButton();
     	
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         Pattern pattern = Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b");
-
+        
+        
+        clickRefreshButton();
     	
         // wait until ANY element contains a valid IP
         Boolean ipFound = wait.until(driver -> {
@@ -107,7 +115,7 @@ public String extractIP() {
 
         // extract again after wait succeeds
         List<WebElement> elements = driver.findElements(ipAddress);
-
+        System.out.println(elements);
         for (WebElement el : elements) {
             String text = el.getText();
             if (text == null) continue;

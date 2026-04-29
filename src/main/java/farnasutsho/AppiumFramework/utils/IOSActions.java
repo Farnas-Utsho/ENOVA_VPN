@@ -10,16 +10,14 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+
 
 /**
  * Hello world!
@@ -58,6 +56,14 @@ public class IOSActions extends AppiumUtils{
 			    
 			));
 		}while(canScrollMore);
+	}
+	
+	
+	public void clickAtCoordinates(int x, int y) {
+	    driver.executeScript("mobile: tap", Map.of(
+	        "x", x,
+	        "y", y
+	    ));
 	}
 	
 	
@@ -144,5 +150,25 @@ private void sleep(long ms) {
 try {
 Thread.sleep(ms);
 } catch (InterruptedException ignored) {}
-}   		
+} 
+
+
+private By vpnSettings = AppiumBy.accessibilityId("com.apple.settings.vpn");
+private By vpnStatus = AppiumBy.accessibilityId("VPN Status, Connected");
+
+public void turnoffVPNFromSettings() throws InterruptedException {
+
+    driver.activateApp("com.apple.Preferences");
+    Thread.sleep(8000);
+	
+   clickElement(vpnSettings);
+    
+   clickElement(vpnStatus);
+    
+     
+	
+}
+
+
+
 }     	

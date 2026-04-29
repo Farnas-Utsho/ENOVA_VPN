@@ -61,7 +61,7 @@ public class ServerStatusCheck extends IOSBaseTest{
 	    home.clickconnect(); 
 	    Thread.sleep(8000);
 
-	    driver.activateApp("com.monvpn.myip");
+	    driver.activateApp("GAAG.myIP");
 	    Thread.sleep(8000);
 
 	    String actualIP = app.extractIP(); 

@@ -11,125 +11,163 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <name>AppiumFramework</name>
-    <url>http://www.example.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>17</maven.compiler.release>
-        
-        <!-- Appium & Test dependencies versions -->
-        <appium.java-client.version>10.1.0</appium.java-client.version>
-        <selenium.version>4.27.0</selenium.version>   <!-- Compatible with Appium 10.x -->
-        <testng.version>7.10.2</testng.version>
-        <junit.jupiter.version>5.11.4</junit.jupiter.version>
+
+        <!-- Java -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+
+        <!-- Dependencies -->
+        <appium.java-client.version>10.1.0</appium.java-client.version>
+        <selenium.version>4.27.0</selenium.version>
+        <testng.version>7.10.2</testng.version>
         <extentreports.version>5.1.2</extentreports.version>
+        <jackson.version>2.21.2</jackson.version>
+        <commons.io.version>2.17.0</commons.io.version>
+
+        <!-- CI -->
+        <skipTests>false</skipTests>
     </properties>
 
     <dependencies>
-        <!-- Appium Java Client -->
+
+        <!-- Appium -->
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
             <version>${appium.java-client.version}</version>
         </dependency>
 
-        <!-- Selenium (required by Appium) -->
+        <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
 
-        <!-- TestNG (recommended for Appium frameworks) -->
+        <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
-        
-        <dependency>
-    <groupId>commons-io</groupId>
-    <artifactId>commons-io</artifactId>
-    <version>2.17.0</version>  <!-- or latest version -->
-</dependency>
-        
-        <!-- Source: https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-  <dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>${extentreports.version}</version>
-    <scope>compile</scope>
-   </dependency>
-   
-   <!-- Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-    <version>2.21.2</version>
-    <scope>compile</scope>
-</dependency>
-   
-   <!-- Source: https://mvnrepository.com/artifact/commons-io/commons-io -->
-<dependency>
-    <groupId>commons-io</groupId>
-    <artifactId>commons-io</artifactId>
-    <version>2.21.0</version>
-    <scope>compile</scope>
-</dependency>
 
-    
+        <!-- Extent Reports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentreports.version}</version>
+        </dependency>
+
+        <!-- Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- Commons IO -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons.io.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <!-- Clean -->
-                <plugin>
-                    <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.4.0</version>
-                </plugin>
-
-                <!-- Resources -->
-                <plugin>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.3.1</version>
-                </plugin>
-
-                <!-- Compiler -->
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.13.0</version>
-                </plugin>
-
-                <!-- Surefire (for running tests) -->
-                <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.5.0</version>
-                </plugin>
-
-                <!-- Jar -->
-                <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.4.2</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-
         <plugins>
-            <!-- Surefire plugin configuration (optional but useful) -->
+
+            <!-- Compiler -->
             <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
                 <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/*Tests.java</include>
-                    </includes>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
+
+            <!-- Surefire (Unit + TestNG execution) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <skipTests>${skipTests}</skipTests>
+
+                    <!-- Jenkins-friendly reports -->
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+
+                    <!-- TestNG suite support -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>EnvoaRegressionTest.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+
+                    <!-- Fail build on test failure -->
+                    <testFailureIgnore>false</testFailureIgnore>
+                </configuration>
+            </plugin>
+
+            <!-- Failsafe (for integration / mobile tests if separated) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- JaCoCo Code Coverage (Jenkins plugin reads this easily) -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.12</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
+
+    <!-- CI PROFILE (Jenkins use: mvn clean test -Pci) -->
+    <profiles>
+        <profile>
+            <id>regression</id>
+            <properties>
+                <skipTests>false</skipTests>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>skip-tests</id>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>

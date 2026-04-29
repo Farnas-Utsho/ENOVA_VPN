@@ -1,5 +1,6 @@
 package farnasutsho.AppiumFramework.iOS;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import farnasutsho.AppiumFramework.utils.IOSActions;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumBy.ById;
 import io.appium.java_client.ios.IOSDriver;
 
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -24,7 +26,15 @@ public class IOSLocationPage extends IOSActions{
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this); //
 		
 	}
+	
+	private By ServerSwitch = AppiumBy.accessibilityId("Switch");
 
+	
+	public void  clickSwitch() {
+		
+		clickElement(ServerSwitch);
+		
+	}
 
 
 
