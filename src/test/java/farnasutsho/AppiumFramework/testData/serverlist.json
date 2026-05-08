@@ -24,14 +24,6 @@
     "Server": "USA - Super"
   },
   {
-    "country": "France",
-    "Server": "France - Special"
-  },
-  {
-    "country": "France",
-    "Server": "France Warrior"
-  },
-  {
     "country": "Netherlands",
     "Server": "Netherlands - 1"
   },
@@ -62,15 +54,6 @@
   {
     "country": "",
     "Server": "United Kingdom"
-  },
-  {
-    "country": "Denmark",
-    "Server": "Denmark - Premium"
-  },
-  {
-    "country": "Denmark",
-    "Server": "Denmark - Warrior"
   }
- 
 
 ]

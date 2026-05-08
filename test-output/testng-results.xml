@@ -1,45 +1,1101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="0" failed="0" skipped="14">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-29T15:02:35 GMT+06:00" name="Suite" finished-at="2026-04-29T15:06:22 GMT+06:00" duration-ms="226305">
+  <suite started-at="2026-05-07T17:54:35 GMT+06:00" name="Default suite" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="1708">
     <groups>
     </groups>
-    <test started-at="2026-04-29T15:02:35 GMT+06:00" name="Server Status check" finished-at="2026-04-29T15:06:22 GMT+06:00" duration-ms="226305">
-      <class name="farnasutsho.AppiumFramework.IOS.EnovaVPN_test">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@548a24a]" started-at="2026-04-29T15:02:35 GMT+06:00" name="ConfigureAppium" finished-at="2026-04-29T15:02:50 GMT+06:00" duration-ms="14768" status="PASS">
+    <test started-at="2026-05-07T17:54:35 GMT+06:00" name="Default test" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="1708">
+      <class name="farnasutsho.AppiumFramework.ServerStatusCheck_Test">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:35 GMT+06:00" name="ConfigureAppium" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="1577" status="FAIL">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method signature="KillSwitchTest()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@548a24a]" started-at="2026-04-29T15:02:50 GMT+06:00" name="KillSwitchTest" finished-at="2026-04-29T15:04:22 GMT+06:00" duration-ms="91941" status="PASS">
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=India - 3, country=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- KillSwitchTest -->
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@548a24a]" started-at="2026-04-29T15:04:22 GMT+06:00" name="preSetup" finished-at="2026-04-29T15:04:24 GMT+06:00" duration-ms="2559" status="PASS">
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- preSetup -->
-        <test-method signature="ServerSwitch_Test()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@548a24a]" started-at="2026-04-29T15:04:24 GMT+06:00" name="ServerSwitch_Test" finished-at="2026-04-29T15:05:30 GMT+06:00" duration-ms="65055" status="PASS">
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - 10, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ServerSwitch_Test -->
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@548a24a]" started-at="2026-04-29T15:05:30 GMT+06:00" name="preSetup" finished-at="2026-04-29T15:05:32 GMT+06:00" duration-ms="2576" status="PASS">
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- preSetup -->
-        <test-method signature="SplitTunneling_Test()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@548a24a]" started-at="2026-04-29T15:05:32 GMT+06:00" name="SplitTunneling_Test" finished-at="2026-04-29T15:06:19 GMT+06:00" duration-ms="46536" status="PASS">
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - 4, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SplitTunneling_Test -->
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@548a24a]" started-at="2026-04-29T15:06:19 GMT+06:00" name="preSetup" finished-at="2026-04-29T15:06:21 GMT+06:00" duration-ms="2745" status="PASS">
+        </test-method> <!-- serverTest -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - 13, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- preSetup -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@548a24a]" started-at="2026-04-29T15:06:21 GMT+06:00" name="tearDown" finished-at="2026-04-29T15:06:22 GMT+06:00" duration-ms="84" status="PASS">
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - Premium, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - Super, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Netherlands - 1, country=Netherlands}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Netherlands - 5, country=Netherlands}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Singapore - 1, country=Singapore}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Singapore, country=Singapore}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Singapore - Premium, country=Singapore}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Germany - 6, country=Germany}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Germany Premium - 2, country=Germany}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=United Kingdom, country=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Neither ANDROID_HOME nor ANDROID_SDK_ROOT environment variable was exported. Read https://developer.android.com/studio/command-line/variables for more details 
+Host info: host: 'Farnass-MacBook-Air.local', ip: 'fe80:0:0:0:401:ec30:e918:7192%en0'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.3.1', java.version: '26'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}]}]
+Capabilities {appium:appActivity: com.enovavpn.mobile.MainAct..., appium:appPackage: com.enovavpn.mobile, appium:appWaitActivity: com.enovavpn.mobile.MainAct..., appium:appWaitDuration: 60000, appium:automationName: UIAutomator2, appium:deviceName: Pixel 4, appium:fullReset: false, appium:noReset: true, platformName: ANDROID}
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:170)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:308)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:199)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:109)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:108)
+at farnasutsho.AppiumFramework.TestUtils.AndroidBaseTest.ConfigureAppium(AndroidBaseTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="tearDown" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- farnasutsho.AppiumFramework.IOS.EnovaVPN_test -->
-    </test> <!-- Server Status check -->
-  </suite> <!-- Suite -->
+        <test-method is-config="true" signature="presetup()[pri:0, instance:farnasutsho.AppiumFramework.ServerStatusCheck_Test@36bc55de]" started-at="2026-05-07T17:54:37 GMT+06:00" name="presetup" finished-at="2026-05-07T17:54:37 GMT+06:00" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- presetup -->
+      </class> <!-- farnasutsho.AppiumFramework.ServerStatusCheck_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
