@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import farnasutsho.AppiumFramework.utils.AndroidActions;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class LocationPage extends AndroidActions{

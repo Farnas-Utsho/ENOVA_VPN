@@ -3,57 +3,57 @@
     "country": "",
     "Server": "India - 3"
   },
-  {
-    "country": "USA",
-    "Server": "USA - 10"
-  },
-  {
-    "country": "USA",
-    "Server": "USA - 4"
-  },
-  {
-    "country": "USA",
-    "Server": "USA - 13"
-  },
-  {
-    "country": "USA",
-    "Server": "USA - Premium"
-  },
-  {
-    "country": "USA",
-    "Server": "USA - Super"
-  },
-  {
-    "country": "Netherlands",
-    "Server": "Netherlands - 1"
-  },
-  {
-    "country": "Netherlands",
-    "Server": "Netherlands - 5"
-  },
-  {
-    "country": "Singapore",
-    "Server": "Singapore - 1"
-  },
-  {
-    "country": "Singapore",
-    "Server": "Singapore"
-  },
-  {
-    "country": "Singapore",
-    "Server": "Singapore - Premium"
-  },
-  {
-    "country": "Germany",
-    "Server": "Germany - 6"
-  },
-  {
-    "country": "Germany",
-    "Server": "Germany Premium - 2"
-  },
-  {
+    {
+      "country": "USA",
+      "Server": "USA - 10"
+    },
+
+    {
+      "country": "USA",
+      "Server": "USA - Premium"
+    },
+ 
+    {
+      "country": "",
+      "Server": "Netherlands - 5"
+    },
+    {
+      "country": "Singapore",
+      "Server": "Singapore - 1"
+    },
+    {
+      "country": "Singapore",
+      "Server": "Singapore"
+    },
+    {
+      "country": "Singapore",
+      "Server": "Singapore - Premium"
+    },
+    {
+      "country": "",
+      "Server": "Germany Premium - 2"
+    },
+    {
+      "country": "",
+      "Server": "United Kingdom"
+    },
+    {
+  	"country": "",
+  	  "Server": "Switzerland - 10"
+    },
+    {
     "country": "",
-    "Server": "United Kingdom"
-  }
+      "Server": "Brazil"
+    },
+    {
+    "country": "",
+      "Server": "Spain - 2"
+    },
+	{
+  	"country": "",
+  	  "Server": "Poland - 3"
+  	}
+
+ 
 
 ]

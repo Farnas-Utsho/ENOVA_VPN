@@ -79,61 +79,104 @@ public void clickRefreshButton() {
   
   
   
+//public String extractIP() {
+//	
+//	
+//	
+//			
+//    
+//    try {  clickRefreshButton();
+//    	
+//    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//        Pattern pattern = Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b");
+//        
+//        
+//        clickRefreshButton();
+//    	
+//        // wait until ANY element contains a valid IP
+//        Boolean ipFound = wait.until(driver -> {
+//            List<WebElement> elements = driver.findElements(ipAddress);
+//
+//            for (WebElement el : elements) {
+//                String text = el.getText();
+//                if (text == null) continue;
+//
+//                Matcher matcher = pattern.matcher(text);
+//                if (matcher.find()) {
+//                    return true;
+//                }
+//            }
+//            return false;
+//        });
+//
+//        if (!ipFound) {
+//            return null;
+//        }
+//
+//        // extract again after wait succeeds
+//        List<WebElement> elements = driver.findElements(ipAddress);
+//        System.out.println(elements);
+//        for (WebElement el : elements) {
+//            String text = el.getText();
+//            if (text == null) continue;
+//
+//            Matcher matcher = pattern.matcher(text);
+//            if (matcher.find()) {
+//                return matcher.group();
+//            }
+//        }
+//
+//        return null;
+//
+//    } catch (TimeoutException e) {
+//        System.out.println("IP not found within timeout");
+//        return null;
+//    }
+//}
+  
+
+private By reloadButton = AppiumBy.accessibilityId("ReloadButton");
+
+public void clickReloadButton() {
+	
+	clickElement(reloadButton);
+}
+
 public String extractIP() {
-	
-	
-	
-			
-    
-    try {  clickRefreshButton();
+
+    try {
+
     	
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        Pattern pattern = Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b");
-        
-        
-        clickRefreshButton();
-    	
-        // wait until ANY element contains a valid IP
-        Boolean ipFound = wait.until(driver -> {
-            List<WebElement> elements = driver.findElements(ipAddress);
-
-            for (WebElement el : elements) {
-                String text = el.getText();
-                if (text == null) continue;
-
-                Matcher matcher = pattern.matcher(text);
-                if (matcher.find()) {
-                    return true;
-                }
-            }
-            return false;
-        });
-
-        if (!ipFound) {
-            return null;
+        // Try native text extraction (WORKS on iOS Safari)
+        String pageSource = driver.getPageSource();
+       
+        for (int i = 0;i <2 ; i++) {
+        	  clickReloadButton();
+              
+              Thread.sleep(5000);
         }
+      
 
-        // extract again after wait succeeds
-        List<WebElement> elements = driver.findElements(ipAddress);
-        System.out.println(elements);
-        for (WebElement el : elements) {
-            String text = el.getText();
-            if (text == null) continue;
+       // System.out.println("PAGE SOURCE: " + pageSource);
 
-            Matcher matcher = pattern.matcher(text);
-            if (matcher.find()) {
-                return matcher.group();
-            }
+        // Extract IP using regex
+        Pattern ipPattern =
+                Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b");
+
+        Matcher matcher = ipPattern.matcher(pageSource);
+
+        if (matcher.find()) {
+            String ip = matcher.group();
+            System.out.println("VPN IP = " + ip);
+            return ip;
         }
 
         return null;
 
-    } catch (TimeoutException e) {
-        System.out.println("IP not found within timeout");
+    } catch (Exception e) {
+        e.printStackTrace();
         return null;
     }
-}
-  
-  
+} 
   
 }

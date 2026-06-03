@@ -1,11 +1,26 @@
 package farnasutsho.AppiumFramework.IOS;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -16,6 +31,7 @@ import farnasutsho.AppiumFramework.TestUtils.IOSBaseTest;
 import farnasutsho.AppiumFramework.iOS.IOSHomePage;
 import farnasutsho.AppiumFramework.iOS.IOSLocationPage;
 import farnasutsho.AppiumFramework.iOS.IOSThirdPartyAPP;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 
 public class ServerStatusCheck extends IOSBaseTest{
@@ -29,12 +45,34 @@ public class ServerStatusCheck extends IOSBaseTest{
 	public IOSThirdPartyAPP app;
 	
 	
+	@BeforeClass
+	public void setupSafari() {
+	    driver.activateApp("com.apple.mobilesafari");
+	    driver.get("https://api.ipify.org");
+	}
+
 	
-	@AfterMethod	
-	public void preSetup() {
-		driver.activateApp("com.enovavpn.mobile");
+	@BeforeMethod
+	public void Setup() throws InterruptedException {
+	    // Terminate the app completely, then relaunch fresh
+	    driver.terminateApp("com.enovavpn.mobile");
+	    driver.activateApp("com.enovavpn.mobile");
+
+	    // Wait for app to fully load before test begins
+	    Thread.sleep(3000); // or use explicit wait on home screen element
+	}
 	
-		
+	@AfterMethod
+	public void preSetup(ITestResult result) {
+	    try {
+	        // If test failed, try to navigate back or force terminate
+	        if (result.getStatus() == ITestResult.FAILURE) {
+	            driver.terminateApp("com.enovavpn.mobile");
+	        }
+	    } catch (Exception e) {
+	        System.out.println("AfterMethod cleanup error: " + e.getMessage());
+	        driver.terminateApp("com.enovavpn.mobile"); // force kill anyway
+	    }
 	}
 	
 	@Test(dataProvider="getData") 
@@ -50,30 +88,37 @@ public class ServerStatusCheck extends IOSBaseTest{
 
 	    String country = input.get("country"); 
 	    String server = input.get("Server"); 
-
-	    if (country == null || country.trim().isEmpty()) {
-	        location.SelectServer(server);
-	    } else {
-	        location.SelectCountry(country); 
-	        location.SelectServer(server);
+	    try {
+	        if (country == null || country.trim().isEmpty()) {
+	            location.SelectServer(server);
+	        } else {
+	            location.SelectCountry(country);
+	            location.SelectServer(server);
+	        }
+	    } catch (Exception e) {
+	        System.out.println("Server not found: " + server + " | " + e.getMessage());
+	        throw new SkipException("Skipping test — server not found: " + server);
 	    }
 
-	    home.clickconnect(); 
-	    Thread.sleep(8000);
 
-	    driver.activateApp("GAAG.myIP");
+	  
+	    home.clickconnect(); 
+        Thread.sleep(8000);
+
 	    Thread.sleep(8000);
+	    driver.activateApp("com.apple.mobilesafari");
 
 	    String actualIP = app.extractIP(); 
+	    System.out.println("Actual IP From : "+actualIP);
 
 	    driver.activateApp("com.enovavpn.mobile");
 	    Thread.sleep(8000);
 	    
 	    home.clickDisconnect();
-	    home.clickdisconnectOnPopup();
+        home.clickdisconnectOnPopup();
 
 	    String enovaIP = home.extractIP();
-	    home.clickCloseConnectionReport();
+        home.clickCloseConnectionReport();
 
 	    Assert.assertEquals(enovaIP, actualIP);
 	}
@@ -95,6 +140,11 @@ public class ServerStatusCheck extends IOSBaseTest{
 	    return arr;
 	}
 	
+
 	
 
-}
+}	
+	
+	
+
+

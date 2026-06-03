@@ -1,19 +1,11 @@
 package farnasutsho.AppiumFramework.IOS;
-
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-
-
 import farnasutsho.AppiumFramework.TestUtils.IOSBaseTest;
-
 import farnasutsho.AppiumFramework.iOS.IOSHomePage;
 import farnasutsho.AppiumFramework.iOS.IOSLocationPage;
 import farnasutsho.AppiumFramework.iOS.IOSSettingsPage;
@@ -33,9 +25,24 @@ public class EnovaVPN_test extends IOSBaseTest{
 	
 	
 	
+	
+	@BeforeClass
+	public void setupSafari() {
+	    driver.activateApp("com.apple.mobilesafari");
+	    driver.get("https://api.ipify.org");
+	}
+
+	
+	@BeforeMethod(alwaysRun= true)		
+	public void Setup() {
+		driver.terminateApp("com.enovavpn.mobile");
+		driver.activateApp("com.enovavpn.mobile");
+	
+		
+	}
+	
 	@AfterMethod(alwaysRun= true)	
 	public void preSetup() {
-		driver.terminateApp("com.enovavpn.mobile");
 		driver.activateApp("com.enovavpn.mobile");
 	}
 	
@@ -53,8 +60,7 @@ public class EnovaVPN_test extends IOSBaseTest{
 		settings.TurnOnKillSwitch();
 		
 		home.goToLocationPage();
-		location.SelectCountry("Singapore"); 
-		location.SelectServer("Singapore - Premium");
+		location.SelectServer("Brazil");
 		
 		home.clickconnect();
 		Thread.sleep(10000);
@@ -63,9 +69,15 @@ public class EnovaVPN_test extends IOSBaseTest{
 		Thread.sleep(8000);
 		//Grab the  from the third Party app
 		//Check IP from the third Party application
-		driver.activateApp("GAAG.myIP"); Thread.sleep(8000); 
+		
+		Thread.sleep(8000);
+		driver.activateApp("com.apple.mobilesafari");
 		String actualIP= app.extractIP(); 
 		System.out.print("Ip from the third party app: " + actualIP ); 
+		
+		driver.activateApp("com.apple.mobilesafari");
+		String actualIPorginal= app.extractIP(); 
+		System.out.print("Ip from the third party app: " + actualIPorginal ); 
 		
 		driver.activateApp("com.enovavpn.mobile");
 		Thread.sleep(3000);	
@@ -80,13 +92,18 @@ public class EnovaVPN_test extends IOSBaseTest{
 	    home.clickdisconnectOnPopup();
 
 	    String enovaIP = home.extractIP();
+	    
+		
 	    home.clickCloseConnectionReport();
 	    
 	    
-		Assert.assertEquals(enovaIP, actualIP);
-		
-		home.clickSettings();
+	    home.clickSettings();
 		settings.TurnOffKillSwitch();
+		
+		Assert.assertEquals(enovaIP, actualIP);
+	    
+		
+		
 		
 		
 	}
@@ -108,43 +125,35 @@ public class EnovaVPN_test extends IOSBaseTest{
 		
 		home.clickconnect();
 		
-				
-		
 		//Switch to second server 
         home.goToLocationPage();
-		
-		location.SelectServer("Japan");
+    	Thread.sleep(8000); 
+        
+        
+		location.SelectServerSwitch("Brazil");
 	    
 		
 		location.clickSwitch();
-		Thread.sleep(8000); 
+	
 		
 		//Verify whether second server has successfully connected or not 
 		
-		driver.activateApp("GAAG.myIP"); 
-		Thread.sleep(8000); 
-		String actualIP= app.extractIP(); 
-		System.out.print("Ip from the third party app: " + actualIP ); 
-		
-		driver.activateApp("com.enovavpn.mobile");
-		Thread.sleep(3000);	
-		//Turn off the kill Switch
-		
-		
-		
-		//Disconnect the vpn 
-        Thread.sleep(8000);
-	    
-	    home.clickDisconnect();
-	    home.clickdisconnectOnPopup();
+		    Thread.sleep(8000);
+		    driver.activateApp("com.apple.mobilesafari");
 
-	    String enovaIP = home.extractIP();
-	    home.clickCloseConnectionReport();
-	    
-	    
-		Assert.assertEquals(enovaIP, actualIP);
+		    String actualIP = app.extractIP(); 
+		    System.out.println("Actual IP From : "+actualIP);
 		
-		
+		  driver.activateApp("com.enovavpn.mobile");
+		    Thread.sleep(8000);
+		    
+		    home.clickDisconnect();
+	        home.clickdisconnectOnPopup();
+
+		    String enovaIP = home.extractIP();
+		    Assert.assertEquals(enovaIP, actualIP);
+	        home.clickCloseConnectionReport();
+
 		
 	}
 	
@@ -171,24 +180,30 @@ public class EnovaVPN_test extends IOSBaseTest{
 		Thread.sleep(3000); // Wait for Safari to load
 		
 		// Perform actions in Safari
-		driver.get("https://whatismyipaddress.com");
-		Thread.sleep(3000);
-		String webIP = driver.findElement(By.xpath("//XCUIElementTypeStaticText[contains(@name, '.')]")).getText();
-		System.out.println("IP Address from web: " + webIP);
+		  Thread.sleep(8000);
+		    driver.activateApp("com.apple.mobilesafari");
+
+		    String WebIP = app.extractIP(); 
+		    System.out.println("Actual IP From : "+WebIP);
 		
-		driver.activateApp("com.enovavpn.mobile");
+		   driver.activateApp("com.enovavpn.mobile");
+		    Thread.sleep(8000);
 		
-		//Disconnect the vpn 
-        Thread.sleep(8000);
-	    
+
+
 	    home.clickDisconnect();
 	    home.clickdisconnectOnPopup();
 
 	    String enovaIP = home.extractIP();
+	    Assert.assertNotEquals(enovaIP, WebIP);
 	    home.clickCloseConnectionReport();
 	    
+	    home.clickSettings();
+		settings.clickConnectionSettings();
+		settings.removeSplitTunneling();
+		
 	    
-		Assert.assertNotEquals(enovaIP, webIP);
+		
 		
 	}
 	

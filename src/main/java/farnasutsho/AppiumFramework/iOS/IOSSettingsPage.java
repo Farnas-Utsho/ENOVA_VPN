@@ -71,6 +71,7 @@ private By EnableButton= AppiumBy.accessibilityId("Enable");
 //Disable Kill switch
 private By DisableButton= AppiumBy.accessibilityId("Disable"); 
 
+private By DeleteButton = AppiumBy.accessibilityId("Delete");
 
 
  
@@ -170,7 +171,7 @@ public void clickSplitTunneling() {
  public void createSplitTunnel() {
 	  
 	  clickElement(SplitTunneling);
-	  driver.findElement(splitTunnelInput).sendKeys("https://whatismyipaddress.com");
+	  driver.findElement(splitTunnelInput).sendKeys("https://api.ipify.org");
 	  driver.hideKeyboard();
 	  clickElement(createSplitTunneling);
 	  clickElement(closelist);
@@ -178,6 +179,15 @@ public void clickSplitTunneling() {
  }
 
  
+ private By removeButton = AppiumBy.accessibilityId("Remove");
+ public void removeSplitTunneling() {
+	 clickElement(SplitTunneling);
+	 clickElement(DeleteButton);
+	 clickElement(removeButton);
+	 clickElement(closelist);
+	 
+	 
+ }
 
 	
  

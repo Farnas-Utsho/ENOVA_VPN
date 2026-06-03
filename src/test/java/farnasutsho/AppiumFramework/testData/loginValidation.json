@@ -1,0 +1,59 @@
+[
+ 
+  {
+    "email": "farnas@nagorik",
+    "password": "11223344@Aa",
+    "expected": "INVALID_EMAIL_FORMAT"
+  },
+  {
+    "email": "farnas@@nagorik.tech",
+    "password": "11223344@Aa",
+    "expected": "INVALID_EMAIL_FORMAT"
+  },
+  {
+    "email": "",
+    "password": "11223344@Aa",
+    "expected": "EMPTY_EMAIL"
+  },
+  {
+    "email": "farnas@nagorik.tech",
+    "password": "",
+    "expected": "EMPTY_PASSWORD"
+  },
+  {
+    "email": "",
+    "password": "",
+    "expected": "EMPTY_CREDENTIALS"
+  },
+  {
+    "email": "   ",
+    "password": "11223344@Aa",
+    "expected": "BLANK_EMAIL"
+  },
+  {
+    "email": "farnas@nagorik.tech",
+    "password": "wrongPassword123",
+    "expected": "INVALID_PASSWORD"
+  },
+  {
+    "email": "test@nagorik.tech",
+    "password": "11223344@Aa",
+    "expected": "UNREGISTERED_EMAIL"
+  },
+  {
+    "email": "farnas@nagorik.tech",
+    "password": "short",
+    "expected": "WEAK_PASSWORD"
+  },
+  {
+    "email": "farnas@nagorik.tech",
+    "password": "11223344@aa",
+    "expected": "CASE_SENSITIVE_PASSWORD_FAIL"
+  },
+  {
+     "email": "farnas@nagorik.tech",
+     "password": "11223344@Aa",
+     "expected": "VALID_LOGIN"
+   }
+  
+]

@@ -54,8 +54,21 @@ public class IOSLocationPage extends IOSActions{
 
 	    iOSScroll();
 
+	    
 	    String predicate =
 	        "name BEGINSWITH '" + server + "' AND name CONTAINS 'ms'";
+
+	    driver.findElement(AppiumBy.iOSNsPredicateString(predicate)).click();
+	}
+	
+	
+	public void SelectServerSwitch(String server) throws InterruptedException {
+
+	    iOSScroll();
+
+	    
+	    String predicate =
+	        "name BEGINSWITH '" + server + "' OR name CONTAINS 'ms'";
 
 	    driver.findElement(AppiumBy.iOSNsPredicateString(predicate)).click();
 	}
