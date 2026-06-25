@@ -61,6 +61,33 @@ private By SettingsIcon = AppiumBy.iOSNsPredicateString("name CONTAINS 'Settings
 	
 
 
+
+
+
+
+public boolean isDefaultServer(String server) {
+
+    By locator = AppiumBy.iOSNsPredicateString(
+        "name CONTAINS '" + server + "' AND name CONTAINS 'Not Connected'"
+    );
+
+    System.out.println("Default server detected: " + server);
+
+    try {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        wait.until(driver -> !driver.findElements(locator).isEmpty());
+
+        return true;
+    } catch (Exception e) {
+        return false;
+    }
+}
+
+
+
+
+
  
  //Necessary functions 
 public void clickconnect() {

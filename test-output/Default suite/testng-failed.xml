@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="farnasutsho.AppiumFramework.IOS.EnovaVPN_test">
+      <class name="farnasutsho.AppiumFramework.IOS.ServerStatusCheck">
         <methods>
-          <include name="Setup"/>
           <include name="ConfigureAppium"/>
-          <include name="setupSafari"/>
           <include name="preSetup"/>
+          <include name="setupSafari"/>
           <include name="tearDown"/>
-          <include name="KillSwitchTest"/>
+          <include name="Setup"/>
+          <include name="serverTest" invocation-numbers="3 4 5 6"/>
         </methods>
-      </class> <!-- farnasutsho.AppiumFramework.IOS.EnovaVPN_test -->
+      </class> <!-- farnasutsho.AppiumFramework.IOS.ServerStatusCheck -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

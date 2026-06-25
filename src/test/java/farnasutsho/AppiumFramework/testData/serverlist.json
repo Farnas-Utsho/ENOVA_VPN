@@ -1,7 +1,19 @@
 [
   {
-    "country": "",
+    "country": "India",
     "Server": "India - 3"
+  },
+  {
+    "country": "India",
+    "Server": "India - 10"
+  },
+  {
+    "country": "India",
+    "Server": "India - 11"
+  },
+  {
+    "country": "India",
+    "Server": "India - 13"
   },
     {
       "country": "USA",
@@ -29,6 +41,22 @@
       "country": "Singapore",
       "Server": "Singapore - Premium"
     },
+	{
+	  "country": "Singapore",
+	  "Server": "Singapore - 1"
+	},
+	{
+	  "country": "Singapore",
+	  "Server": "Singapore - 10"
+	},
+	{
+	  "country": "Singapore",
+	  "Server": "Singapore - 11"
+	},
+	{
+	  "country": "Singapore",
+	  "Server": "Singapore - 12"
+	},
     {
       "country": "",
       "Server": "Germany Premium - 2"
@@ -52,7 +80,23 @@
 	{
   	"country": "",
   	  "Server": "Poland - 3"
-  	}
+  	},
+	{
+	"country": "",
+	  "Server": "Japan"
+	},
+	{
+	"country": "South Korea",
+	"Server": "South Korea - 1"
+	},
+	{
+		"country": "South Korea",
+		"Server": "South Korea - 2"
+	},
+	{
+	"country": "South Korea",
+	"Server": "South Korea - 3"
+	}
 
  
 

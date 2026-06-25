@@ -1,38 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="14" passed="10" failed="0" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-03T18:20:11 GMT+06:00" name="Default suite" finished-at="2026-06-03T18:24:31 GMT+06:00" duration-ms="259784">
+  <suite started-at="2026-06-08T09:43:14 GMT+06:00" name="Default suite" finished-at="2026-06-08T09:56:06 GMT+06:00" duration-ms="771971">
     <groups>
     </groups>
-    <test started-at="2026-06-03T18:20:11 GMT+06:00" name="Default test" finished-at="2026-06-03T18:24:31 GMT+06:00" duration-ms="259784">
-      <class name="farnasutsho.AppiumFramework.IOS.EnovaVPN_test">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:20:11 GMT+06:00" name="ConfigureAppium" finished-at="2026-06-03T18:20:25 GMT+06:00" duration-ms="13904" status="PASS">
+    <test started-at="2026-06-08T09:43:14 GMT+06:00" name="Default test" finished-at="2026-06-08T09:56:06 GMT+06:00" duration-ms="771971">
+      <class name="farnasutsho.AppiumFramework.IOS.ServerStatusCheck">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:43:14 GMT+06:00" name="ConfigureAppium" finished-at="2026-06-08T09:43:32 GMT+06:00" duration-ms="18722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method is-config="true" signature="setupSafari()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:20:25 GMT+06:00" name="setupSafari" finished-at="2026-06-03T18:20:27 GMT+06:00" duration-ms="2029" status="PASS">
+        <test-method is-config="true" signature="setupSafari()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:43:32 GMT+06:00" name="setupSafari" finished-at="2026-06-08T09:43:33 GMT+06:00" duration-ms="782" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSafari -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:20:27 GMT+06:00" name="Setup" finished-at="2026-06-03T18:20:30 GMT+06:00" duration-ms="3060" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:43:33 GMT+06:00" name="Setup" finished-at="2026-06-08T09:43:39 GMT+06:00" duration-ms="6126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="KillSwitchTest()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:20:30 GMT+06:00" name="KillSwitchTest" finished-at="2026-06-03T18:22:18 GMT+06:00" duration-ms="108701" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:43:39 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:44:37 GMT+06:00" duration-ms="57654" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=India - 3, country=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:44:37 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:44:37 GMT+06:00" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SUCCESS method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:44:37 GMT+06:00" name="Setup" finished-at="2026-06-08T09:44:43 GMT+06:00" duration-ms="6053" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:44:43 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:45:51 GMT+06:00" duration-ms="67871" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - 10, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:45:51 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:45:51 GMT+06:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SUCCESS method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:45:51 GMT+06:00" name="Setup" finished-at="2026-06-08T09:45:57 GMT+06:00" duration-ms="5942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:45:57 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:47:04 GMT+06:00" duration-ms="67375" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=USA - Premium, country=USA}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:47:04 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:47:04 GMT+06:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SUCCESS method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:47:04 GMT+06:00" name="Setup" finished-at="2026-06-08T09:47:10 GMT+06:00" duration-ms="5978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:47:10 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:47:21 GMT+06:00" duration-ms="11213" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Netherlands - 5, country=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
             <message>
-              <![CDATA[expected [118.67.208.50] but found [172.233.1.25]]]>
+              <![CDATA[Skipping test — server not found: Netherlands - 5]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [118.67.208.50] but found [172.233.1.25]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at farnasutsho.AppiumFramework.IOS.EnovaVPN_test.KillSwitchTest(EnovaVPN_test.java:101)
+              <![CDATA[org.testng.SkipException: Skipping test — server not found: Netherlands - 5
+at farnasutsho.AppiumFramework.IOS.ServerStatusCheck.serverTest(ServerStatusCheck.java:100)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -61,43 +140,394 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- KillSwitchTest -->
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:22:18 GMT+06:00" name="preSetup" finished-at="2026-06-03T18:22:19 GMT+06:00" duration-ms="102" status="PASS">
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:47:21 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:47:21 GMT+06:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SKIP method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:22:19 GMT+06:00" name="Setup" finished-at="2026-06-03T18:22:22 GMT+06:00" duration-ms="3001" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:47:21 GMT+06:00" name="Setup" finished-at="2026-06-08T09:47:27 GMT+06:00" duration-ms="5998" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="ServerSwitch_Test()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:22:22 GMT+06:00" name="ServerSwitch_Test" finished-at="2026-06-03T18:23:25 GMT+06:00" duration-ms="63508" status="PASS">
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:47:27 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:47:49 GMT+06:00" duration-ms="21185" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Singapore - 1, country=Singapore}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping test — server not found: Singapore - 1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping test — server not found: Singapore - 1
+at farnasutsho.AppiumFramework.IOS.ServerStatusCheck.serverTest(ServerStatusCheck.java:100)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ServerSwitch_Test -->
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:23:25 GMT+06:00" name="preSetup" finished-at="2026-06-03T18:23:25 GMT+06:00" duration-ms="81" status="PASS">
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:47:49 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:47:49 GMT+06:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SKIP method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:23:25 GMT+06:00" name="Setup" finished-at="2026-06-03T18:23:28 GMT+06:00" duration-ms="2966" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:47:49 GMT+06:00" name="Setup" finished-at="2026-06-08T09:47:55 GMT+06:00" duration-ms="5989" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="SplitTunneling_Test()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:23:28 GMT+06:00" name="SplitTunneling_Test" finished-at="2026-06-03T18:24:30 GMT+06:00" duration-ms="62220" status="PASS">
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:47:55 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:48:16 GMT+06:00" duration-ms="21806" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Singapore, country=Singapore}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping test — server not found: Singapore]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping test — server not found: Singapore
+at farnasutsho.AppiumFramework.IOS.ServerStatusCheck.serverTest(ServerStatusCheck.java:100)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SplitTunneling_Test -->
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:24:30 GMT+06:00" name="preSetup" finished-at="2026-06-03T18:24:30 GMT+06:00" duration-ms="81" status="PASS">
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:48:16 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:48:16 GMT+06:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SKIP method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:farnasutsho.AppiumFramework.IOS.EnovaVPN_test@8f4ea7c]" started-at="2026-06-03T18:24:30 GMT+06:00" name="tearDown" finished-at="2026-06-03T18:24:31 GMT+06:00" duration-ms="93" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:48:16 GMT+06:00" name="Setup" finished-at="2026-06-08T09:48:22 GMT+06:00" duration-ms="5928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:48:22 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:48:44 GMT+06:00" duration-ms="21774" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Singapore - Premium, country=Singapore}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping test — server not found: Singapore - Premium]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping test — server not found: Singapore - Premium
+at farnasutsho.AppiumFramework.IOS.ServerStatusCheck.serverTest(ServerStatusCheck.java:100)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:48:44 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:48:44 GMT+06:00" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SKIP method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:48:44 GMT+06:00" name="Setup" finished-at="2026-06-08T09:48:50 GMT+06:00" duration-ms="5915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:48:50 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:49:47 GMT+06:00" duration-ms="57366" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Germany Premium - 2, country=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:49:47 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:49:47 GMT+06:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SUCCESS method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:49:47 GMT+06:00" name="Setup" finished-at="2026-06-08T09:49:54 GMT+06:00" duration-ms="6040" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:49:54 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:50:50 GMT+06:00" duration-ms="56952" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=United Kingdom, country=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:50:50 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:50:50 GMT+06:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SUCCESS method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:50:50 GMT+06:00" name="Setup" finished-at="2026-06-08T09:50:56 GMT+06:00" duration-ms="5975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:50:56 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:51:54 GMT+06:00" duration-ms="57104" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Switzerland - 10, country=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:51:54 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:51:54 GMT+06:00" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SUCCESS method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:51:54 GMT+06:00" name="Setup" finished-at="2026-06-08T09:52:00 GMT+06:00" duration-ms="6001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:52:00 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:52:57 GMT+06:00" duration-ms="56970" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Brazil, country=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:52:57 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:52:57 GMT+06:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SUCCESS method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:52:57 GMT+06:00" name="Setup" finished-at="2026-06-08T09:53:03 GMT+06:00" duration-ms="5998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:53:03 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:54:00 GMT+06:00" duration-ms="57040" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Spain - 2, country=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:54:00 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:54:00 GMT+06:00" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SUCCESS method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:54:00 GMT+06:00" name="Setup" finished-at="2026-06-08T09:54:06 GMT+06:00" duration-ms="6048" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:54:06 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:55:03 GMT+06:00" duration-ms="57224" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Poland - 3, country=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:55:03 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:55:03 GMT+06:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SUCCESS method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="Setup()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:55:03 GMT+06:00" name="Setup" finished-at="2026-06-08T09:55:09 GMT+06:00" duration-ms="6022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:55:09 GMT+06:00" name="serverTest" data-provider="getData" finished-at="2026-06-08T09:56:05 GMT+06:00" duration-ms="56582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Server=Japan, country=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverTest -->
+        <test-method is-config="true" signature="preSetup(org.testng.ITestResult)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:56:05 GMT+06:00" name="preSetup" finished-at="2026-06-08T09:56:05 GMT+06:00" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serverTest status=SUCCESS method=ServerStatusCheck.serverTest(java.util.HashMap)[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:farnasutsho.AppiumFramework.IOS.ServerStatusCheck@5b8dfcc1]" started-at="2026-06-08T09:56:05 GMT+06:00" name="tearDown" finished-at="2026-06-08T09:56:06 GMT+06:00" duration-ms="98" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- farnasutsho.AppiumFramework.IOS.EnovaVPN_test -->
+      </class> <!-- farnasutsho.AppiumFramework.IOS.ServerStatusCheck -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,10 +1,13 @@
 package farnasutsho.AppiumFramework.iOS;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import farnasutsho.AppiumFramework.utils.IOSActions;
 import io.appium.java_client.AppiumBy;
@@ -39,26 +42,41 @@ public class IOSLocationPage extends IOSActions{
 
 
   
-  
 	public void SelectCountry(String country) throws InterruptedException {
 
-	    iOSScroll();
-	    
 	    String predicate = "name == '" + country + "'";
+	    By locator = AppiumBy.iOSNsPredicateString(predicate);
 
-	    driver.findElement(AppiumBy.iOSNsPredicateString(predicate)).click();
+	    // Check if already visible
+	    if (driver.findElements(locator).isEmpty()) {
+	        iOSScroll();
+	    }
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebElement element = wait.until(
+	            ExpectedConditions.elementToBeClickable(locator));
+
+	    element.click();
 	}
 	
 
 	public void SelectServer(String server) throws InterruptedException {
 
-	    iOSScroll();
-
-	    
 	    String predicate =
-	        "name BEGINSWITH '" + server + "' AND name CONTAINS 'ms'";
+	            "name BEGINSWITH '" + server + "' AND name CONTAINS 'ms'";
 
-	    driver.findElement(AppiumBy.iOSNsPredicateString(predicate)).click();
+	    By locator = AppiumBy.iOSNsPredicateString(predicate);
+
+	    // Scroll only if not currently visible
+	    if (driver.findElements(locator).isEmpty()) {
+	        iOSScroll();
+	    }
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebElement element = wait.until(
+	            ExpectedConditions.elementToBeClickable(locator));
+
+	    element.click();
 	}
 	
 	

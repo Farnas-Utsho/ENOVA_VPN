@@ -116,7 +116,7 @@ public class WireGuardProtocol extends IOSBaseTest{
 	public Object[][] getData() throws IOException {
 	    List<HashMap<String, String>> data = getJsonData(
 	    		System.getProperty("user.dir")
-	    		+ "/src/test/java/farnasutsho/AppiumFramework/testData/serverlist.json"
+	    		+ "/src/test/java/farnasutsho/AppiumFramework/testData/serverlist_wireguard.json"
 	    );
 
 	    Object[][] arr = new Object[data.size()][1]; // 1 parameter per row

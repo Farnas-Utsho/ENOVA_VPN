@@ -34,21 +34,25 @@ import farnasutsho.AppiumFramework.iOS.IOSThirdPartyAPP;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 
-public class ServerStatusCheck extends IOSBaseTest{
+public  abstract class ServerStatusCheck extends IOSBaseTest{
 	
 	
-	public AppiumDriver drive;
+	protected AppiumDriver drive;
 	
-	public IOSHomePage home;
-	public IOSLocationPage location;
+	protected IOSHomePage home;
+	protected IOSLocationPage location;
 	
-	public IOSThirdPartyAPP app;
+	protected IOSThirdPartyAPP app;
+	
+    protected abstract void selectProtocol();
+    protected abstract String getJsonFile();
 	
 	
 	@BeforeClass
 	public void setupSafari() {
 	    driver.activateApp("com.apple.mobilesafari");
 	    driver.get("https://api.ipify.org");
+	    driver.terminateApp("com.enovavpn.mobile");
 	}
 
 	
@@ -84,26 +88,34 @@ public class ServerStatusCheck extends IOSBaseTest{
 	    location = new IOSLocationPage(driver);
 	    app = new IOSThirdPartyAPP(driver);
 
-	    home.goToLocationPage();
-
+	    
 	    String country = input.get("country"); 
 	    String server = input.get("Server"); 
-	    try {
-	        if (country == null || country.trim().isEmpty()) {
-	            location.SelectServer(server);
+	    
+	      if (home.isDefaultServer(server)) {
+
+	            // default already selected
+	            home.clickconnect();
+
 	        } else {
-	            location.SelectCountry(country);
-	            location.SelectServer(server);
+
+	        	home.goToLocationPage();
+
+
+	        	  try {
+	      	        if (country == null || country.trim().isEmpty()) {
+	      	            location.SelectServer(server);
+	      	        } else {
+	      	            location.SelectCountry(country);
+	      	            location.SelectServer(server);
+	      	        }
+	      	    } catch (Exception e) {
+	      	        System.out.println("Server not found: " + server + " | " + e.getMessage());
+	      	        throw new SkipException("Skipping test — server not found: " + server);
+	      	    }
+
+	        	  home.clickconnect();
 	        }
-	    } catch (Exception e) {
-	        System.out.println("Server not found: " + server + " | " + e.getMessage());
-	        throw new SkipException("Skipping test — server not found: " + server);
-	    }
-
-
-	  
-	    home.clickconnect(); 
-        Thread.sleep(8000);
 
 	    Thread.sleep(8000);
 	    driver.activateApp("com.apple.mobilesafari");
