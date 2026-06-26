@@ -54,6 +54,17 @@ public class IOSSettingsPage extends IOSActions{
  private By CloseIcon = AppiumBy.iOSNsPredicateString("type == \"XCUIElementTypeImage\"");
  
  
+ //Back Navigation from the Protocol settings page 
+ private By BackNavigation = AppiumBy.iOSNsPredicateString(
+		    "type == 'XCUIElementTypeImage'"
+		);
+ 
+ public void clickBackProtocolPage() {
+	 
+	 clickElement(BackNavigation);
+	 
+ }
+ 
  //Home Icon
  private By HomeIcon = AppiumBy.iOSNsPredicateString("name BEGINSWITH 'Home'");
  
@@ -152,6 +163,9 @@ public void clickSplitTunneling() {
 	 clickAtCoordinates(681,1069);
  }
  
+ 
+ 
+ 
  public void clickClose() {
 	 
 	 clickElement(CloseIcon);
@@ -163,7 +177,7 @@ public void clickSplitTunneling() {
 	 clickAtCoordinates(36,64);
  }
  
-
+ 
  private By splitTunnelInput = AppiumBy.accessibilityId("Type here");
  private By createSplitTunneling= AppiumBy.accessibilityId("Create Split Tunnel");
  private By closelist = AppiumBy.className("XCUIElementTypeImage");

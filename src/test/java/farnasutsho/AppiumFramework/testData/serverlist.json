@@ -22,13 +22,37 @@
 
     {
       "country": "USA",
-      "Server": "USA - Premium"
+      "Server": "USA - 20"
     },
+	{
+	    "country": "USA",
+	    "Server": "USA - 21"
+	  },
+	  {
+	  	    "country": "USA",
+	  	    "Server": "USA - 23"
+	  	  },
+		  {
+		  	    "country": "USA",
+		  	    "Server": "USA - 25"
+		  	  },
+			  {
+			  	    "country": "USA",
+			  	    "Server": "USA - 30"
+			  	  },
  
     {
       "country": "",
-      "Server": "Netherlands - 5"
+      "Server": "Netherlands - 6"
     },
+	{
+		    "country": "Brazil",
+		    "Server": "Brazil - 3"
+		  },
+		  {
+		  	    "country": "Brazil",
+		  	    "Server": "Brazil - 2"
+		  	  }, 
     {
       "country": "Singapore",
       "Server": "Singapore - 1"
@@ -39,16 +63,8 @@
     },
     {
       "country": "Singapore",
-      "Server": "Singapore - Premium"
+      "Server": "Singapore - 10"
     },
-	{
-	  "country": "Singapore",
-	  "Server": "Singapore - 1"
-	},
-	{
-	  "country": "Singapore",
-	  "Server": "Singapore - 10"
-	},
 	{
 	  "country": "Singapore",
 	  "Server": "Singapore - 11"
@@ -57,30 +73,45 @@
 	  "country": "Singapore",
 	  "Server": "Singapore - 12"
 	},
+	{
+	  "country": "Singapore",
+	  "Server": "Singapore - Premium"
+	},
+	
     {
-      "country": "",
-      "Server": "Germany Premium - 2"
+      "country": "Germany",
+      "Server": "Germany - 15"
     },
+	{
+	    "country": "Germany",
+	    "Server": "Germany Premium - 5"
+	  },
     {
-      "country": "",
+      "country": "United Kingdom",
       "Server": "United Kingdom"
     },
+	{
+	  "country": "United Kingdom",
+	  "Server": "United Kingdom - 3"
+	},
+	{
+	  "country": "United Kingdom",
+	  "Server": "United Kingdom - 4"
+	},
+	{
+	  "country": "United Kingdom",
+	  "Server": "United Kingdom - 5"
+	},
     {
   	"country": "",
   	  "Server": "Switzerland - 10"
     },
-    {
-    "country": "",
-      "Server": "Brazil"
-    },
+ 
     {
     "country": "",
       "Server": "Spain - 2"
     },
-	{
-  	"country": "",
-  	  "Server": "Poland - 3"
-  	},
+
 	{
 	"country": "",
 	  "Server": "Japan"
@@ -96,7 +127,16 @@
 	{
 	"country": "South Korea",
 	"Server": "South Korea - 3"
-	}
+	},
+	{
+		"country": "",
+		"Server": "Canada -2"
+		},
+		
+		{
+				"country": "",
+				"Server": "Norway - 3"
+				}
 
  
 

@@ -60,7 +60,14 @@ private By closeReport = AppiumBy.iOSClassChain("**/XCUIElementTypeWindow[1]/XCU
 private By SettingsIcon = AppiumBy.iOSNsPredicateString("name CONTAINS 'Settings'");
 	
 
+private By HomeIcon = AppiumBy.iOSNsPredicateString("name CONTAINS 'Home'");
 
+public void clickHomeIcon() {
+	
+	clickElement(HomeIcon);
+	
+	
+}
 
 
 

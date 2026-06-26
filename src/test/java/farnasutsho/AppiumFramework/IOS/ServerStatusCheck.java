@@ -30,54 +30,54 @@ import farnasutsho.AppiumFramework.TestUtils.IOSBaseTest;
 
 import farnasutsho.AppiumFramework.iOS.IOSHomePage;
 import farnasutsho.AppiumFramework.iOS.IOSLocationPage;
+import farnasutsho.AppiumFramework.iOS.IOSSettingsPage;
 import farnasutsho.AppiumFramework.iOS.IOSThirdPartyAPP;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 
-public  abstract class ServerStatusCheck extends IOSBaseTest{
+public abstract class ServerStatusCheck extends IOSBaseTest{
 	
 	
 	protected AppiumDriver drive;
 	
 	protected IOSHomePage home;
 	protected IOSLocationPage location;
-	
 	protected IOSThirdPartyAPP app;
-	
+	protected IOSSettingsPage settings;
+	// Each protocol class will implement these
     protected abstract void selectProtocol();
     protected abstract String getJsonFile();
+
 	
 	
 	@BeforeClass
-	public void setupSafari() {
+	public void setupProtocol() {
 	    driver.activateApp("com.apple.mobilesafari");
 	    driver.get("https://api.ipify.org");
-	    driver.terminateApp("com.enovavpn.mobile");
-	}
-
-	
-	@BeforeMethod
-	public void Setup() throws InterruptedException {
-	    // Terminate the app completely, then relaunch fresh
-	    driver.terminateApp("com.enovavpn.mobile");
 	    driver.activateApp("com.enovavpn.mobile");
+	    home = new IOSHomePage(driver);
+        settings = home.clickSettings();
 
-	    // Wait for app to fully load before test begins
-	    Thread.sleep(3000); // or use explicit wait on home screen element
+        settings.clickConnectionSettings();
+        settings.clickProtocol();
+        selectProtocol();
+        settings.clickClose();
+        settings.clickBackProtocolPage();
+        home.clickHomeIcon();
+        
+	    
+	    
 	}
 	
-	@AfterMethod
-	public void preSetup(ITestResult result) {
-	    try {
-	        // If test failed, try to navigate back or force terminate
-	        if (result.getStatus() == ITestResult.FAILURE) {
-	            driver.terminateApp("com.enovavpn.mobile");
-	        }
-	    } catch (Exception e) {
-	        System.out.println("AfterMethod cleanup error: " + e.getMessage());
-	        driver.terminateApp("com.enovavpn.mobile"); // force kill anyway
-	    }
-	}
+    @AfterMethod(alwaysRun = true)
+    public void cleanUp() {
+        driver.terminateApp("com.enovavpn.mobile");
+        driver.activateApp("com.enovavpn.mobile");
+    }
+
+	
+	
+
 	
 	@Test(dataProvider="getData") 
 	public void serverTest(HashMap<String ,String> input) throws InterruptedException {
@@ -136,21 +136,21 @@ public  abstract class ServerStatusCheck extends IOSBaseTest{
 	}
 	
 	
-	@DataProvider
-	public Object[][] getData() throws IOException {
-	    List<HashMap<String, String>> data = getJsonData(
-	    		System.getProperty("user.dir")
-	    		+ "/src/test/java/farnasutsho/AppiumFramework/testData/serverlist.json"
-	    );
 
-	    Object[][] arr = new Object[data.size()][1]; // 1 parameter per row
+    @DataProvider
+    public Object[][] getData() throws IOException {
 
-	    for (int i = 0; i < data.size(); i++) {
-	        arr[i][0] = data.get(i); // each HashMap is a separate test row
-	    }
+        List<HashMap<String, String>> data =
+                getJsonData(getJsonFile());
 
-	    return arr;
-	}
+        Object[][] arr = new Object[data.size()][1];
+
+        for (int i = 0; i < data.size(); i++) {
+            arr[i][0] = data.get(i);
+        }
+
+        return arr;
+    }
 	
 
 	

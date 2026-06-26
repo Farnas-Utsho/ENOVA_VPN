@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="farnasutsho.AppiumFramework.IOS.ServerStatusCheck">
+      <class name="farnasutsho.AppiumFramework.IOSBase.VMessServerCheck">
         <methods>
           <include name="ConfigureAppium"/>
-          <include name="preSetup"/>
-          <include name="setupSafari"/>
+          <include name="cleanUp"/>
           <include name="tearDown"/>
-          <include name="Setup"/>
-          <include name="serverTest" invocation-numbers="3 4 5 6"/>
+          <include name="setupProtocol"/>
+          <include name="serverTest"/>
         </methods>
-      </class> <!-- farnasutsho.AppiumFramework.IOS.ServerStatusCheck -->
+      </class> <!-- farnasutsho.AppiumFramework.IOSBase.VMessServerCheck -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
