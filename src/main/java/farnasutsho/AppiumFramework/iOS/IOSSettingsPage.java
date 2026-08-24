@@ -46,27 +46,27 @@ public class IOSSettingsPage extends IOSActions{
  private By ConnectionSettings = AppiumBy.accessibilityId("Connection settings");
 
  
-//Encryption Protocol 
- private By EncryptionProtocol = AppiumBy.iOSNsPredicateString("name BEGINSWITH 'Encryption protocol'");
- 
 
- //Protocol list Close 
- private By CloseIcon = AppiumBy.iOSNsPredicateString("type == \"XCUIElementTypeImage\"");
+
  
+ //Settings Page Back
+ private By BackButton = AppiumBy.accessibilityId("BackButton");
  
- //Back Navigation from the Protocol settings page 
- private By BackNavigation = AppiumBy.iOSNsPredicateString(
-		    "type == 'XCUIElementTypeImage'"
-		);
+//Speed Checking 
  
- public void clickBackProtocolPage() {
-	 
-	 clickElement(BackNavigation);
-	 
- }
+ private By SpeedTestButton = AppiumBy.iOSNsPredicateString("name BEGINSWITH 'Speed Test'");
+ 
+ private By Go_Button = AppiumBy.accessibilityId("Go");
  
  //Home Icon
- private By HomeIcon = AppiumBy.iOSNsPredicateString("name BEGINSWITH 'Home'");
+ private By HomeIcon = AppiumBy.accessibilityId("Home");
+ 
+ 
+ 
+ public void clickHome() {
+	 
+	 clickElement(HomeIcon);
+ }
  
  
 //Split tunneling 
@@ -84,6 +84,19 @@ private By DisableButton= AppiumBy.accessibilityId("Disable");
 
 private By DeleteButton = AppiumBy.accessibilityId("Delete");
 
+private By settings_button = AppiumBy.accessibilityId("Settings"); 
+
+
+public void ClickSpeedTest() {
+	
+	clickElement(SpeedTestButton);
+	
+}
+
+public void ClickGoButton() {
+	
+	clickElement(Go_Button);
+}
 
  
 //Turn On kill switch
@@ -145,36 +158,43 @@ public void clickSplitTunneling() {
 	 
  }
 
- //Click on Protocol 
- public void clickProtocol() {
-	 clickElement(EncryptionProtocol);
-	 
- }
+
  
- //Click on WireGuard Protocol
- 
+//Protocol  Locators and Selection
+
+ private By VMess_Protocol = AppiumBy.accessibilityId("VMess, Fast and reliable for overcoming restrictions");
+ private By WireGuard_Protocol = AppiumBy.accessibilityId("WireGuard, Strong balance between speed and security");
+
  public void clickVMess() {
+	 clickElement(VMess_Protocol);
 	 
-	 clickAtCoordinates(675,997);
  }
  
  public void clickWireGuard() {
+	 clickElement(WireGuard_Protocol);
 	 
-	 clickAtCoordinates(681,1069);
  }
  
  
  
  
- public void clickClose() {
+ 
+ 
+ public void click_Backbutton() {
 	 
-	 clickElement(CloseIcon);
+ clickElement(BackButton);
+	 
  }
  
  
+ 
+
+ 
+
  public void gotoSettingspage() {
 	 
-	 clickAtCoordinates(36,64);
+	 clickElement(settings_button);
+	 //clickAtCoordinates(36,64);
  }
  
  
@@ -203,7 +223,24 @@ public void clickSplitTunneling() {
 	 
  }
 
+ 
+ 
+// Fetch the IP from the Settings 
+ 
+ public void getIPEnova() 
+{
+	 
+
+}
+
+
+
+
+
+
+}
+ 
 	
  
  
-}
+

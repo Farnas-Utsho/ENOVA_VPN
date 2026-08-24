@@ -13,7 +13,7 @@ import farnasutsho.AppiumFramework.android.myIPappPage;
 
 
 
-public class ServerStatusCheck_Test extends AndroidBaseTest{
+public class GetServerList extends AndroidBaseTest{
 
 	
 

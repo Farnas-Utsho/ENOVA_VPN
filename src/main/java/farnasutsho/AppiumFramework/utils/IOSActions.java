@@ -103,7 +103,6 @@ public class IOSActions extends AppiumUtils{
 	}
 
 	
-	
 	public void iOSScroll() throws InterruptedException {
 		
 	    Map<String, Object> params = new HashMap<>();
@@ -114,7 +113,7 @@ public class IOSActions extends AppiumUtils{
 	    
 	    
 	    
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	}
 		
 	public void ClickElement(WebElement element) {

@@ -146,37 +146,33 @@ public String extractIP() {
 
     try {
 
-    	
-        // Try native text extraction (WORKS on iOS Safari)
-        String pageSource = driver.getPageSource();
-       
-        for (int i = 0;i <2 ; i++) {
-        	  clickReloadButton();
-              
-              Thread.sleep(5000);
+        for (int i = 0; i < 2; i++) {
+            clickReloadButton();
         }
-      
 
-       // System.out.println("PAGE SOURCE: " + pageSource);
+        String pageSource = driver.getPageSource();
 
-        // Extract IP using regex
         Pattern ipPattern =
                 Pattern.compile("\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b");
 
         Matcher matcher = ipPattern.matcher(pageSource);
 
         if (matcher.find()) {
+
             String ip = matcher.group();
+
             System.out.println("VPN IP = " + ip);
+
             return ip;
         }
 
         return null;
 
     } catch (Exception e) {
+
         e.printStackTrace();
         return null;
     }
-} 
   
+}
 }

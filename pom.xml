@@ -14,6 +14,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
 
         <!-- Java -->
         <maven.compiler.source>17</maven.compiler.source>
@@ -26,6 +27,7 @@
         <extentreports.version>5.1.2</extentreports.version>
         <jackson.version>2.21.2</jackson.version>
         <commons.io.version>2.17.0</commons.io.version>
+        <rest-assured.version>5.5.6</rest-assured.version>
 
         <!-- CI -->
         <skipTests>false</skipTests>
@@ -54,6 +56,13 @@
             <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
+        
+        <!-- REST Assured -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>${rest-assured.version}</version>
+</dependency>
 
         <!-- Extent Reports -->
         <dependency>
@@ -105,7 +114,7 @@
 
                     <!-- TestNG suite support -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>EnvoaRegressionTest.xml</suiteXmlFile>
+                        <suiteXmlFile>ServerTest.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
                     <!-- Fail build on test failure -->

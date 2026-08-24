@@ -1,5 +1,5 @@
-package farnasutsho.AppiumFramework.IOS;
-
+package farnasutsho.AppiumFramework.IOSBase;
+import farnasutsho.AppiumFramework.Serverlist.Get_Server_List;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -35,7 +35,7 @@ import farnasutsho.AppiumFramework.iOS.IOSThirdPartyAPP;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 
-public abstract class ServerStatusCheck extends IOSBaseTest{
+public abstract class BaseServerStatusCheck extends IOSBaseTest{
 	
 	
 	protected AppiumDriver drive;
@@ -44,30 +44,49 @@ public abstract class ServerStatusCheck extends IOSBaseTest{
 	protected IOSLocationPage location;
 	protected IOSThirdPartyAPP app;
 	protected IOSSettingsPage settings;
-	// Each protocol class will implement these
+	
+	
+	
     protected abstract void selectProtocol();
     protected abstract String getJsonFile();
+    protected abstract int getProtocolId();
+	
+	
+    @BeforeClass
+    public void setupProtocol() {
 
-	
-	
-	@BeforeClass
-	public void setupProtocol() {
-	    driver.activateApp("com.apple.mobilesafari");
-	    driver.get("https://api.ipify.org");
-	    driver.activateApp("com.enovavpn.mobile");
-	    home = new IOSHomePage(driver);
+        // =====================================
+        // 1. Get latest server list from API
+        // =====================================
+
+//        Get_Server_List serverList = new Get_Server_List();
+//
+//        serverList.getServerList(
+//                getProtocolId(),
+//                getJsonFile()
+//        );
+
+
+        // =====================================
+        // 2. Setup iOS application
+        // =====================================
+
+        driver.activateApp("com.apple.mobilesafari");
+        driver.get("https://api.ipify.org");
+
+        driver.activateApp("com.enovavpn.mobile");
+
+        home = new IOSHomePage(driver);
+
         settings = home.clickSettings();
 
         settings.clickConnectionSettings();
-        settings.clickProtocol();
+
+        // Select VMess or WireGuard
         selectProtocol();
-        settings.clickClose();
-        settings.clickBackProtocolPage();
-        home.clickHomeIcon();
-        
-	    
-	    
-	}
+
+        settings.clickHome();
+    }
 	
     @AfterMethod(alwaysRun = true)
     public void cleanUp() {
@@ -87,10 +106,18 @@ public abstract class ServerStatusCheck extends IOSBaseTest{
 	    home = new IOSHomePage(driver);
 	    location = new IOSLocationPage(driver);
 	    app = new IOSThirdPartyAPP(driver);
+	    settings= new IOSSettingsPage(driver);
 
 	    
 	    String country = input.get("country"); 
-	    String server = input.get("Server"); 
+	    String server = input.get("server");
+	    String expectedIP = input.get("ip");
+	    String servercount=input.get("numberofservers");
+	    
+	    System.out.println("Country: " + country);
+	    System.out.println("Server: " + server);
+	    System.out.println("Expected IP: " + expectedIP);
+	    System.out.println("Number of server: " + servercount);	    
 	    
 	      if (home.isDefaultServer(server)) {
 
@@ -103,10 +130,11 @@ public abstract class ServerStatusCheck extends IOSBaseTest{
 
 
 	        	  try {
-	      	        if (country == null || country.trim().isEmpty()) {
+	        		  if ("multiple".equals(servercount)){
+	      	        	location.SelectCountry(country);
 	      	            location.SelectServer(server);
 	      	        } else {
-	      	            location.SelectCountry(country);
+	      	            
 	      	            location.SelectServer(server);
 	      	        }
 	      	    } catch (Exception e) {
@@ -117,22 +145,28 @@ public abstract class ServerStatusCheck extends IOSBaseTest{
 	        	  home.clickconnect();
 	        }
 
-	    Thread.sleep(8000);
+
+	    
+	     
+	      
+	      
 	    driver.activateApp("com.apple.mobilesafari");
+	    
 
 	    String actualIP = app.extractIP(); 
-	    System.out.println("Actual IP From : "+actualIP);
+	    System.out.println("Actual IP : "+actualIP);
 
 	    driver.activateApp("com.enovavpn.mobile");
-	    Thread.sleep(8000);
+	    settings.clickHome();
+	    
+	    Assert.assertEquals(expectedIP, actualIP);	    
 	    
 	    home.clickDisconnect();
         home.clickdisconnectOnPopup();
 
-	    String enovaIP = home.extractIP();
-        home.clickCloseConnectionReport();
-
-	    Assert.assertEquals(enovaIP, actualIP);
+     
+  
+	    
 	}
 	
 	

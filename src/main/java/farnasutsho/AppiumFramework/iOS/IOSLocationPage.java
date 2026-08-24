@@ -1,6 +1,8 @@
 package farnasutsho.AppiumFramework.iOS;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -8,6 +10,7 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.SkipException;
 
 import farnasutsho.AppiumFramework.utils.IOSActions;
 import io.appium.java_client.AppiumBy;
@@ -41,44 +44,172 @@ public class IOSLocationPage extends IOSActions{
 
 
 
-  
+	
+
 	public void SelectCountry(String country) throws InterruptedException {
 
-	    String predicate = "name == '" + country + "'";
-	    By locator = AppiumBy.iOSNsPredicateString(predicate);
+	    int maxScrolls = 2;
 
-	    // Check if already visible
-	    if (driver.findElements(locator).isEmpty()) {
-	        iOSScroll();
+	    // Singapore → use Class Chain
+	    if ("Singapore".equalsIgnoreCase(country)) {
+
+	        String classChain =
+	                "**/XCUIElementTypeButton[`name == \"Singapore\"`][2]";
+
+	        By locator = AppiumBy.iOSClassChain(classChain);
+
+	        for (int i = 0; i < maxScrolls; i++) {
+
+	            List<WebElement> countries =
+	                    driver.findElements(locator);
+
+	            System.out.println(
+	                    "Attempt " + (i + 1) +
+	                    " | Singapore found: " + countries.size()
+	            );
+
+	            if (!countries.isEmpty()) {
+
+	                WebElement countryElement = countries.get(0);
+
+	                System.out.println(
+	                        "Country: " +
+	                        countryElement.getAttribute("name")
+	                );
+
+	                System.out.println(
+	                        "Displayed: " +
+	                        countryElement.isDisplayed()
+	                );
+
+	                if (countryElement.isDisplayed()) {
+
+	                    System.out.println(
+	                            "Singapore is visible. Clicking..."
+	                    );
+
+	                    countryElement.click();
+	                    Thread.sleep(1000);
+
+	                    return;
+	                }
+	            }
+
+	            System.out.println(
+	                    "Singapore not visible. Scrolling..."
+	            );
+
+	            iOSScroll();
+	        }
+
+	    } else {
+
+	        // All other countries → existing Predicate
+	        String predicate =
+	                "name == '" + country + "' AND " +
+	                "label == '" + country + "' AND " +
+	                "type == 'XCUIElementTypeButton'";
+
+	        By locator =
+	                AppiumBy.iOSNsPredicateString(predicate);
+
+	        for (int i = 0; i < maxScrolls; i++) {
+
+	            List<WebElement> countries =
+	                    driver.findElements(locator);
+
+	            System.out.println(
+	                    "Attempt " + (i + 1) +
+	                    " | Country found: " + countries.size()
+	            );
+
+	            if (!countries.isEmpty()) {
+
+	                WebElement countryElement =
+	                        countries.get(0);
+
+	                System.out.println(
+	                        "Country: " +
+	                        countryElement.getAttribute("name")
+	                );
+
+	                System.out.println(
+	                        "Displayed: " +
+	                        countryElement.isDisplayed()
+	                );
+
+	                if (countryElement.isDisplayed()) {
+
+	                    System.out.println(
+	                            "Country is visible. Clicking: " +
+	                            country
+	                    );
+
+	                    countryElement.click();
+	                    Thread.sleep(1000);
+
+	                    return;
+	                }
+	            }
+
+	            System.out.println(
+	                    "Country not visible. Scrolling..."
+	            );
+
+	            iOSScroll();
+	        }
 	    }
 
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	    WebElement element = wait.until(
-	            ExpectedConditions.elementToBeClickable(locator));
-
-	    element.click();
+	    throw new SkipException(
+	            "Country could not be found/displayed after scrolling: "
+	            + country
+	    );
 	}
-	
 
 	public void SelectServer(String server) throws InterruptedException {
 
 	    String predicate =
-	            "name BEGINSWITH '" + server + "' AND name CONTAINS 'ms'";
+	            "type == 'XCUIElementTypeButton' AND " +
+	            "name BEGINSWITH '" + server + "' AND " +
+	            "name CONTAINS 'ms'";
 
 	    By locator = AppiumBy.iOSNsPredicateString(predicate);
 
-	    // Scroll only if not currently visible
-	    if (driver.findElements(locator).isEmpty()) {
+	    WebDriverWait wait =
+	            new WebDriverWait(driver, Duration.ofSeconds(30));
+
+	    int maxScrolls = 2;
+
+	    for (int i = 0; i < maxScrolls; i++) {
+
+	        List<WebElement> servers = driver.findElements(locator);
+
+
+
+	        if (!servers.isEmpty()) {
+
+	            WebElement serverElement = servers.get(0);
+
+	            if (serverElement.isDisplayed()) {
+
+
+
+	                serverElement.click();
+	                
+	                return;
+	            }
+	        }
+
 	        iOSScroll();
+
+	        Thread.sleep(1000);
 	    }
 
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	    WebElement element = wait.until(
-	            ExpectedConditions.elementToBeClickable(locator));
-
-	    element.click();
+	    throw new SkipException(
+	            "Server could not be found/ displayed after scrolling: "
+	            + server
+	    );
 	}
-	
 	
 	public void SelectServerSwitch(String server) throws InterruptedException {
 

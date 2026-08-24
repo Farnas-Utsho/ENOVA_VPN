@@ -41,15 +41,15 @@ public class IOSHomePage extends IOSActions{
 	
  private By locationPage = AppiumBy.iOSNsPredicateString("name Contains 'Auto'");
  
-private By connectButton = AppiumBy.iOSClassChain("**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]");
+private By connectButton = AppiumBy.accessibilityId("Connected");
  
  // private By connectButton = AppiumBy.xpath("//XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]");
- private By disconnectButton = AppiumBy.iOSClassChain("**/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]");
-
+ private By disconnectButton = AppiumBy.accessibilityId("DISCONNECT");
  //private By disconnectButton = AppiumBy.xpath("//XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]");
  
  
- private By disconnectOnPopup = AppiumBy.accessibilityId("DISCONNECT");
+ private By disconnectOnPopup =
+		    AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`name == \"DISCONNECT\"`][2]");
  
 private By ipAddress =
 		    AppiumBy.iOSNsPredicateString("name MATCHES '[0-9]{1,3}(\\.[0-9]{1,3}){3}'");
@@ -60,7 +60,7 @@ private By closeReport = AppiumBy.iOSClassChain("**/XCUIElementTypeWindow[1]/XCU
 private By SettingsIcon = AppiumBy.iOSNsPredicateString("name CONTAINS 'Settings'");
 	
 
-private By HomeIcon = AppiumBy.iOSNsPredicateString("name CONTAINS 'Home'");
+private By HomeIcon = AppiumBy.iOSNsPredicateString("Home");
 
 public void clickHomeIcon() {
 	
@@ -74,23 +74,50 @@ public void clickHomeIcon() {
 
 public boolean isDefaultServer(String server) {
 
-    By locator = AppiumBy.iOSNsPredicateString(
-        "name CONTAINS '" + server + "' AND name CONTAINS 'Not Connected'"
-    );
+    String predicate =
+            "name BEGINSWITH '" + server + "," + "'";
 
-    System.out.println("Default server detected: " + server);
+    By locator =
+            AppiumBy.iOSNsPredicateString(predicate);
+
+    System.out.println("Checking default server: " + server);
 
     try {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        wait.until(driver -> !driver.findElements(locator).isEmpty());
+        WebDriverWait wait =
+                new WebDriverWait(driver, Duration.ofSeconds(5));
+
+        WebElement element = wait.until(driver -> {
+
+            List<WebElement> elements =
+                    driver.findElements(locator);
+
+            if (!elements.isEmpty() &&
+                elements.get(0).isDisplayed()) {
+
+                return elements.get(0);
+            }
+
+            return null;
+        });
+
+        System.out.println(
+                "Default server matched: " +
+                element.getAttribute("name")
+        );
 
         return true;
+
     } catch (Exception e) {
+
+        System.out.println(
+                "Default server does not match: " +
+                server
+        );
+
         return false;
     }
 }
-
 
 
 
@@ -175,6 +202,16 @@ public void clickCloseConnectionReport() {
 	    }
 	}
 	
+
+
+
+
+	
+	
+	
+	
+	
+
 	
 	public IOSSettingsPage clickSettings() {
 		
