@@ -46,15 +46,16 @@ public class IOSLocationPage extends IOSActions{
 
 	
 
-	public void SelectCountry(String country) throws InterruptedException {
+	public void SelectCountry(String country)
+	        throws InterruptedException {
 
 	    int maxScrolls = 2;
 
-	    // Singapore → use Class Chain
 	    if ("Singapore".equalsIgnoreCase(country)) {
 
 	        String classChain =
-	                "**/XCUIElementTypeButton[`name == \"Singapore\"`][2]";
+	                    "**/XCUIElementTypeButton[`name == 'Singapore'`][2]";
+	        
 
 	        By locator = AppiumBy.iOSClassChain(classChain);
 
@@ -63,48 +64,48 @@ public class IOSLocationPage extends IOSActions{
 	            List<WebElement> countries =
 	                    driver.findElements(locator);
 
-	            System.out.println(
-	                    "Attempt " + (i + 1) +
-	                    " | Singapore found: " + countries.size()
-	            );
+//	            System.out.println(
+//	                    "Attempt " + (i + 1) +
+//	                    " | Singapore found: " + countries.size()
+//	            );
 
 	            if (!countries.isEmpty()) {
 
-	                WebElement countryElement = countries.get(0);
+	                WebElement countryElement =
+	                        countries.get(0);
+//
+//	                System.out.println(
+//	                        "Country: " +
+//	                        countryElement.getAttribute("name")
+//	                );
 
-	                System.out.println(
-	                        "Country: " +
-	                        countryElement.getAttribute("name")
-	                );
-
-	                System.out.println(
-	                        "Displayed: " +
-	                        countryElement.isDisplayed()
-	                );
+//	                System.out.println(
+//	                        "Displayed: " +
+//	                        countryElement.isDisplayed()
+//	                );
 
 	                if (countryElement.isDisplayed()) {
 
-	                    System.out.println(
-	                            "Singapore is visible. Clicking..."
-	                    );
+//	                    System.out.println(
+//	                            "Singapore is visible. Clicking..."
+//	                    );
 
 	                    countryElement.click();
 	                    Thread.sleep(1000);
-
 	                    return;
 	                }
 	            }
 
-	            System.out.println(
-	                    "Singapore not visible. Scrolling..."
-	            );
+//	            System.out.println(
+//	                    "Singapore not visible. Scrolling..."
+//	            );
 
 	            iOSScroll();
 	        }
 
 	    } else {
 
-	        // All other countries → existing Predicate
+	        // Other countries → existing Predicate
 	        String predicate =
 	                "name == '" + country + "' AND " +
 	                "label == '" + country + "' AND " +
@@ -118,43 +119,23 @@ public class IOSLocationPage extends IOSActions{
 	            List<WebElement> countries =
 	                    driver.findElements(locator);
 
-	            System.out.println(
-	                    "Attempt " + (i + 1) +
-	                    " | Country found: " + countries.size()
-	            );
+//	            System.out.println(
+//	                    "Attempt " + (i + 1) +
+//	                    " | Country found: " + countries.size()
+//	            );
 
 	            if (!countries.isEmpty()) {
 
 	                WebElement countryElement =
 	                        countries.get(0);
 
-	                System.out.println(
-	                        "Country: " +
-	                        countryElement.getAttribute("name")
-	                );
-
-	                System.out.println(
-	                        "Displayed: " +
-	                        countryElement.isDisplayed()
-	                );
-
 	                if (countryElement.isDisplayed()) {
-
-	                    System.out.println(
-	                            "Country is visible. Clicking: " +
-	                            country
-	                    );
 
 	                    countryElement.click();
 	                    Thread.sleep(1000);
-
 	                    return;
 	                }
 	            }
-
-	            System.out.println(
-	                    "Country not visible. Scrolling..."
-	            );
 
 	            iOSScroll();
 	        }
@@ -162,7 +143,7 @@ public class IOSLocationPage extends IOSActions{
 
 	    throw new SkipException(
 	            "Country could not be found/displayed after scrolling: "
-	            + country
+	                    + country
 	    );
 	}
 

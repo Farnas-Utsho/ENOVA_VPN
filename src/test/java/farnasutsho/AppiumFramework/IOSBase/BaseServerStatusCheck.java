@@ -50,6 +50,8 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
     protected abstract void selectProtocol();
     protected abstract String getJsonFile();
     protected abstract int getProtocolId();
+    protected abstract boolean isWireGuard();
+    
 	
 	
     @BeforeClass
@@ -58,13 +60,12 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
         // =====================================
         // 1. Get latest server list from API
         // =====================================
+        Get_Server_List serverList = new Get_Server_List();
 
-//        Get_Server_List serverList = new Get_Server_List();
-//
-//        serverList.getServerList(
-//                getProtocolId(),
-//                getJsonFile()
-//        );
+        serverList.getServerList(
+                getProtocolId(),
+                getJsonFile()
+        );
 
 
         // =====================================
@@ -113,11 +114,7 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
 	    String server = input.get("server");
 	    String expectedIP = input.get("ip");
 	    String servercount=input.get("numberofservers");
-	    
-	    System.out.println("Country: " + country);
-	    System.out.println("Server: " + server);
-	    System.out.println("Expected IP: " + expectedIP);
-	    System.out.println("Number of server: " + servercount);	    
+	     
 	    
 	      if (home.isDefaultServer(server)) {
 
@@ -138,7 +135,7 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
 	      	            location.SelectServer(server);
 	      	        }
 	      	    } catch (Exception e) {
-	      	        System.out.println("Server not found: " + server + " | " + e.getMessage());
+	      	        //System.out.println("Server not found: " + server + " | " + e.getMessage());
 	      	        throw new SkipException("Skipping test — server not found: " + server);
 	      	    }
 

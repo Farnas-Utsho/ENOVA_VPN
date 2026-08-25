@@ -80,7 +80,7 @@ public boolean isDefaultServer(String server) {
     By locator =
             AppiumBy.iOSNsPredicateString(predicate);
 
-    System.out.println("Checking default server: " + server);
+   // System.out.println("Checking default server: " + server);
 
     try {
 
@@ -101,19 +101,19 @@ public boolean isDefaultServer(String server) {
             return null;
         });
 
-        System.out.println(
-                "Default server matched: " +
-                element.getAttribute("name")
-        );
+//        System.out.println(
+//                "Default server matched: " +
+//                element.getAttribute("name")
+//        );
 
         return true;
 
     } catch (Exception e) {
 
-        System.out.println(
-                "Default server does not match: " +
-                server
-        );
+//        System.out.println(
+//                "Default server does not match: " +
+//                server
+//        );
 
         return false;
     }

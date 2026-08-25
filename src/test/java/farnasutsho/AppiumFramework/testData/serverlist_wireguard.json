@@ -1,93 +1,76 @@
-[
-	{
-	   "country": "India",
-	   "Server": "India - 3"
-	 },
-	 {
-	   "country": "India",
-	   "Server": "India - 10"
-	 },
-	 {
-	   "country": "India",
-	   "Server": "India - 11"
-	 },
-	 {
-	   "country": "India",
-	   "Server": "India - 13"},
-	   {
-	   	  	    "country": "",
-	   	  	    "Server": "USA - 25"
-	   	  	  },
-			  
-			  
-
-			  {
-			    "country": "",
-			    "Server": "Netherlands - 6"
-			  },
-			  
-			  {
-			    "country": "Germany",
-			    "Server": "Germany - 15"
-			  },
-			  {
-			      "country": "Germany",
-			      "Server": "Germany Premium - 5"
-			    },  
-			  			  
-			  
-			 
-  {
-    "country": "Singapore",
-    "Server": "Singapore - 1"
-  },
-  {
-    "country": "Singapore",
-    "Server": "Singapore"
-  },
-  {
-    "country": "Singapore",
-    "Server": "Singapore - 10"
-  },
-  {
-    "country": "Singapore",
-    "Server": "Singapore - 11"
-  },
-  {
-    "country": "Singapore",
-    "Server": "Singapore - 12"
-  },
-  {
-    "country": "",
-    "Server": "Japan"
-  },
-  {
-    "country": "United Kingdom",
-    "Server": "United Kingdom - 3"
-  },
-  {
-    "country": "United Kingdom",
-    "Server": "United Kingdom - 4"
-  },
-  {
-    "country": "United Kingdom",
-    "Server": "United Kingdom - 5"
-  },
-  {
-  	"country": "South Korea",
-  	"Server": "South Korea - 1"
-  	},
-  	{
-  		"country": "South Korea",
-  		"Server": "South Korea - 2"
-  	},
-  	{
-  	"country": "South Korea",
-  	"Server": "South Korea - 3"
-  	},
-	{
-				"country": "",
-				"Server": "Norway - 3"
-				}
-
-]
+[ {
+  "country" : "Singapore",
+  "server" : "Singapore - 1",
+  "numberofservers" : "multiple",
+  "ip" : "167.172.88.191"
+}, {
+  "country" : "Singapore",
+  "server" : "Singapore",
+  "numberofservers" : "multiple",
+  "ip" : "192.53.172.74"
+}, {
+  "country" : "Singapore",
+  "server" : "Singapore - 10",
+  "numberofservers" : "multiple",
+  "ip" : "192.53.172.74"
+}, {
+  "country" : "Singapore",
+  "server" : "Singapore - 11",
+  "numberofservers" : "multiple",
+  "ip" : "192.53.172.74"
+}, {
+  "country" : "Singapore",
+  "server" : "Singapore - 12",
+  "numberofservers" : "multiple",
+  "ip" : "192.53.172.74"
+}, {
+  "country" : "Germany",
+  "server" : "Germany - 15",
+  "numberofservers" : "multiple",
+  "ip" : "45.140.42.21"
+}, {
+  "country" : "Germany",
+  "server" : "Germany Premium - 5",
+  "numberofservers" : "multiple",
+  "ip" : "45.140.42.21"
+}, {
+  "country" : "Japan",
+  "server" : "Japan",
+  "numberofservers" : "single",
+  "ip" : "172.233.82.44"
+}, {
+  "country" : "United Kingdom",
+  "server" : "United Kingdom - 3",
+  "numberofservers" : "multiple",
+  "ip" : "216.245.140.24"
+}, {
+  "country" : "United Kingdom",
+  "server" : "United Kingdom - 4",
+  "numberofservers" : "multiple",
+  "ip" : "216.245.140.28"
+}, {
+  "country" : "United Kingdom",
+  "server" : "United Kingdom - 5",
+  "numberofservers" : "multiple",
+  "ip" : "216.245.140.28"
+}, {
+  "country" : "South Korea",
+  "server" : "South Korea - 1",
+  "numberofservers" : "multiple",
+  "ip" : "172.233.82.44"
+}, {
+  "country" : "South Korea",
+  "server" : "South Korea - 2",
+  "numberofservers" : "multiple",
+  "ip" : "172.233.82.44"
+}, {
+  "country" : "South Korea",
+  "server" : "South Korea - 3",
+  "numberofservers" : "multiple",
+  "ip" : "172.233.82.44"
+}, {
+  "country" : "Norway",
+  "server" : "Norway - 3",
+  "numberofservers" : "single",
+  "ip" : "194.127.178.55"
+} ]

@@ -1,4 +1,64 @@
-[  {
+[ {
+  "country" : "India",
+  "server" : "India - 3",
+  "numberofservers" : "multiple",
+  "ip" : "172.105.58.19"
+}, {
+  "country" : "India",
+  "server" : "India - 10",
+  "numberofservers" : "multiple",
+  "ip" : "172.105.58.19"
+}, {
+  "country" : "India",
+  "server" : "India - 11",
+  "numberofservers" : "multiple",
+  "ip" : "172.105.58.19"
+}, {
+  "country" : "India",
+  "server" : "India - 13",
+  "numberofservers" : "multiple",
+  "ip" : "172.105.58.19"
+}, {
+  "country" : "USA",
+  "server" : "USA - 10",
+  "numberofservers" : "multiple",
+  "ip" : "174.138.61.114"
+}, {
+  "country" : "USA",
+  "server" : "USA - 20",
+  "numberofservers" : "multiple",
+  "ip" : "130.94.66.85"
+}, {
+  "country" : "USA",
+  "server" : "USA - 21",
+  "numberofservers" : "multiple",
+  "ip" : "38.60.236.227"
+}, {
+  "country" : "USA",
+  "server" : "USA - 25",
+  "numberofservers" : "multiple",
+  "ip" : "162.120.71.217"
+}, {
+  "country" : "USA",
+  "server" : "USA - 30",
+  "numberofservers" : "multiple",
+  "ip" : "130.94.92.87"
+}, {
+  "country" : "Netherlands",
+  "server" : "Netherlands - 6",
+  "numberofservers" : "single",
+  "ip" : "194.127.178.55"
+}, {
+  "country" : "Brazil",
+  "server" : "Brazil - 2",
+  "numberofservers" : "multiple",
+  "ip" : "38.60.242.195"
+}, {
+  "country" : "Brazil",
+  "server" : "Brazil - 3",
+  "numberofservers" : "multiple",
+  "ip" : "38.60.242.195"
+}, {
   "country" : "Singapore",
   "server" : "Singapore - 1",
   "numberofservers" : "multiple",
@@ -23,8 +83,59 @@
   "server" : "Singapore - 12",
   "numberofservers" : "multiple",
   "ip" : "192.53.172.74"
-} 
-
-
-
-]
+}, {
+  "country" : "Germany",
+  "server" : "Germany - 15",
+  "numberofservers" : "multiple",
+  "ip" : "45.140.42.21"
+}, {
+  "country" : "Germany",
+  "server" : "Germany Premium - 5",
+  "numberofservers" : "multiple",
+  "ip" : "45.140.42.21"
+}, {
+  "country" : "Japan",
+  "server" : "Japan",
+  "numberofservers" : "single",
+  "ip" : "172.233.82.44"
+}, {
+  "country" : "Indonesia",
+  "server" : "Indonesia - 1",
+  "numberofservers" : "single",
+  "ip" : "130.94.92.87"
+}, {
+  "country" : "United Kingdom",
+  "server" : "United Kingdom - 3",
+  "numberofservers" : "multiple",
+  "ip" : "216.245.140.24"
+}, {
+  "country" : "United Kingdom",
+  "server" : "United Kingdom - 4",
+  "numberofservers" : "multiple",
+  "ip" : "216.245.140.28"
+}, {
+  "country" : "United Kingdom",
+  "server" : "United Kingdom - 5",
+  "numberofservers" : "multiple",
+  "ip" : "216.245.140.28"
+}, {
+  "country" : "South Korea",
+  "server" : "South Korea - 1",
+  "numberofservers" : "multiple",
+  "ip" : "172.233.82.44"
+}, {
+  "country" : "South Korea",
+  "server" : "South Korea - 2",
+  "numberofservers" : "multiple",
+  "ip" : "172.233.82.44"
+}, {
+  "country" : "South Korea",
+  "server" : "South Korea - 3",
+  "numberofservers" : "multiple",
+  "ip" : "172.233.82.44"
+}, {
+  "country" : "Norway",
+  "server" : "Norway - 3",
+  "numberofservers" : "single",
+  "ip" : "194.127.178.55"
+} ]

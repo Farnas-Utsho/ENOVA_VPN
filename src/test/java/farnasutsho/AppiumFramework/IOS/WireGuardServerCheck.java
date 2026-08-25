@@ -13,6 +13,10 @@ public class WireGuardServerCheck extends BaseServerStatusCheck {
     protected int getProtocolId() {
         return 5;
     }
+    @Override
+    protected boolean isWireGuard() {
+        return true;
+    }
 
     @Override
     protected String getJsonFile() {
