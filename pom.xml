@@ -21,11 +21,11 @@
         <maven.compiler.target>25</maven.compiler.target>
 
         <!-- Dependencies -->
-        <appium.java-client.version>10.1.0</appium.java-client.version>
+        <appium.java-client.version>10.1.1</appium.java-client.version>
         <selenium.version>4.27.0</selenium.version>
         <testng.version>7.10.2</testng.version>
         <extentreports.version>5.1.2</extentreports.version>
-        <jackson.version>2.21.2</jackson.version>
+        <jackson.version>2.21.5</jackson.version>
         <commons.io.version>2.17.0</commons.io.version>
         <rest-assured.version>5.5.6</rest-assured.version>
 
