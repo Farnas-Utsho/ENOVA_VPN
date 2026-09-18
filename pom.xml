@@ -17,8 +17,8 @@
         
 
         <!-- Java -->
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
 
         <!-- Dependencies -->
         <appium.java-client.version>10.1.0</appium.java-client.version>
@@ -54,7 +54,6 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-            <scope>test</scope>
         </dependency>
         
         <!-- REST Assured -->
