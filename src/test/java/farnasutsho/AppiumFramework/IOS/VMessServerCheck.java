@@ -12,7 +12,7 @@ public class VMessServerCheck extends BaseServerStatusCheck {
     @Override 
     protected int getProtocolId() {
         return 3;
-    }
+    } 
 
     @Override
     protected boolean isWireGuard() {

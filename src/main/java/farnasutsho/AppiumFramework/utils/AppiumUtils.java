@@ -29,17 +29,20 @@ public class AppiumUtils {
 	
 	
 	public AppiumDriverLocalService startAppiumServer(String ipAddress , int port) {
-		
+
 		//Start appium server programmatically
 		service = new AppiumServiceBuilder().withAppiumJS(new File("//Users//farnasutsho//.nvm//versions//node//v24.14.1//lib//node_modules//appium//build//lib//main.js"))
-				
+
 				.withIPAddress(ipAddress)
-				.usingPort(port).build();
-		
+				.usingPort(port)
+				.withLogFile(new File(System.getProperty("user.dir") + "/appium-server.log"))
+				.build();
+
 		service.start();
+		service.clearOutPutStreams();
 		return service ;
-		
-		
+
+
 	}
 	
 	
