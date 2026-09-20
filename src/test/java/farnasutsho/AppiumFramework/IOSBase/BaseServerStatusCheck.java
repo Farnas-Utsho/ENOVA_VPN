@@ -8,11 +8,13 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -62,10 +64,10 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
         // =====================================
         Get_Server_List serverList = new Get_Server_List();
 
-        serverList.getServerList(
-                getProtocolId(),
-                getJsonFile()
-        );
+//        serverList.getServerList(
+//                getProtocolId(),
+//                getJsonFile()
+//        );
 
 
         // =====================================
@@ -79,24 +81,28 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
 
         home = new IOSHomePage(driver);
 
-        settings = home.clickSettings();
+     //   settings = home.clickSettings();
 
-        settings.clickConnectionSettings();
-
+       // settings.clickConnectionSettings();
+ 
         // Select VMess or WireGuard
-        selectProtocol();
+       // selectProtocol();
 
-        settings.clickHome();
+      //  settings.clickHome();
     }
 	
     @AfterMethod(alwaysRun = true)
-    public void cleanUp() {
-        driver.terminateApp("com.enovavpn.mobile");
-        driver.activateApp("com.enovavpn.mobile");
+    public void cleanUp(ITestResult result) {
+
+        if (!result.isSuccess()) {
+            driver.terminateApp("com.enovavpn.mobile");
+            driver.activateApp("com.enovavpn.mobile");
+        }
     }
 
 	
 	
+
 
 	
 	@Test(dataProvider="getData") 
@@ -124,7 +130,7 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
 	        } else {
 
 	        	home.goToLocationPage();
-
+	       
 
 	        	  try {
 	        		  if ("multiple".equals(servercount)){

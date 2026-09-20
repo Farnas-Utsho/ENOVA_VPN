@@ -104,15 +104,13 @@ public class IOSActions extends AppiumUtils{
 
 	
 	public void iOSScroll() throws InterruptedException {
-		
+
 	    Map<String, Object> params = new HashMap<>();
-	       // Important: cast to RemoteWebElement
-	    params.put("direction", "down");   
-	    
-	    driver.executeScript("mobile:scroll", params);
-	    
-	    
-	    
+	    params.put("direction", "down");
+	    params.put("distance", 0.6);
+
+	    driver.executeScript("mobile: scroll", params);
+
 	    Thread.sleep(1000);
 	}
 		

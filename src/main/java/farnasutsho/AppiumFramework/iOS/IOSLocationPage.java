@@ -1,14 +1,21 @@
 package farnasutsho.AppiumFramework.iOS;
+
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.SkipException;
+
 import farnasutsho.AppiumFramework.utils.IOSActions;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumBy.ById;
 import io.appium.java_client.ios.IOSDriver;
+
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 /**
@@ -38,35 +45,59 @@ public class IOSLocationPage extends IOSActions{
 
 	
 
-	public void SelectCountry(String country) throws InterruptedException {
+	public void SelectCountry(String country)
+	        throws InterruptedException {
 
-	    int maxScrolls = 2;
-	    By locator;
+	    String predicate =
+	            "name == '" + country + "' AND " +
+	            "label == '" + country + "' AND " +
+	            "type == 'XCUIElementTypeButton'";
 
-	    if ("Singapore".equalsIgnoreCase(country)) {
+	    By locatorExact = AppiumBy.iOSNsPredicateString(predicate);
 
-	        locator = AppiumBy.iOSClassChain(
-	                "**/XCUIElementTypeButton[`name == \"Singapore\"`][2]"
-	        );
+	    By locatorDuplicateIndexed = AppiumBy.iOSClassChain(
+	            "**/XCUIElementTypeButton[`name == \"" + country + "\"`][2]"
+	    );
 
-	    } else {
-
-	        String predicate =
-	                "type == 'XCUIElementTypeButton' AND " +
-	                "name == '" + country.trim() + "'";
-
-	        locator = AppiumBy.iOSNsPredicateString(predicate);
-	    }
+	    int maxScrolls = 5;
 
 	    for (int i = 0; i < maxScrolls; i++) {
 
-	        List<WebElement> countries = driver.findElements(locator);
+	        List<WebElement> countries = driver.findElements(locatorExact);
+
+	        if (countries.isEmpty()) {
+	            countries = driver.findElements(locatorDuplicateIndexed);
+	        }
+
+	        System.out.println("Scroll attempt " + (i + 1) + " for '" + country + "' - matches found: " + countries.size());
 
 	        if (!countries.isEmpty()) {
 
-	            WebElement countryElement = countries.get(0);
+	            // When the name is shared with a "Quick access" shortcut tile,
+	            // the real list row is the last match, not the first.
+	            WebElement countryElement = countries.get(countries.size() - 1);
 
-	            if (countryElement.isDisplayed()) {
+	            if (!countryElement.isDisplayed()) {
+
+	                System.out.println("Matched '" + country + "' but not visible yet, scrolling to it.");
+
+	                scrollToWebElement(countryElement);
+	                Thread.sleep(500);
+
+	                countries = driver.findElements(locatorExact);
+	                if (countries.isEmpty()) {
+	                    countries = driver.findElements(locatorDuplicateIndexed);
+	                }
+
+	                if (!countries.isEmpty()) {
+	                    countryElement = countries.get(countries.size() - 1);
+	                }
+	            }
+
+	            if (!countries.isEmpty() && countryElement.isDisplayed()) {
+
+	                System.out.println("Country found on page: " + country);
+
 	                countryElement.click();
 	                Thread.sleep(1000);
 	                return;
@@ -74,7 +105,6 @@ public class IOSLocationPage extends IOSActions{
 	        }
 
 	        iOSScroll();
-	        Thread.sleep(1000);
 	    }
 
 	    throw new SkipException(
@@ -82,38 +112,88 @@ public class IOSLocationPage extends IOSActions{
 	                    + country
 	    );
 	}
+
 	public void SelectServer(String server) throws InterruptedException {
 
-	    String predicate =
+	    String predicateWithMs =
 	            "type == 'XCUIElementTypeButton' AND " +
-	            "name == '" + server.trim() + "'";
+	            "name BEGINSWITH '" + server + "' AND " +
+	            "name CONTAINS 'ms'";
 
-	    By locator = AppiumBy.iOSNsPredicateString(predicate);
+	    String predicateExact =
+	            "name == '" + server + "' AND " +
+	            "label == '" + server + "' AND " +
+	            "value == '1'";
 
-	    int maxScrolls = 2;
+	    String predicateBeginsWith =
+	            "type == 'XCUIElementTypeButton' AND " +
+	            "name BEGINSWITH '" + server + "'";
+
+	    By locatorWithMs = AppiumBy.iOSNsPredicateString(predicateWithMs);
+	    By locatorExact = AppiumBy.iOSNsPredicateString(predicateExact);
+	    By locatorBeginsWith = AppiumBy.iOSNsPredicateString(predicateBeginsWith);
+
+	    int maxScrolls = 5;
 
 	    for (int i = 0; i < maxScrolls; i++) {
 
-	        List<WebElement> servers = driver.findElements(locator);
+	        List<WebElement> servers = driver.findElements(locatorWithMs);
 
-	        for (WebElement serverElement : servers) {
+	        if (servers.isEmpty()) {
+	            servers = driver.findElements(locatorExact);
+	        }
 
-	            if (serverElement.isDisplayed()) {
+	        if (servers.isEmpty()) {
+	            servers = driver.findElements(locatorBeginsWith);
+	        }
+
+	        System.out.println("Scroll attempt " + (i + 1) + " for '" + server + "' - matches found: " + servers.size());
+
+	        if (!servers.isEmpty()) {
+
+	            WebElement serverElement = servers.get(0);
+
+	            if (!serverElement.isDisplayed()) {
+
+	                System.out.println("Matched '" + server + "' but not visible yet, scrolling to it.");
+
+	                scrollToWebElement(serverElement);
+	                Thread.sleep(500);
+
+	                servers = driver.findElements(locatorWithMs);
+	                if (servers.isEmpty()) {
+	                    servers = driver.findElements(locatorExact);
+	                }
+	                if (servers.isEmpty()) {
+	                    servers = driver.findElements(locatorBeginsWith);
+	                }
+
+	                if (!servers.isEmpty()) {
+	                    serverElement = servers.get(0);
+	                }
+	            }
+
+	            if (!servers.isEmpty() && serverElement.isDisplayed()) {
+
+	                System.out.println("Server found on page: " + server);
+
 	                serverElement.click();
+
 	                return;
 	            }
 	        }
 
 	        iOSScroll();
+
 	        Thread.sleep(1000);
 	    }
 
 	    throw new SkipException(
-	            "Server could not be found/displayed after scrolling: "
-	                    + server
+	            "Server could not be found/ displayed after scrolling: "
+	            + server
 	    );
 	}
-	
+
 	public void SelectServerSwitch(String server) throws InterruptedException {
 		String predicate =
 		        "type == 'XCUIElementTypeButton' AND " +
@@ -155,8 +235,8 @@ public class IOSLocationPage extends IOSActions{
 		            "Server could not be found/ displayed after scrolling: "
 		            + server
 		    );
-  
-  
-  
+
+
+
 	}
 }

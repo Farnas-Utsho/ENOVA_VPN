@@ -128,7 +128,7 @@ public void clickconnect() {
 	
 	clickElement(connectButton);
 	
-}
+} 
 
 public void clickDisconnect() {
 	clickElement(disconnectButton );
