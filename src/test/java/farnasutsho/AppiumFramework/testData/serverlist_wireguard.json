@@ -1,4 +1,39 @@
 [ {
+  "country" : "India",
+  "server" : "India - 3",
+  "numberofservers" : "multiple",
+  "ip" : "172.105.58.19"
+}, {
+  "country" : "India",
+  "server" : "India - 10",
+  "numberofservers" : "multiple",
+  "ip" : "172.105.58.19"
+}, {
+  "country" : "India",
+  "server" : "India - 11",
+  "numberofservers" : "multiple",
+  "ip" : "172.105.58.19"
+}, {
+  "country" : "India",
+  "server" : "India - 13",
+  "numberofservers" : "multiple",
+  "ip" : "172.105.58.19"
+}, {
+  "country" : "France",
+  "server" : "France - 10",
+  "numberofservers" : "single",
+  "ip" : "194.99.23.55"
+}, {
+  "country" : "Netherlands",
+  "server" : "Netherlands - 6",
+  "numberofservers" : "multiple",
+  "ip" : "194.127.178.55"
+}, {
+  "country" : "Netherlands",
+  "server" : "Netherlands - 7",
+  "numberofservers" : "multiple",
+  "ip" : "194.127.178.74"
+}, {
   "country" : "Singapore",
   "server" : "Singapore - 1",
   "numberofservers" : "multiple",
@@ -24,6 +59,11 @@
   "numberofservers" : "multiple",
   "ip" : "192.53.172.74"
 }, {
+  "country" : "Singapore",
+  "server" : "Singapore - 15",
+  "numberofservers" : "multiple",
+  "ip" : "167.104.101.52"
+}, {
   "country" : "Germany",
   "server" : "Germany - 15",
   "numberofservers" : "multiple",
@@ -34,10 +74,55 @@
   "numberofservers" : "multiple",
   "ip" : "45.140.42.21"
 }, {
+  "country" : "Italy",
+  "server" : "Rome ",
+  "numberofservers" : "single",
+  "ip" : "85.137.175.205"
+}, {
+  "country" : "Belgium",
+  "server" : "Belgium - 10",
+  "numberofservers" : "single",
+  "ip" : "192.121.170.187"
+}, {
+  "country" : "Spain",
+  "server" : "Spain - 6",
+  "numberofservers" : "single",
+  "ip" : "31.14.238.96"
+}, {
   "country" : "Japan",
   "server" : "Japan",
-  "numberofservers" : "single",
+  "numberofservers" : "multiple",
   "ip" : "172.233.82.44"
+}, {
+  "country" : "Japan",
+  "server" : "Japan - 2",
+  "numberofservers" : "multiple",
+  "ip" : "167.104.164.22"
+}, {
+  "country" : "Australia",
+  "server" : "Australia - 3",
+  "numberofservers" : "multiple",
+  "ip" : "85.155.189.176"
+}, {
+  "country" : "Australia",
+  "server" : "Australia - 10",
+  "numberofservers" : "multiple",
+  "ip" : "158.255.212.81"
+}, {
+  "country" : "Romania",
+  "server" : "Romania - 10",
+  "numberofservers" : "single",
+  "ip" : "194.14.217.183"
+}, {
+  "country" : "Canada",
+  "server" : "Canada - 10",
+  "numberofservers" : "single",
+  "ip" : "188.190.17.27"
+}, {
+  "country" : "Poland",
+  "server" : "Poland",
+  "numberofservers" : "single",
+  "ip" : "89.46.235.79"
 }, {
   "country" : "United Kingdom",
   "server" : "United Kingdom - 3",
@@ -69,8 +154,58 @@
   "numberofservers" : "multiple",
   "ip" : "172.233.82.44"
 }, {
+  "country" : "South Korea",
+  "server" : "South Korea - 6",
+  "numberofservers" : "multiple",
+  "ip" : "85.155.177.151"
+}, {
+  "country" : "Switzerland",
+  "server" : "Zurich - 1",
+  "numberofservers" : "single",
+  "ip" : "85.155.182.185"
+}, {
+  "country" : "United Arab Emirates",
+  "server" : "United Arab Emirates",
+  "numberofservers" : "single",
+  "ip" : "91.132.93.28"
+}, {
   "country" : "Norway",
   "server" : "Norway - 3",
-  "numberofservers" : "single",
+  "numberofservers" : "multiple",
   "ip" : "194.127.178.55"
+}, {
+  "country" : "Norway",
+  "server" : "Oslo",
+  "numberofservers" : "multiple",
+  "ip" : "167.104.108.188"
+}, {
+  "country" : "HongKong",
+  "server" : "HongKong - 1",
+  "numberofservers" : "multiple",
+  "ip" : "103.69.128.163"
+}, {
+  "country" : "HongKong",
+  "server" : "HongKong - 2",
+  "numberofservers" : "multiple",
+  "ip" : "103.69.129.42"
+}, {
+  "country" : "HongKong",
+  "server" : "Hong Kong - 10",
+  "numberofservers" : "multiple",
+  "ip" : "158.255.208.111"
+}, {
+  "country" : "Greecce",
+  "server" : "Greecce - 1",
+  "numberofservers" : "single",
+  "ip" : "185.234.52.249"
+}, {
+  "country" : "Ireland",
+  "server" : "Ireland - 10",
+  "numberofservers" : "single",
+  "ip" : "194.26.213.42"
+}, {
+  "country" : "Czech Republic",
+  "server" : "Czech Republic",
+  "numberofservers" : "single",
+  "ip" : "185.122.186.101"
 } ]

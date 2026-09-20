@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="farnasutsho.AppiumFramework.TestUtils.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Server Status check(failed)">
     <classes>
+      <class name="farnasutsho.AppiumFramework.IOS.WireGuardServerCheck">
+        <methods>
+          <include name="ConfigureAppium"/>
+          <include name="serverTest" invocation-numbers="17 2 19 25"/>
+          <include name="setupProtocol"/>
+          <include name="tearDown"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- farnasutsho.AppiumFramework.IOS.WireGuardServerCheck -->
       <class name="farnasutsho.AppiumFramework.IOS.VMessServerCheck">
         <methods>
           <include name="ConfigureAppium"/>
-          <include name="serverTest" invocation-numbers="2 3 4 5 6"/>
+          <include name="serverTest" invocation-numbers="42 43 12 44 13 45 46 49 50 51 52 53 57 58 59"/>
           <include name="setupProtocol"/>
           <include name="tearDown"/>
           <include name="cleanUp"/>
         </methods>
       </class> <!-- farnasutsho.AppiumFramework.IOS.VMessServerCheck -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Server Status check(failed) -->
+</suite> <!-- Failed suite [Suite] -->

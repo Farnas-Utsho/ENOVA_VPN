@@ -64,10 +64,10 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
         // =====================================
         Get_Server_List serverList = new Get_Server_List();
 
-//        serverList.getServerList(
-//                getProtocolId(),
-//                getJsonFile()
-//        );
+        serverList.getServerList(
+               getProtocolId(),
+                getJsonFile()
+       );
 
 
         // =====================================
@@ -81,14 +81,14 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
 
         home = new IOSHomePage(driver);
 
-     //   settings = home.clickSettings();
+     settings = home.clickSettings();
 
-       // settings.clickConnectionSettings();
+       settings.clickConnectionSettings();
  
-        // Select VMess or WireGuard
-       // selectProtocol();
+      // Select VMess or WireGuard
+       selectProtocol();
 
-      //  settings.clickHome();
+       settings.clickHome();
     }
 	
     @AfterMethod(alwaysRun = true)

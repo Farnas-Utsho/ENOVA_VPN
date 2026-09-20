@@ -59,11 +59,20 @@ public class SettingsPage extends AndroidActions {
 	
 	@AndroidFindBy(xpath="//android.widget.Switch[contains(@content-desc,'WireGuard')]")
 	private WebElement wireguardProtocol ;
-	
-	
+
+
 	public void ClickWireguard() {
 		wireguardProtocol.click();
-		
+
+	}
+
+	@AndroidFindBy(xpath="//android.widget.Switch[contains(@content-desc,'VMess')]")
+	private WebElement vmessProtocol ;
+
+
+	public void ClickVMess() {
+		vmessProtocol.click();
+
 	}
 
 }

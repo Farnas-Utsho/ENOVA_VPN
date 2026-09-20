@@ -10,7 +10,7 @@
     <test name="Server Status check">
         <classes>
             <class name="farnasutsho.AppiumFramework.IOS.VMessServerCheck"/>
-            <!-- <class name="farnasutsho.AppiumFramework.IOS.WireGuardServerCheck"/> -->
+            <class name="farnasutsho.AppiumFramework.IOS.WireGuardServerCheck"/> 
         </classes>
     </test>
 

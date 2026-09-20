@@ -6,14 +6,24 @@
   </listeners>
   <test thread-count="5" name="Server Status check(failed)">
     <classes>
-      <class name="farnasutsho.AppiumFramework.IOS.ServerStatusCheck">
+      <class name="farnasutsho.AppiumFramework.IOS.WireGuardServerCheck">
         <methods>
           <include name="ConfigureAppium"/>
-          <include name="preSetup"/>
+          <include name="serverTest" invocation-numbers="17 2 19 25"/>
+          <include name="setupProtocol"/>
           <include name="tearDown"/>
-          <include name="serverTest" invocation-numbers="6 7 8 9 10 11 12"/>
+          <include name="cleanUp"/>
         </methods>
-      </class> <!-- farnasutsho.AppiumFramework.IOS.ServerStatusCheck -->
+      </class> <!-- farnasutsho.AppiumFramework.IOS.WireGuardServerCheck -->
+      <class name="farnasutsho.AppiumFramework.IOS.VMessServerCheck">
+        <methods>
+          <include name="ConfigureAppium"/>
+          <include name="serverTest" invocation-numbers="42 43 12 44 13 45 46 49 50 51 52 53 57 58 59"/>
+          <include name="setupProtocol"/>
+          <include name="tearDown"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- farnasutsho.AppiumFramework.IOS.VMessServerCheck -->
     </classes>
   </test> <!-- Server Status check(failed) -->
 </suite> <!-- Failed suite [Suite] -->
