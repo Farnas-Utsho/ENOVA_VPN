@@ -70,11 +70,14 @@ public class IOSSettingsPage extends IOSActions{
  
  
 //Split tunneling 
-private By SplitTunneling = AppiumBy.iOSNsPredicateString("name BEGINSWITH 'Split tunneling'");
+private By SplitTunnelingOn = AppiumBy.iOSClassChain("**/XCUIElementTypeSwitch[`value == \"0\"`][2]");
+
  
 
 //Internal Kill switch 
-private By killSwitch = AppiumBy.className("XCUIElementTypeSwitch");
+private By killSwitch = AppiumBy.iOSClassChain(
+	    "**/XCUIElementTypeSwitch[`value == \"0\"`][1]"
+	);
 
 // Enable Kill switch
 private By EnableButton= AppiumBy.accessibilityId("Enable"); 
@@ -109,38 +112,28 @@ public void TurnOnKillSwitch() {
 	
 	clickElement(EnableButton);
 	
-	gotoSettingspage();
-	
 	clickElement(HomeIcon);
 	
 
 	
 }
+
+private By killswitchOff= AppiumBy.iOSClassChain("**/XCUIElementTypeSwitch[`value == '1'`][1]");
 
 public void TurnOffKillSwitch() {
 	
 	clickConnectionSettings();
 	
-	clickElement(killSwitch);
+	clickElement(killswitchOff);
 	
 	clickElement(DisableButton);
 	
-	gotoSettingspage();
-	
 	clickElement(HomeIcon);
-	
-
-	
-}
-
-//Click split tunneling
-
-public void clickSplitTunneling() {
-	
-	clickElement(SplitTunneling);
-	
+ 
 	
 }
+
+
 
 
  //Click on home icon
@@ -198,32 +191,36 @@ public void clickSplitTunneling() {
  }
  
  
- private By splitTunnelInput = AppiumBy.accessibilityId("Type here");
- private By createSplitTunneling= AppiumBy.accessibilityId("Create Split Tunnel");
- private By closelist = AppiumBy.className("XCUIElementTypeImage");
+ private By splitTunnelInput = AppiumBy.iOSNsPredicateString("value == 'Add domain to bypass…'");
+ private By addUrl = AppiumBy.accessibilityId("Add");
 
- public void createSplitTunnel() {
-	  
-	  clickElement(SplitTunneling);
-	  driver.findElement(splitTunnelInput).sendKeys("https://api.ipify.org");
-	  driver.hideKeyboard();
-	  clickElement(createSplitTunneling);
-	  clickElement(closelist);
-	  
+
+ // Once split tunneling is enabled, the switch's value flips from "0" to
+ // "1" - tapping it again (same position) reopens the split-tunnel
+ // config screen to add another URL, without turning the feature off.
+ private By SplitTunnelingOff = AppiumBy.iOSClassChain("**/XCUIElementTypeSwitch[`value == \"1\"`][2]");
+
+
+ public void CreateSplitTunnelUrl(String url) {
+
+	  clickElement(SplitTunnelingOn);
+	  clickElement(EnableButton);
+	  driver.findElement(splitTunnelInput).sendKeys(url);
+	  clickElement(addUrl);
+	
+	 
+
+ }
+ 
+ public void turnoffSplitTunneling() {
+	 clickElement(SplitTunnelingOff);
+	 clickElement(DisableButton);
+	 
  }
 
  
- private By removeButton = AppiumBy.accessibilityId("Remove");
- public void removeSplitTunneling() {
-	 clickElement(SplitTunneling);
-	 clickElement(DeleteButton);
-	 clickElement(removeButton);
-	 clickElement(closelist);
-	 
-	 
- }
 
- 
+
  
 // Fetch the IP from the Settings 
  

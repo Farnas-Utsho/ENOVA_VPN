@@ -44,6 +44,7 @@ public class IOSActions extends AppiumUtils{
 		driver.executeScript("mobile:touchAndHold", params);
 	}
 
+	@SuppressWarnings("null")
 	public void scrollToEndAction()
 	{
 		boolean canScrollMore;
@@ -68,6 +69,7 @@ public class IOSActions extends AppiumUtils{
 	
 	
 	
+	@SuppressWarnings("null")
 	public void clickElement(By locator) {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
@@ -151,19 +153,20 @@ Thread.sleep(ms);
 
 
 private By vpnSettings = AppiumBy.accessibilityId("com.apple.settings.vpn");
-private By vpnStatus = AppiumBy.accessibilityId("VPN Status, Connected");
+
+private By vpnToggle = AppiumBy.iOSClassChain("**/XCUIElementTypeSwitch[`value == '1'`][2]");
 
 public void turnoffVPNFromSettings() throws InterruptedException {
 
     driver.activateApp("com.apple.Preferences");
-    Thread.sleep(8000);
-	
-   clickElement(vpnSettings);
-    
-   clickElement(vpnStatus);
-    
-     
-	
+
+    // "VPN" is below the fold on the Settings root page - one scroll is
+    // enough to bring it into view.
+    iOSScroll();
+
+    clickElement(vpnSettings);
+    clickElement(vpnToggle);
+
 }
 
 

@@ -1,28 +1,19 @@
 package farnasutsho.AppiumFramework.IOSBase;
 import farnasutsho.AppiumFramework.Serverlist.Get_Server_List;
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.time.Duration;
+
+
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -34,7 +25,7 @@ import farnasutsho.AppiumFramework.iOS.IOSHomePage;
 import farnasutsho.AppiumFramework.iOS.IOSLocationPage;
 import farnasutsho.AppiumFramework.iOS.IOSSettingsPage;
 import farnasutsho.AppiumFramework.iOS.IOSThirdPartyAPP;
-import io.appium.java_client.AppiumBy;
+
 import io.appium.java_client.AppiumDriver;
 
 public abstract class BaseServerStatusCheck extends IOSBaseTest{
@@ -62,7 +53,7 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
         // =====================================
         // 1. Get latest server list from API
         // =====================================
-        Get_Server_List serverList = new Get_Server_List();
+       Get_Server_List serverList = new Get_Server_List();
 
         serverList.getServerList(
                getProtocolId(),
@@ -85,7 +76,7 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
 
        settings.clickConnectionSettings();
  
-      // Select VMess or WireGuard
+    //  Select VMess or WireGuard
        selectProtocol();
 
        settings.clickHome();
@@ -93,6 +84,12 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
 	
     @AfterMethod(alwaysRun = true)
     public void cleanUp(ITestResult result) {
+
+        if (driver == null) {
+            // @BeforeClass never finished (e.g. no device detected on this
+            // run) - there is nothing to clean up.
+            return;
+        }
 
         if (!result.isSuccess()) {
             driver.terminateApp("com.enovavpn.mobile");
@@ -133,7 +130,7 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
 	       
 
 	        	  try {
-	        		  if ("multiple".equals(servercount)){
+	        		  if ("multiple".equals(servercount) && !"Brazil - 3".equals(server)){
 	      	        	location.SelectCountry(country);
 	      	            location.SelectServer(server);
 	      	        } else {

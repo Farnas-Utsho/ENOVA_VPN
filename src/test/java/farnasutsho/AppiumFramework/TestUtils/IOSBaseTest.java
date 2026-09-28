@@ -96,7 +96,20 @@ public class IOSBaseTest  extends AppiumUtils{
 	// options.setApp("...");
 
 	// ✅ ADDED: Use bundleId instead
-	 options.setBundleId("com.enovavpn.mobile");
+	String bundleId = "com.enovavpn.mobile";
+	 options.setBundleId(bundleId);
+
+	// ✅ ADDED: Verify the app is actually installed on this device before
+	// attempting to start a session - otherwise Appium fails with an
+	// opaque 500 "App with bundle identifier ... unknown" error.
+	String installedApps = runCommand("ideviceinstaller -u " + udid + " list -b " + bundleId + " | grep " + bundleId);
+	if (installedApps == null || installedApps.isEmpty()) {
+	    throw new RuntimeException(
+	            "❌ App '" + bundleId + "' is not installed on device " + udid
+	                    + " (" + deviceName + "). Install the app on this device before running tests."
+	    );
+	}
+	System.out.println("✅ Confirmed '" + bundleId + "' is installed on the device.");
 
 	options.setWdaLaunchTimeout(Duration.ofSeconds(100));
 

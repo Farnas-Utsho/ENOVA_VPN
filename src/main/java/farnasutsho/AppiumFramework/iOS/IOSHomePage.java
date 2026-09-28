@@ -125,10 +125,22 @@ public boolean isDefaultServer(String server) {
  
  //Necessary functions 
 public void clickconnect() {
-	
+
 	clickElement(connectButton);
-	
-} 
+
+}
+
+/**
+ * Waits for the DISCONNECT button to appear, which only shows once the
+ * VPN tunnel is actually up - not just after tapping Connect. Use this
+ * before terminating the app, otherwise killing the process too early
+ * can tear down a connection that hasn't fully established yet.
+ */
+public void waitForConnected() {
+
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	wait.until(org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated(disconnectButton));
+}
 
 public void clickDisconnect() {
 	clickElement(disconnectButton );

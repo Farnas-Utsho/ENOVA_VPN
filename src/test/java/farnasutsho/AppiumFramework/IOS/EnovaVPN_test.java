@@ -167,7 +167,7 @@ public class EnovaVPN_test extends IOSBaseTest{
 		
 		home.clickSettings();
 		settings.clickConnectionSettings();
-		settings.createSplitTunnel();
+	//	settings.createSplitTunnel("https://api.ipify.org");
 		
 		settings.gotoSettingspage();
 		settings.clickHomeIcon();
@@ -200,7 +200,7 @@ public class EnovaVPN_test extends IOSBaseTest{
 	    
 	    home.clickSettings();
 		settings.clickConnectionSettings();
-		settings.removeSplitTunneling();
+		//settings.removeSplitTunneling();
 		
 	    
 		

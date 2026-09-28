@@ -1,21 +1,12 @@
 package farnasutsho.AppiumFramework.IOS;
 
-import farnasutsho.AppiumFramework.IOSBase.BaseServerStatusCheck;
+import farnasutsho.AppiumFramework.IOSBase.BaseCoreFunctionalityTest;
 
-public class WireGuardServerCheck extends BaseServerStatusCheck {
+public class WireGuardCoreFunctionalityTest extends BaseCoreFunctionalityTest {
 
     @Override
     protected void selectProtocol() {
         settings.clickWireGuard();
-    }
-
-    @Override
-    protected int getProtocolId() {
-        return 5;
-    }
-    @Override
-    protected boolean isWireGuard() {
-        return true;
     }
 
     @Override

@@ -1,12 +1,12 @@
-package farnasutsho.AppiumFramework.Android;
+package farnasutsho.AppiumFramework.IOS;
 
-import farnasutsho.AppiumFramework.AndroidBase.BaseServerStatusCheck;
+import farnasutsho.AppiumFramework.IOSBase.BaseCoreFunctionalityTest;
 
-public class VMessServerCheck extends BaseServerStatusCheck {
+public class VMessCoreFunctionalityTest extends BaseCoreFunctionalityTest {
 
     @Override
     protected void selectProtocol() {
-        settings.ClickVMess();
+        settings.clickVMess();
     }
 
     @Override

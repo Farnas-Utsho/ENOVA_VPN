@@ -21,6 +21,6 @@ public class VMessServerCheck extends BaseServerStatusCheck {
     @Override
     protected String getJsonFile() {
         return System.getProperty("user.dir")
-                + "/src/test/java/farnasutsho/AppiumFramework/testData/serverlist.json";
+                + "/src/test/java/farnasutsho/AppiumFramework/testData/vmessServerList.json";
     }
 }

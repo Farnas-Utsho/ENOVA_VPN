@@ -1,9 +1,15 @@
-2026-09-20 15:32:08:633 [Appium] Welcome to Appium v3.7.0 (REV bab86d5de571015b63fd8fc30b47bbe072a1290e)
-2026-09-20 15:32:08:634 [Appium] Non-default server args:
-2026-09-20 15:32:08:634 [Appium] { address: '127.0.0.1' }
-2026-09-20 15:32:08:634 [Appium] The autodetected Appium home path: /Users/farnasutsho/.appium
-2026-09-20 15:32:08:635 [Appium] Attempting to load driver xcuitest...
-2026-09-20 15:32:08:635 [Appium] Attempting to load driver uiautomator2...
-2026-09-20 15:32:08:636 [Appium] Requiring driver at /Users/farnasutsho/.appium/node_modules/appium-xcuitest-driver/build/lib/index.js
-2026-09-20 15:32:09:411 [Appium] XCUITestDriver has been successfully loaded in 0.775s
-2026-09-20 15:32:09:412 [Appium] Requiring driver at /Users/farnasutsho/.appium/node_modules/appium-uiautomator2-driver/build/lib/index.js
+2026-09-28 03:07:54:590 [Appium] Welcome to Appium v3.7.0 (REV bab86d5de571015b63fd8fc30b47bbe072a1290e)
+2026-09-28 03:07:54:591 [Appium] Non-default server args:
+2026-09-28 03:07:54:592 [Appium] { address: '127.0.0.1' }
+2026-09-28 03:07:54:592 [Appium] The autodetected Appium home path: /Users/farnasutsho/.appium
+2026-09-28 03:07:54:593 [Appium] Attempting to load driver xcuitest...
+2026-09-28 03:07:54:593 [Appium] Attempting to load driver uiautomator2...
+2026-09-28 03:07:54:596 [Appium] Requiring driver at /Users/farnasutsho/.appium/node_modules/appium-xcuitest-driver/build/lib/index.js
+2026-09-28 03:07:56:188 [Appium] XCUITestDriver has been successfully loaded in 1.595s
+2026-09-28 03:07:56:189 [Appium] Requiring driver at /Users/farnasutsho/.appium/node_modules/appium-uiautomator2-driver/build/lib/index.js
+2026-09-28 03:07:56:813 [Appium] AndroidUiautomator2Driver has been successfully loaded in 2.220s
+2026-09-28 03:07:56:835 [Appium] Appium REST http interface listener started on http://127.0.0.1:4723
+2026-09-28 03:07:56:836 [Appium] Available drivers:
+2026-09-28 03:07:56:836 [Appium]   - xcuitest@12.12.3 (automationName 'XCUITest')
+2026-09-28 03:07:56:836 [Appium]   - uiautomator2@8.6.4 (automationName 'UiAutomator2')
+2026-09-28 03:07:56:836 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
