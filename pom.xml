@@ -17,8 +17,8 @@
         
 
         <!-- Java -->
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
+        <maven.compiler.source>26</maven.compiler.source>
+        <maven.compiler.target>26</maven.compiler.target>
 
         <!-- Dependencies -->
         <appium.java-client.version>10.1.1</appium.java-client.version>

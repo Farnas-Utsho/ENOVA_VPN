@@ -163,7 +163,7 @@ public abstract class BaseServerStatusCheck extends IOSBaseTest{
 	    
 	    home.clickDisconnect();
         home.clickdisconnectOnPopup();
-
+        home.closePopUp();
      
   
 	    

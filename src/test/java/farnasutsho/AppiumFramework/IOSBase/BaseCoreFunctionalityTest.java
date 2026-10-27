@@ -140,140 +140,140 @@ public abstract class BaseCoreFunctionalityTest extends IOSBaseTest {
         }
     }
 
-//    @Test
-//    public void KillSwitchTest() throws InterruptedException, IOException {
-//
-//        home = new IOSHomePage(driver);
-//
-//        settings = home.clickSettings();
-//
-//        location = new IOSLocationPage(driver);
-//        app = new IOSThirdPartyAPP(driver);
-//     
-//
-//        settings.TurnOnKillSwitch();
-//
-//        HashMap<String, String> row = pickRandomServer();
-//        System.out.println("KillSwitchTest using server: " + row.get("server"));
-//
-//        String expectedIP = row.get("ip");
-//
-//        selectServerRow(row);
-//  
-//        home.clickconnect();
-//        home.waitForConnected();  
-//    
-//        // Turn off the kill switch from Apple's own Settings app (not the
-//        // in-app toggle) - this is the actual scenario being verified.
-//        home.turnoffVPNFromSettings();
-//        Thread.sleep(3000);
-//
-//        // With the kill switch off and the VPN toggled off from Settings,
-//        // Safari should now show the real, non-VPN IP - assert it matches
-//        // the expected IP recorded in the test data, same pattern as
-//        // BaseServerStatusCheck.serverTest.
-//        driver.activateApp("com.apple.mobilesafari");
-//
-//        String actualIP = app.extractIP();
-//        System.out.println("Actual IP : " + actualIP);
-//
-//        Assert.assertEquals(expectedIP, actualIP);
-//
-//        // Reopen Enova, disconnect, then turn off the kill switch in-app.
-//        driver.activateApp("com.enovavpn.mobile");
-//       
-//
-//        home.clickDisconnect();
-//        home.clickdisconnectOnPopup();
-//
-//        // TurnOffKillSwitch() assumes it's starting from the Settings tab
-//        // (it clicks straight into "Connection settings") - go there first
-//        // instead of calling it directly from Home.
-//        settings = home.clickSettings();
-//        settings.TurnOffKillSwitch();
-//    }
+    @Test
+    public void KillSwitchTest() throws InterruptedException, IOException {
 
-//    @Test
-//    public void ServerSwitch_Test() throws InterruptedException, IOException {
-//
-//        home = new IOSHomePage(driver);
-//        location = new IOSLocationPage(driver);
-//        app = new IOSThirdPartyAPP(driver);
-//        settings = new IOSSettingsPage(driver);
-//
-//        HashMap<String, String>[] rows = pickTwoDistinctRandomServers();
-//        HashMap<String, String> firstRow = rows[0];
-//        HashMap<String, String> secondRow = rows[1];
-//        System.out.println("ServerSwitch_Test connecting to: " + firstRow.get("server")
-//                + " then switching to: " + secondRow.get("server"));
-//
-//        String firstExpectedIP = firstRow.get("ip");
-//        String secondExpectedIP = secondRow.get("ip");
-//
-//        // 1. Connect with the first server, and wait for the DISCONNECT
-//        // button to appear (confirms the tunnel is actually up, not just
-//        // that the Connect button was tapped).
-//        selectServerRow(firstRow);
-//        home.clickconnect();
-//        home.waitForConnected();
-//        Thread.sleep(8000);
-//
-//        // 2. Verify the server IP from Safari (apify.org) against the
-//        // expected IP recorded in the test data, while still connected -
-//        // same pattern as BaseServerStatusCheck.serverTest.
-//        driver.activateApp("com.apple.mobilesafari");
-//
-//        String actualIPFirst = app.extractIP();
-//        System.out.println("Actual IP : " + actualIPFirst);
-//
-//        driver.activateApp("com.enovavpn.mobile");
-//        settings.clickHome();
-//
-//        Assert.assertEquals(firstExpectedIP, actualIPFirst);
-//
-//        // 3. Reopen the app (it was never terminated - killing the app
-//        // process also kills the VPN connection, so we only ever switch
-//        // foreground/background here), then go to the server list and
-//        // select the second server via the switch-server locator (no ms
-//        // suffix while already connected).
-//        driver.activateApp("com.enovavpn.mobile");
-//        Thread.sleep(3000);
-//
-//        home.goToLocationPage();
-//        Thread.sleep(8000);
-//
-//        String secondCountry = secondRow.get("country");
-//        String secondServer = secondRow.get("server");
-//        String secondServerCount = secondRow.get("numberofservers");
-//
-//        if ("multiple".equals(secondServerCount) && !"Brazil - 3".equals(secondServer)) {
-//            location.SelectCountry(secondCountry);
-//        }
-//        location.SelectServerSwitch(secondServer);
-//
-//        location.clickSwitch();
-//
-//        // 4. Now connected to the second server - wait for the switch to
-//        // take effect, then verify the new server IP the same way.
-//        home.waitForConnected();
-//        Thread.sleep(8000);
-//
-//        driver.activateApp("com.apple.mobilesafari");
-//
-//        String actualIPSecond = app.extractIP();
-//        System.out.println("Actual IP : " + actualIPSecond);
-//
-//        driver.activateApp("com.enovavpn.mobile");
-//        settings.clickHome();
-//
-//        Assert.assertEquals(secondExpectedIP, actualIPSecond);
-//
-//        // 5. Reopen the app and disconnect.
-//        driver.activateApp("com.enovavpn.mobile");
-//        Thread.sleep(3000);
-//
-//        home.clickDisconnect();
-//    }
+        home = new IOSHomePage(driver);
+
+        settings = home.clickSettings();
+
+        location = new IOSLocationPage(driver);
+        app = new IOSThirdPartyAPP(driver);
+
+
+        settings.TurnOnKillSwitch();
+
+        HashMap<String, String> row = pickRandomServer();
+        System.out.println("KillSwitchTest using server: " + row.get("server"));
+
+        String expectedIP = row.get("ip");
+
+        selectServerRow(row);
+
+        home.clickconnect();
+        home.waitForConnected();
+
+        // Turn off the kill switch from Apple's own Settings app (not the
+        // in-app toggle) - this is the actual scenario being verified.
+        home.turnoffVPNFromSettings();
+        Thread.sleep(3000);
+
+        // With the kill switch off and the VPN toggled off from Settings,
+        // Safari should now show the real, non-VPN IP - assert it matches
+        // the expected IP recorded in the test data, same pattern as
+        // BaseServerStatusCheck.serverTest.
+        driver.activateApp("com.apple.mobilesafari");
+
+        String actualIP = app.extractIP();
+        System.out.println("Actual IP : " + actualIP);
+
+        Assert.assertEquals(expectedIP, actualIP);
+
+        // Reopen Enova, disconnect, then turn off the kill switch in-app.
+        driver.activateApp("com.enovavpn.mobile");
+
+
+        home.clickDisconnect();
+        home.clickdisconnectOnPopup();
+
+        // TurnOffKillSwitch() assumes it's starting from the Settings tab
+        // (it clicks straight into "Connection settings") - go there first
+        // instead of calling it directly from Home.
+        settings = home.clickSettings();
+        settings.TurnOffKillSwitch();
+    }
+
+    @Test
+    public void ServerSwitch_Test() throws InterruptedException, IOException {
+
+        home = new IOSHomePage(driver);
+        location = new IOSLocationPage(driver);
+        app = new IOSThirdPartyAPP(driver);
+        settings = new IOSSettingsPage(driver);
+
+        HashMap<String, String>[] rows = pickTwoDistinctRandomServers();
+        HashMap<String, String> firstRow = rows[0];
+        HashMap<String, String> secondRow = rows[1];
+        System.out.println("ServerSwitch_Test connecting to: " + firstRow.get("server")
+                + " then switching to: " + secondRow.get("server"));
+
+        String firstExpectedIP = firstRow.get("ip");
+        String secondExpectedIP = secondRow.get("ip");
+
+        // 1. Connect with the first server, and wait for the DISCONNECT
+        // button to appear (confirms the tunnel is actually up, not just
+        // that the Connect button was tapped).
+        selectServerRow(firstRow);
+        home.clickconnect();
+        home.waitForConnected();
+        Thread.sleep(8000);
+
+        // 2. Verify the server IP from Safari (apify.org) against the
+        // expected IP recorded in the test data, while still connected -
+        // same pattern as BaseServerStatusCheck.serverTest.
+        driver.activateApp("com.apple.mobilesafari");
+
+        String actualIPFirst = app.extractIP();
+        System.out.println("Actual IP : " + actualIPFirst);
+
+        driver.activateApp("com.enovavpn.mobile");
+        settings.clickHome();
+
+        Assert.assertEquals(firstExpectedIP, actualIPFirst);
+
+        // 3. Reopen the app (it was never terminated - killing the app
+        // process also kills the VPN connection, so we only ever switch
+        // foreground/background here), then go to the server list and
+        // select the second server via the switch-server locator (no ms
+        // suffix while already connected).
+        driver.activateApp("com.enovavpn.mobile");
+        Thread.sleep(3000);
+
+        home.goToLocationPage();
+        Thread.sleep(8000);
+
+        String secondCountry = secondRow.get("country");
+        String secondServer = secondRow.get("server");
+        String secondServerCount = secondRow.get("numberofservers");
+
+        if ("multiple".equals(secondServerCount) && !"Brazil - 3".equals(secondServer)) {
+            location.SelectCountry(secondCountry);
+        }
+        location.SelectServerSwitch(secondServer);
+
+        location.clickSwitch();
+
+        // 4. Now connected to the second server - wait for the switch to
+        // take effect, then verify the new server IP the same way.
+        home.waitForConnected();
+        Thread.sleep(8000);
+
+        driver.activateApp("com.apple.mobilesafari");
+
+        String actualIPSecond = app.extractIP();
+        System.out.println("Actual IP : " + actualIPSecond);
+
+        driver.activateApp("com.enovavpn.mobile");
+        settings.clickHome();
+
+        Assert.assertEquals(secondExpectedIP, actualIPSecond);
+
+        // 5. Reopen the app and disconnect.
+        driver.activateApp("com.enovavpn.mobile");
+        Thread.sleep(3000);
+
+        home.clickDisconnect();
+    }
 
     private static final String Non_TUNNEL_URL_1 = "https://api.ipify.org";
     private static final String SPLIT_TUNNEL_URL_2 = "whatismyipaddress.com";

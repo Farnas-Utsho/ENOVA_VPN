@@ -127,15 +127,11 @@ public class IOSLocationPage extends IOSActions{
 
 	    for (int i = 0; i < maxScrolls; i++) {
 
-	        String matchedBy = "exact";
 	        List<WebElement> countries = driver.findElements(locatorExact);
 
 	        if (countries.isEmpty()) {
-	            matchedBy = "duplicateIndexed";
 	            countries = driver.findElements(locatorDuplicateIndexed);
 	        }
-
-	        System.out.println("Scroll attempt " + (i + 1) + " for '" + country + "' - matches found: " + countries.size() + " (via " + matchedBy + ")");
 
 	        if (!countries.isEmpty()) {
 
@@ -144,8 +140,6 @@ public class IOSLocationPage extends IOSActions{
 	            WebElement countryElement = countries.get(countries.size() - 1);
 
 	            if (!isActuallyVisible(countryElement)) {
-
-	                System.out.println("Matched '" + country + "' but not visible yet, scrolling to it.");
 
 	                scrollToWebElement(countryElement);
 	                Thread.sleep(500);
@@ -207,25 +201,19 @@ public class IOSLocationPage extends IOSActions{
 
 	    for (int i = 0; i < maxScrolls; i++) {
 
-	        String matchedBy = "withMs";
 	        List<WebElement> servers = driver.findElements(locatorWithMs);
 
 	        if (servers.isEmpty()) {
-	            matchedBy = "exact";
 	            servers = driver.findElements(locatorExact);
 	        }
 
 	        if (servers.isEmpty()) {
-	            matchedBy = "beginsWith";
 	            servers = driver.findElements(locatorBeginsWith);
 	        }
 
 	        if (servers.isEmpty()) {
-	            matchedBy = "duplicateIndexed";
 	            servers = driver.findElements(locatorDuplicateIndexed);
 	        }
-
-	        System.out.println("Scroll attempt " + (i + 1) + " for '" + server + "' - matches found: " + servers.size() + " (via " + matchedBy + ")");
 
 	        if (!servers.isEmpty()) {
 
@@ -235,8 +223,6 @@ public class IOSLocationPage extends IOSActions{
 	            WebElement serverElement = servers.get(servers.size() - 1);
 
 	            if (!isActuallyVisible(serverElement)) {
-
-	                System.out.println("Matched '" + server + "' but not visible yet, scrolling to it.");
 
 	                scrollToWebElement(serverElement);
 	                Thread.sleep(500);

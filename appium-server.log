@@ -1,15 +1,1206 @@
-2026-09-28 03:07:54:590 [Appium] Welcome to Appium v3.7.0 (REV bab86d5de571015b63fd8fc30b47bbe072a1290e)
-2026-09-28 03:07:54:591 [Appium] Non-default server args:
-2026-09-28 03:07:54:592 [Appium] { address: '127.0.0.1' }
-2026-09-28 03:07:54:592 [Appium] The autodetected Appium home path: /Users/farnasutsho/.appium
-2026-09-28 03:07:54:593 [Appium] Attempting to load driver xcuitest...
-2026-09-28 03:07:54:593 [Appium] Attempting to load driver uiautomator2...
-2026-09-28 03:07:54:596 [Appium] Requiring driver at /Users/farnasutsho/.appium/node_modules/appium-xcuitest-driver/build/lib/index.js
-2026-09-28 03:07:56:188 [Appium] XCUITestDriver has been successfully loaded in 1.595s
-2026-09-28 03:07:56:189 [Appium] Requiring driver at /Users/farnasutsho/.appium/node_modules/appium-uiautomator2-driver/build/lib/index.js
-2026-09-28 03:07:56:813 [Appium] AndroidUiautomator2Driver has been successfully loaded in 2.220s
-2026-09-28 03:07:56:835 [Appium] Appium REST http interface listener started on http://127.0.0.1:4723
-2026-09-28 03:07:56:836 [Appium] Available drivers:
-2026-09-28 03:07:56:836 [Appium]   - xcuitest@12.12.3 (automationName 'XCUITest')
-2026-09-28 03:07:56:836 [Appium]   - uiautomator2@8.6.4 (automationName 'UiAutomator2')
-2026-09-28 03:07:56:836 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2026-10-26 05:43:56:328 [Appium] Welcome to Appium v3.7.0 (REV bab86d5de571015b63fd8fc30b47bbe072a1290e)
+2026-10-26 05:43:56:329 [Appium] Non-default server args:
+2026-10-26 05:43:56:329 [Appium] { address: '127.0.0.1' }
+2026-10-26 05:43:56:329 [Appium] The autodetected Appium home path: /Users/farnasutsho/.appium
+2026-10-26 05:43:56:330 [Appium] Attempting to load driver xcuitest...
+2026-10-26 05:43:56:330 [Appium] Attempting to load driver uiautomator2...
+2026-10-26 05:43:56:332 [Appium] Requiring driver at /Users/farnasutsho/.appium/node_modules/appium-xcuitest-driver/build/lib/index.js
+2026-10-26 05:43:57:013 [Appium] XCUITestDriver has been successfully loaded in 0.683s
+2026-10-26 05:43:57:014 [Appium] Requiring driver at /Users/farnasutsho/.appium/node_modules/appium-uiautomator2-driver/build/lib/index.js
+2026-10-26 05:43:57:712 [Appium] AndroidUiautomator2Driver has been successfully loaded in 1.381s
+2026-10-26 05:43:57:737 [Appium] Appium REST http interface listener started on http://127.0.0.1:4723
+2026-10-26 05:43:57:737 [Appium] Available drivers:
+2026-10-26 05:43:57:737 [Appium]   - xcuitest@12.12.3 (automationName 'XCUITest')
+2026-10-26 05:43:57:737 [Appium]   - uiautomator2@8.6.4 (automationName 'UiAutomator2')
+2026-10-26 05:43:57:737 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2026-10-26 05:55:52:225 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 05:55:52:283 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 05:55:52:324 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 121 ms - 1985
+2026-10-26 05:57:36:625 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 05:57:36:637 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 05:57:36:649 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 33 ms - 1985
+2026-10-26 05:58:36:771 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 05:58:36:783 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 05:58:36:817 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 52 ms - 1985
+2026-10-26 05:59:36:225 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 05:59:36:235 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 05:59:36:240 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 15 ms - 1985
+2026-10-26 06:00:36:691 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:00:36:701 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:00:36:710 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 25 ms - 1985
+2026-10-26 06:01:36:807 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:01:36:821 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:01:36:832 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 33 ms - 1985
+2026-10-26 06:02:36:617 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:02:36:629 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:02:36:639 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 28 ms - 1985
+2026-10-26 06:03:36:593 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:03:36:608 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:03:36:616 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 31 ms - 1985
+2026-10-26 06:04:36:252 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:04:36:255 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:04:36:260 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 11 ms - 1985
+2026-10-26 06:05:36:220 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:05:36:223 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:05:36:228 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 9 ms - 1985
+2026-10-26 06:06:36:208 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:06:36:211 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:06:36:213 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 11 ms - 1985
+2026-10-26 06:07:36:542 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:07:36:553 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:07:36:562 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 26 ms - 1985
+2026-10-26 06:08:36:576 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:08:36:594 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:08:36:602 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 32 ms - 1985
+2026-10-26 06:09:36:567 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:09:36:579 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:09:36:589 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 34 ms - 1985
+2026-10-26 06:10:36:762 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:10:36:774 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:10:36:783 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 26 ms - 1985
+2026-10-26 06:11:36:497 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:11:36:499 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:11:36:504 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 7 ms - 1985
+2026-10-26 06:12:36:617 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:12:36:637 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:12:36:645 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 36 ms - 1985
+2026-10-26 06:13:36:323 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:13:36:329 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:13:36:332 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 12 ms - 1985
+2026-10-26 06:14:36:209 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:14:36:217 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:14:36:221 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 25 ms - 1985
+2026-10-26 06:15:36:212 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:15:36:216 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:15:36:223 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 14 ms - 1985
+2026-10-26 06:16:36:691 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:16:36:708 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:16:36:721 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 39 ms - 1985
+2026-10-26 06:17:36:329 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:17:36:334 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:17:36:335 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 8 ms - 1985
+2026-10-26 06:18:36:671 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:18:36:694 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:18:36:706 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 40 ms - 1985
+2026-10-26 06:19:36:592 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:19:36:606 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:19:36:620 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 34 ms - 1985
+2026-10-26 06:20:36:699 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:20:36:709 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:20:36:721 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 32 ms - 1985
+2026-10-26 06:21:36:283 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:21:36:297 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:21:36:310 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 29 ms - 1985
+2026-10-26 06:22:36:660 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:22:36:674 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:22:36:681 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 30 ms - 1985
+2026-10-26 06:23:07:414 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:23:07:426 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:23:07:432 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 39 ms - 1985
+2026-10-26 06:23:09:458 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:23:09:463 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:23:09:467 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 11 ms - 1985
+2026-10-26 06:23:29:472 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:23:29:478 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:23:29:481 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 15 ms - 1985
+2026-10-26 06:23:49:547 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:23:49:559 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:23:49:569 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 30 ms - 1985
+2026-10-26 06:24:10:762 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:24:10:769 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:24:10:776 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 22 ms - 1985
+2026-10-26 06:24:30:389 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:24:30:397 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:24:30:400 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 12 ms - 1985
+2026-10-26 06:24:50:179 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:24:50:189 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:24:50:191 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 16 ms - 1985
+2026-10-26 06:25:36:218 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:25:36:222 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:25:36:227 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 14 ms - 1985
+2026-10-26 06:26:36:645 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:26:36:657 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:26:36:667 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 47 ms - 1985
+2026-10-26 06:27:05:904 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:27:06:638 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:27:06:706 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 813 ms - 1985
+2026-10-26 06:27:10:595 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:27:10:605 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:27:10:612 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 32 ms - 1985
+2026-10-26 06:27:31:030 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:27:31:065 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:27:31:079 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 97 ms - 1985
+2026-10-26 06:27:50:481 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:27:50:491 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:27:50:498 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 26 ms - 1985
+2026-10-26 06:28:37:405 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:28:37:427 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:28:37:435 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 51 ms - 1985
+2026-10-26 06:29:36:601 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:29:36:615 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:29:36:626 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 30 ms - 1985
+2026-10-26 06:30:38:326 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:30:38:347 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:30:38:360 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 43 ms - 1985
+2026-10-26 06:31:36:536 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:31:36:550 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:31:36:558 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 32 ms - 1985
+2026-10-26 06:32:36:496 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:32:36:511 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:32:36:519 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 30 ms - 1985
+2026-10-26 06:33:36:642 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:33:36:668 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:33:36:686 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 71 ms - 1985
+2026-10-26 06:34:05:801 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:34:05:883 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:34:05:911 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 197 ms - 1985
+2026-10-26 06:34:10:204 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:34:10:212 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:34:10:218 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 16 ms - 1985
+2026-10-26 06:34:30:467 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:34:30:479 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:34:30:494 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 30 ms - 1985
+2026-10-26 06:34:50:161 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:34:50:167 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:34:50:170 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 16 ms - 1985
+2026-10-26 06:35:36:218 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:35:36:221 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:35:36:228 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 12 ms - 1985
+2026-10-26 06:36:36:666 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:36:36:685 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:36:36:692 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 34 ms - 1985
+2026-10-26 06:37:36:733 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:37:36:745 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:37:36:753 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 28 ms - 1985
+2026-10-26 06:38:36:657 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:38:36:674 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:38:36:682 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 34 ms - 1985
+2026-10-26 06:39:36:643 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:39:36:656 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:39:36:669 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 32 ms - 1985
+2026-10-26 06:40:36:757 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:40:36:771 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:40:36:780 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 31 ms - 1985
+2026-10-26 06:41:36:739 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:41:36:752 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:41:36:760 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 27 ms - 1985
+2026-10-26 06:42:37:524 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:42:37:554 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:42:37:581 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 62 ms - 1985
+2026-10-26 06:43:36:738 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:43:36:750 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:43:36:759 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 30 ms - 1985
+2026-10-26 06:44:36:672 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:44:36:693 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:44:36:705 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 41 ms - 1985
+2026-10-26 06:45:36:985 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:45:37:079 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:45:37:123 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 126 ms - 1985
+2026-10-26 06:46:36:568 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:46:36:578 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:46:36:586 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 26 ms - 1985
+2026-10-26 06:47:37:109 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:47:37:141 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:47:37:153 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 56 ms - 1985
+2026-10-26 06:48:36:697 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:48:36:717 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:48:36:731 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 43 ms - 1985
+2026-10-26 06:49:36:543 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:49:36:559 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:49:36:567 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 32 ms - 1985
+2026-10-26 06:50:29:744 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:50:29:773 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:50:29:793 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 75 ms - 1985
+2026-10-26 06:50:50:397 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:50:50:408 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:50:50:415 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 27 ms - 1985
+2026-10-26 06:51:10:172 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:51:10:180 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:51:10:183 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 13 ms - 1985
+2026-10-26 06:51:30:173 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:51:30:179 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:51:30:180 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 10 ms - 1985
+2026-10-26 06:51:50:461 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 
+2026-10-26 06:51:50:480 [0d506fdb][AppiumDriver@7cca] Encountered internal error running command: NoSuchDriverError: A session is either terminated or not started
+    at asyncHandler (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:331:23)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/@appium/base-driver/build/lib/protocol/protocol.js:490:14
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/lib/layer.js:152:17)
+    at /Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:295:15
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:600:14)
+    at param (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:610:14)
+    at processParams (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:664:3)
+    at Immediate.next (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:291:5)
+    at Immediate._onImmediate (/Users/farnasutsho/.nvm/versions/node/v24.14.1/lib/node_modules/appium/node_modules/router/index.js:688:15)
+    at process.processImmediate (node:internal/timers:506:21)
+2026-10-26 06:51:50:490 [HTTP] <-- GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 404 36 ms - 1985
+2026-10-26 06:52:10:535 [0d506fdb][HTTP] --> GET /session/0d506fdb-f74b-44b1-9972-51170224b659/timeouts 

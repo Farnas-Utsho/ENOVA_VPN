@@ -114,11 +114,6 @@
   "numberofservers" : "single",
   "ip" : "85.137.175.205"
 }, {
-  "country" : "Belgium",
-  "server" : "Belgium - 10",
-  "numberofservers" : "single",
-  "ip" : "192.121.170.187"
-}, {
   "country" : "Spain",
   "server" : "Spain - 6",
   "numberofservers" : "single",
@@ -151,28 +146,13 @@
 }, {
   "country" : "Australia",
   "server" : "Australia - 3",
-  "numberofservers" : "multiple",
-  "ip" : "85.155.189.176"
-}, {
-  "country" : "Australia",
-  "server" : "Australia - 10",
-  "numberofservers" : "multiple",
-  "ip" : "158.255.212.81"
-}, {
-  "country" : "Romania",
-  "server" : "Romania - 10",
   "numberofservers" : "single",
-  "ip" : "194.14.217.183"
+  "ip" : "85.155.189.176"
 }, {
   "country" : "Canada",
   "server" : "Canada - 10",
   "numberofservers" : "single",
   "ip" : "188.190.17.27"
-}, {
-  "country" : "Poland",
-  "server" : "Poland",
-  "numberofservers" : "single",
-  "ip" : "89.46.235.79"
 }, {
   "country" : "United Kingdom",
   "server" : "United Kingdom - 3",
@@ -293,9 +273,4 @@
   "server" : "Ireland - 10",
   "numberofservers" : "single",
   "ip" : "194.26.213.42"
-}, {
-  "country" : "Czech Republic",
-  "server" : "Czech Republic",
-  "numberofservers" : "single",
-  "ip" : "185.122.186.101"
 } ]

@@ -48,9 +48,26 @@ private By connectButton = AppiumBy.accessibilityId("Connected");
  //private By disconnectButton = AppiumBy.xpath("//XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeImage[3]");
  
  
- private By disconnectOnPopup =
+private By popUpCancelButton = AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`name == \"xmark\"`]"); 
+
+public void closePopUp() {
+	
+	
+	clickElement(popUpCancelButton);
+	
+	
+}
+
+
+
+private By disconnectOnPopup =
 		    AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`name == \"DISCONNECT\"`][2]");
- 
+
+// "End session ?" confirmation alert shown after tapping the main
+// DISCONNECT button (confirmed via Inspector).
+private By endSessionAlert = AppiumBy.iOSNsPredicateString(
+		"type == 'XCUIElementTypeAlert' AND name == 'End session ?'");
+
 private By ipAddress =
 		    AppiumBy.iOSNsPredicateString("name MATCHES '[0-9]{1,3}(\\.[0-9]{1,3}){3}'");
 	
@@ -147,9 +164,54 @@ public void clickDisconnect() {
 	
 }
 
-public void clickdisconnectOnPopup() {
-	clickElement(disconnectOnPopup );
-	
+/**
+ * Taps DISCONNECT on the "End session ?" confirmation alert. WDA reports
+ * this button as visible/enabled/accessible and .click() appears to
+ * succeed, but the tap does not reliably register on the native alert
+ * overlay - the same issue seen with the "Switch server?" alert in
+ * IOSLocationPage.clickSwitch(). Tapping by the element's own on-screen
+ * coordinates (rather than calling .click()) works around it.
+ */
+public void clickdisconnectOnPopup() throws InterruptedException {
+
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	WebElement alert = wait.until(
+			org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated(endSessionAlert));
+
+	WebElement disconnectButton = wait.until(
+			org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated(disconnectOnPopup));
+
+	org.openqa.selenium.Rectangle rect = disconnectButton.getRect();
+	int tapX = rect.getX() + rect.getWidth() / 2;
+	int tapY = rect.getY() + rect.getHeight() / 2;
+
+	driver.executeScript("mobile: tap", java.util.Map.of("x", tapX, "y", tapY));
+
+	Thread.sleep(1000);
+}
+
+/**
+ * Diagnostic helper: dumps the current page source and a screenshot to
+ * the given file path prefix (no extension). Call this right after the
+ * disconnect popup appears (before clickdisconnectOnPopup) to capture
+ * the real element hierarchy when the popup's DISCONNECT tap is not
+ * registering.
+ */
+public void dumpPageStateForDebug(String filePathPrefix) {
+
+	try {
+		String pageSource = driver.getPageSource();
+		java.nio.file.Files.writeString(
+				java.nio.file.Path.of(filePathPrefix + ".xml"), pageSource);
+
+		byte[] screenshot = driver.getScreenshotAs(org.openqa.selenium.OutputType.BYTES);
+		java.nio.file.Files.write(
+				java.nio.file.Path.of(filePathPrefix + ".png"), screenshot);
+
+		System.out.println("Dumped page state to " + filePathPrefix + ".xml/.png");
+	} catch (Exception e) {
+		System.out.println("Failed to dump page state: " + e.getMessage());
+	}
 }
 
 public void goToLocationPage() {
